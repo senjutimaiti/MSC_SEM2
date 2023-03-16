@@ -1,0 +1,43 @@
+<html>
+
+<head>
+     <title>DATE</title>
+     <script TYPE="text/javascript">
+          var m, s, h;
+          d = new Date();
+          h = d.getHours()
+          m = d.getMinutes()
+          s = d.getSeconds()
+          //console.log(s + '1');
+          function callchange() {
+               var str;
+               if (h <= 9)
+                    h = '0' + h;
+               if (m <= 9)
+                    m = '0' + m;
+               if (s <= 9)
+                    s = '0' + s;
+               document.getElementById('h').innerHTML = h + ":" + m + ":" + s;
+               h = parseInt(h)
+               s = parseInt(s)
+               m = parseInt(m)
+               s = s + 1;
+               if (s == 60) {
+                    m = m + 1;
+                    s = 0;
+               }
+               if (m == 60) {
+                    m = 0;
+                    h = h + 1;
+               }
+               setTimeout("callchange()", 1000);
+               //document.body.innerHTML="";
+          }
+     </script>
+
+<body bgColor="skyblue" color="pink" onLoad="callchange()">
+     <H1 color="pink" id="h"></H1>
+
+</body>
+
+</html>

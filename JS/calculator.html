@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style>
+	button
+	{
+		background-color:#991212;
+		border-radius:20%;
+		width:50px;
+		border:solid 2px;
+		padding:10px;
+		color:white;
+		font-size:15;
+
+	}
+</style>
+<script>
+	var m;
+	function dis(a)
+	{
+		document.getElementById('ans').value+=a;
+	}
+	function calc()
+	{
+		document.getElementById('ans').value=eval(document.getElementById('ans').value);
+	}
+	function back()
+	{
+		a=document.getElementById('ans').value;
+		document.getElementById('ans').value=a.substr(0,a.length-1);
+	}
+	function ms()
+	{
+		m=document.getElementById('ans').value;
+		document.getElementById('ans').value='';
+
+	}
+	function mu()
+	{
+		m=m+'+'
+		m=eval(m+document.getElementById('ans').value);
+	}
+</script>
+</head>
+<body>
+	<h1>CALCULATOR</h1>
+	<input style="text-align:right" type="text" id="ans" placeholder=0 disabled=""><br><br>
+	<button onClick="document.getElementById('ans').value=''">MC</button>
+	<button onClick="document.getElementById('ans').value=m">MR</button>
+	<button onclick="ms()">MS</button>
+	<button onClick="mu()">M+</button><br>
+	<button onClick=dis(7)>7</button>
+	<button onClick=dis(8)>8</button>
+	<button onClick=dis(9)>9</button>
+	<button onClick="dis('+')">+</button><br>
+	<button onClick=dis(4)>4</button>
+	<button onClick=dis(5)>5</button>
+	<button onClick=dis(6)>6</button>
+	<button onClick="dis('/')">/</button><br>
+	<button onClick=dis(1)>1</button>
+	<button onClick=dis(2)>2</button>
+	<button onClick=dis(3)>3</button>
+	<button onClick="dis('*')">*</button><br>
+	<button onClick=dis(0)>0</button>
+	<button onclick="calc()">=</button>
+	<button onClick="document.getElementById('ans').value='';">C</button>
+	<button onclick="back()"><-</button>
+
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>DATE</title>
+<script TYPE="text/javascript">
+col=new Array("blue","pink","black","yellow","red");
+function callchange()
+{
+i=Math.random();
+i=Math.round(i*4);
+document.bgColor=col[i];
+document.getElementById('h').style.color=col[(i+1)%5];
+setTimeout("callchange()",1000);
+}
+</script>
+<body bgColor="skyblue" onLoad="callchange()">
+<h1 id="h">MY HOME PAGE</H1>
+</body>
+</html>

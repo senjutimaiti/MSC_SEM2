@@ -1,0 +1,72 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function prod(a,b)
+		{
+			if(a=='' && b=='' )
+				alert("Both Input fields empty");
+			else if(a=='')
+				alert("1st number is empty!")
+			else if(b=='')
+				alert("2nd number is empty")
+			else
+			return a*b;
+		}
+		function add(a,b)
+		{
+			if(a=='' && b=='' )
+				alert("Both Input fields empty");
+			else if(a=='')
+				alert("1st number is empty!")
+			else if(b=='')
+				alert("2nd number is empty")
+			else
+			{
+			a=parseInt(a);
+			b=parseInt(b);
+			return a+b;
+			}
+		}
+		function divi(a,b)
+		{
+			if(a=='' && b=='' )
+				alert("Both Input fields empty");
+			else if(a=='')
+				alert("1st number is empty!")
+			else if(b=='')
+				alert("2nd number is empty")
+			else if(b==0)
+			{
+				alert("error:Division by 0");
+				return "error"
+			}
+			else
+			return a/b
+		}
+		function sub(a,b)
+		{
+			if(a=='' && b=='' )
+				alert("Both Input fields empty");
+			else if(a=='')
+				alert("1st number is empty!")
+			else if(b=='')
+				alert("2nd number is empty")
+			else
+			return a-b;
+		}
+	</script>
+</head>
+<body bgcolor="SKYBLUE">
+	<form ><center>
+		<h1>1st number<font color="red">*</font><input type="text" name="t1" required="required"><br>
+		2nd number<font color="red">*</font><input type="text" name="t2" required="required"><br>
+		ANSWER<input type="text" name="t3"></h1>
+		<input type="button" value="ADD" onclick="t3.value=add(t1.value,t2.value)">
+		<input type="button" value="SUB" onclick="t3.value=sub(t1.value,t2.value)">
+		<input type="button" value="MUL" onclick="t3.value=prod(t1.value,t2.value)">
+		<input type="button" value="DIV" onclick="t3.value=divi(t1.value,t2.value)">
+		<input type="reset" value="reset"><br>
+	</center>
+</form>
+</body>
+</html>

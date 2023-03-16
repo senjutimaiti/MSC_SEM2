@@ -1,0 +1,21 @@
+<html>
+
+<head>
+     <title>DATE</title>
+     <script TYPE="text/javascript">
+          function callchange() {
+               d = new Date();
+               //document.write("<font size='20'>");
+               document.getElementById('h').innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+               //document.write("</font>");
+               setTimeout("callchange()", 1000);
+               //document.body.innerHTML="";
+          }
+     </script>
+
+<body bgColor="skyblue" onLoad="callchange()">
+     <H1 color="pink" id="h"></H1>
+
+</body>
+
+</html>

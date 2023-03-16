@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Calculator</title>
+<script>
+function cal()
+{
+	var a=document.f.nu.value;
+	var b=document.f.num.value;
+	a=parseInt(a);
+	b=parseInt(b);
+	document.f.r1.value=a+b;
+	document.f.r2.value=a-b;
+	document.f.r3.value=a*b;
+	if(b!=0)
+	document.f.r4.value=a/b;
+else
+	echo("Divide by 0 not possible")
+
+}
+</script>
+</head>
+<body>
+	<h1><marquee style="color:white;background-color:purple" behavior="alternate" >CALCULATOR</marquee></h1>
+	<form cellpadding="10" cellspacing="10" border="5" width="50%" name="f" action="sub.html">
+		<center>
+			<table border="5" width="600" height="800">
+				<tr>
+					<td>1st number:<input name="nu" size="5" type="number"></td>
+					<td>2nd number:<input name="num" size="5" type="number"></td>
+				</tr>
+				<tr>
+					<th colspan="2">+RESULT:<input name="r1" size="5" type="number"></th>
+				</tr>
+				<tr>
+					<th colspan="2">-RESULT:<input name="r2" size="5" type="number"></th>
+				</tr>
+				<tr>
+					<th colspan="2">*RESULT:<input name="r3" size="5" type="number"></th>
+				</tr>
+				<tr>
+					<th colspan="2">/RESULT:<input name="r4" size="5"type="number"></th>
+				</tr>
+				<tr>
+					<th><button onclick="cal()"><u>C</u>ALCULATE</td>
+					<th><button><u>R</u>ESET</td>
+				</tr>
+				<tr>
+					<th><input type="submit" value="SUBMIT">
+				</tr>
+			</table>
+		</center>
+	</form>
+</body>
+</html>
+
+

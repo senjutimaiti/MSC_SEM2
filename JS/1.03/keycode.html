@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Password</title>
+	<script>
+		function textcheck()
+		{
+			if((event.keyCode>=65 && event.keyCode<=90) || (event.keyCode>=97 && event.keyCode<=122) || event.keyCode==32)
+			{}
+				else
+				{
+					alert("WRONG")
+					//document.write("Wrong data")
+
+					event.keyCode=f1.t1.focus();
+
+				}
+			}
+			function ck()
+			{
+				if(document.f1.t1.value=="")
+				{
+					alert("PASSWORD EMPTY");
+					document.f1.t2.focus();
+					}
+
+
+			}
+
+	</script>
+</head>
+<body bgcolor="skyblue" >
+	<form name="f1" >
+		INPUT<input type="text" name="t1"  onkeypress="textcheck()" >
+		<BR>PASSWORD<INPUT TYPE="password" name="t2" onkeypress="textcheck()" >
+		<input type="button" value ="SUBMIT" onclick="ck()">
+</body>
+</html>
+
+
