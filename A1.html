@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+	<script type="text/javascript">
+		let marks = 0
+		const prompt1 = () =>{
+			const s = prompt("Write your answer")
+			if( s == "1" || s == "one"){
+				marks += 5
+			}
+			else {
+				marks -= 2
+			}
+		}
+
+		const prompt2 = () =>{
+			const s = prompt("Write your answer")
+			if( s == "2" || s == "two" ){
+				marks += 5
+			}
+			else {
+				marks -= 2
+			}
+		}
+
+		const prompt3 = () =>{
+			const s = prompt("Write your answer")
+			if( s == "3" || s == "three" ){
+				marks += 5
+			}
+			else {
+				marks -= 2
+			}
+		}
+
+		const showMarks = () =>{
+			document.write("<h3>Marks: </h3> "+marks)
+			console.log(-false)
+			console.log(typeof "fnjg")
+			console.log(1==="1")
+			console.log(!0)
+			console.log(false == '0')
+			console.log(0 == '0')
+			console.log(0 == false)
+
+		}
+
+	</script>
+</head>
+<body>
+	<h3>What number do you see? -> "1" </h3><br>
+	<input type="button" value="Answer" name="b1" onclick="return prompt1()"><br><br>
+
+	<h3>What number do you see? -> "2" </h3><br>
+	<input type="button" value="Answer" name="b2" onclick="return prompt2()"><br><br>
+
+	<h3>What number do you see? -> "3" </h3><br>
+	<input type="button" value="Answer" name="b3" onclick="return prompt3()"><br><br>
+
+	<input type="button" name="marks" value="Show Marks" onclick="return showMarks()">
+</body>
+</html>

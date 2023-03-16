@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style>
+		#but{
+			border: none;
+			padding: 15px;
+			color: #fff;
+			background-color: rgb(240, 0, 30, 0.6);
+		}
+	</style>
+</head>
+<body>
+	<marquee behavior="alternate" ><h1 style="color: red;">CALCULATOR</h1></marquee>
+	<form id="f" name="f">
+		<center>
+		<table cellpadding="10" cellspacing="10" border="5" bordercolor="red">
+			<tr>
+				<td>1ST NUMBER: <input id="n1" name="n1" type="number" size="10"></td>
+				<td>2ND NUMBER: <input id="n2" name="n2" type="number" size="10"></td>
+			</tr>
+			<tr>
+				<th colspan="2"><h3>+ RESULT:</h3><br>
+					<input id="add" name="add" size="10"></th>
+			</tr>
+			<tr>
+				<th colspan="2"><h3>- RESULT:</h3><br>
+					<input id="sub" name="sub" size="10"></th>
+			</tr>
+			<tr>
+				<th colspan="2"><h3>* RESULT:</h3><br>
+					<input id="mul" name="mul" size="10"></th>
+			</tr>
+			<tr>
+				<th colspan="2"><h3>/ RESULT:</h3><br>
+					<input id="div" name="div" size="10"></th>
+			</tr>
+			<tr>
+				<th colspan="2"><button id="but" accesskey="c" onclick="calculate(this.form)"><u>C</u>ALCULATE</button></th>
+				
+			</tr>
+			<tr>
+				<th colspan="2"><button id="but" accesskey="r" type="reset"><u>R</u>ESET</button></th>
+			</tr>
+		</table>
+		</center>
+	</form>
+	<script type="text/javascript">
+		const calculate = (calculate) =>{
+			const a = parseInt(calculate.n1.value);
+			const b = parseInt(calculate.n2.value);
+			calculate.add.value = a+b;
+			calculate.sub.value = a-b;
+			calculate.mul.value = a*b;
+			calculate.div.value = a/b;
+		}
+	</script>
+</body>
+</html>

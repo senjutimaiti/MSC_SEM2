@@ -1,0 +1,29 @@
+<html>
+<head>
+<script language="JavaScript">
+function textcheck()
+{
+	if(event.keyCode>=65 && event.keyCode<=90)
+	{
+	}
+	else if(event.keyCode>=97 && event.keyCode<=122)
+	{
+	}
+	else if(event.keyCode==32)
+	{
+	}
+	else
+	{
+		alert("You are entering wrong data!")
+		event.keyCode=0
+	}
+}
+</script>
+<body bgcolor="purple">
+<form name="f1" action="b.html" enctype="text/html" method="get">
+<table align="center">
+<tr><td>Name</td><td><input type="text" name="t1" onKeypress="textcheck()"></td></tr>
+</table>
+</form>
+</body>
+</html>

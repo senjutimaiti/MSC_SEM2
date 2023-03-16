@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sort Button</title>
+</head>
+<body>
+	<h2>Sort the values</h2>
+	<button onclick="return mysort()">Sort</button>
+	<p id="demo"></p>
+	<script>
+		let arr = new Array("C", "B", "A", "E", "D");
+		document.getElementById("demo").innerHTML = arr;
+
+		const mysort = () =>{
+			arr.sort();
+			document.getElementById("demo").innerHTML = arr;
+		}
+	</script>
+</body>
+</html>

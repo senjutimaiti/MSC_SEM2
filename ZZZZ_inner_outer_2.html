@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<table>
+<tbody>
+<tr id="myRow"><td>A</td><td>B</td></tr>
+</tbody>
+</table>
+<textarea rows="3" id="results"></textarea>
+<button id="inner">Inner HTML</button>
+<button id="outer">Outer HTML</button>
+<script>
+var results = document.getElementById("results");
+var row = document.getElementById("myRow");
+document.getElementById("inner").onclick = function() {
+results.innerHTML = row.innerHTML;
+};
+document.getElementById("outer").onclick = function() {
+results.innerHTML = row.outerHTML;
+}
+</script>
+</body>
+</html>

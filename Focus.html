@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keycode</title>
+	<script type="text/javascript">
+		const check = () =>{
+
+			if(document.f1.t1.value=="")
+			{
+				alert("The name is empty");
+				document.f1.t1.focus();
+			}
+
+			if(document.f1.t2.value=="")
+			{
+				alert("The password is empty");
+				document.f1.t2.focus();
+				
+			}
+		}
+	</script>
+</head>
+<body>
+	<form name="f1">
+		Name: <input name="t1" type="text">
+		Password: <input name="t2" type="password">
+		<input type="button" value="Submit" onclick = "return check()">
+	</form>
+	</form>
+</body>
+</html>
