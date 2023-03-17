@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style>
+		.buttons{
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 10px;
+			margin-top: 40px;
+		}
+		.input-button{
+			font-size: 20px;
+			width: 80px;
+			height: 80px;
+			border: solid 1px;
+			margin: 1px;
+			text-align: center;
+			border-radius: 10%;
+			background-color: rgb(0, 0, 0, 0.5);
+			color: white;
+		}
+		.input-box{
+			font-size: 20px;
+			width: 350px;
+			height: 80px;
+			border: solid 1px;
+			margin: 1px;
+			text-align: right;
+		}
+		.input-button:hover{
+			transition: 0.3s;
+			background-color: rgb(0, 0, 0, 0.7);
+		}
+	</style>
+</head>
+<body style="width:30vh; justify-content: center;">
+	<form>
+		<input type="text" id="ans" placeholder="0" disabled class="input-box"><br>
+		<p class="buttons">
+		<input value="1" type="button" onclick="button('1')" class="input-button">
+		<input value="2" type="button" onclick="button('2')" class="input-button">
+		<input value="3" type="button" onclick="button('3')" class="input-button">
+		<input value="+" type="button" onclick="button('+')" class="input-button">
+		<input value="4" type="button" onclick="button('4')" class="input-button">
+		<input value="5" type="button" onclick="button('5')" class="input-button">
+		<input value="6" type="button" onclick="button('6')" class="input-button">
+		<input value="-" type="button" onclick="button('-')" class="input-button">
+		<input value="7" type="button" onclick="button('7')" class="input-button">
+		<input value="8" type="button" onclick="button('8')" class="input-button">
+		<input value="9" type="button" onclick="button('9')" class="input-button">
+		<input value="*" type="button" onclick="button('*')" class="input-button">
+		<input value="0" type="button" onclick="button('0')" class="input-button">
+		<input value="/" type="button" onclick="button('/')" class="input-button">
+		<input value="=" type="button" onclick="result()" class="input-button">
+		<input value="CLR" type="button" onclick="buttonclr()" class="input-button">
+		<input value="<--" type="button" onclick="bckspc()" class="input-button">
+		<input value="MC" type="button" onclick="mc()" class="input-button">
+		<input value="MR" type="button" onclick="mr()" class="input-button">
+		<input value="MS" type="button" onclick="ms()" class="input-button";>
+		<input value="M+" type="button" onclick="mem('+')" class="input-button">
+		<input value="M-" type="button" onclick="mem('-')" class="input-button";>
+		<input value="M*" type="button" onclick="mem('*')" class="input-button">
+		<input value="M/" type="button" onclick="mem('/')" class="input-button";>
+		</p>
+	</form>
+	<script type="text/javascript">
+		let m = "";
+		const button = (a) => {
+			document.getElementById("ans").value += a;
+		}
+		const result = () => {
+			document.getElementById("ans").value = eval(document.getElementById("ans").value);
+		}
+		const buttonclr = () => {
+			document.getElementById("ans").value = "";
+		}
+		const bckspc = () => {
+			const p = document.getElementById("ans").value;
+			document.getElementById("ans").value = p.substr(0, p.length -1 );
+		}
+		const mc = () => {
+			m = "";
+		}
+		const ms = () => {
+			m = document.getElementById("ans").value;
+			buttonclr();
+		}
+		const mr = () => {
+			document.getElementById("ans").value += m;
+		}
+		const mem = (a) =>{
+			m = m+a+document.getElementById("ans").value;
+			m = eval(m);
+		}
+	</script>
+</body>
+</html>
