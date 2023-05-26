@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+</head>
+<body>
+<form action="form1.php" method="post">
+	<label>Student Name:</label><br>
+	<input type="text" name="nm"><br>
+
+	<label>Guardian Name:</label><br>
+	<input type="text" name="gnm"><br>
+
+	<label>Gender:</label><br>
+	<input type="radio" name="gen" value="Male">Male<br>
+	<input type="radio" name="gen" value="Female">Female<br>
+	<input type="radio" name="gen" value="Transgender">Transgender<br>
+
+	<label>Phone Number:</label><br>
+	<input type="tel" pattern="[+]{1}[9]{1}[1]{1}[0-9]{10}" name="phn" id=""><br>
+
+	<label>Address:</label><br>
+	<textarea name="add"></textarea><br>
+
+	<label>Hobbies:</label><br>
+	<input type="checkbox" value="Reading" name="c1">Reading<br>
+	<input type="checkbox" value="Painting" name="c2">Painting<br>
+	<input type="checkbox" value="Cooking" name="c3">Cooking<br>
+
+	<input type="submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hot Window</title>
+	<style type="text/css">
+		a:active{
+			color: green;
+		}
+	</style>
+	<script type="text/javascript">
+		const hotwin = () =>{
+			open("http://www.hotbot.com", "HBSW", "toolbar=1, location=1, menubars=1, scrollbars=1, status=1, resizable=1")
+		}
+		const getf = () =>{
+			document.getElementById("linkw3").focus();
+		}
+		const losef = () =>{
+			document.getElementById("linkw3").blur();
+		}
+		const checklen = (x,y) =>{
+			if(y.length == x.maxLength){
+				var next = x.tabIndex;
+				console.log(document.getElementById("myform").elements.length);
+				//if(next<document.getElementById("myform").length){
+					document.getElementById("myform").elements[next].focus();
+				//}
+			}
+		}
+		const chsrc = () =>{
+			document.getElementById("frame1").src="f1.html";
+			document.getElementById("frame2").src="test.php";
+		}
+		const ch = (x) =>{
+			console.log(x);
+			document.getElementById("i1").value="Bye";
+		}
+		// const myWin = open("", "newwin", "height=200, width=200")
+		// with (myWin.document){
+		// 	open();
+		// 	write("<h2>Hola! Soy Dora!</h2>");
+		// 	close();
+		// }
+	</script>
+</head>
+<body>
+	<!-- <input type="password"><br> -->
+	<form id="myform">
+
+		<input size="5" tabindex="3" maxlength="3" onkeyup="checklen(this, this.value)"> 
+		<input size="5" tabindex="2" maxlength="2" onkeyup="checklen(this, this.value)">
+		<input size="5" tabindex="0" maxlength="1" onkeyup="checklen(this, this.value)">
+		<input size="5" tabindex="1" maxlength="4" onkeyup="checklen(this, this.value)"><br>
+
+		<!-- <label>Hola! Soy Dora!</label> -->
+		<!-- <textarea></textarea>
+		<select></select> -->
+
+		<a id="linkw3" href="http://www.w3schools.com" target="_blank">Link to W3schools</a><br>
+
+		<input type="button" value="Get focus" onclick="getf()"><br>
+		<input type="button" value="Lose focus" onclick="losef()"><br>
+
+		<iframe src="test.php" id="frame1"></iframe>
+		<iframe src="f1.html" id="frame2"></iframe>	<br>
+
+		<input type="button" value="Change" onclick="chsrc()"><br>
+
+		<input type="button" id="i1" value="Hi" onclick="ch(this.value)"><br>
+
+		<!--<input type="button" value="HBSW" onclick="hotwin()"><br>-->
+	</form>
+</body>
+</html>
