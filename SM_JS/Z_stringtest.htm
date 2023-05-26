@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<TITLE>String Evaluation Exercise
+</TITLE>
+
+<SCRIPT>
+<!--
+
+function showUpper(checked)
+{
+	if (checked)
+	{
+		showThis = document.forms[0].textBox.value.toUpperCase()		}
+	else
+	{
+		showThis = document.forms[0].textBox.value.toLowerCase()
+	}
+	document.forms[0].textBox.value = showThis
+}
+
+function cmdTest()
+{
+	if (document.forms[0].textBox.value.indexOf("@",0)<0)
+	{
+		alert("This is not a valid e-mail address !")
+	}
+	else
+	{
+		alert("This could be a valid e-mail address.")
+	}
+}
+
+function showFirst2()
+{
+	first2chars = document.forms[0].textBox.value.substring(0,2)
+	alert(first2chars)
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="white">
+
+<H2>String Tests</H2>
+<HR>
+
+<FORM>
+Enter any text string here :<BR>
+<INPUT TYPE="TEXT" NAME="textBox"><P>
+
+<INPUT TYPE="checkbox" onClick="showUpper(this.checked)">
+Convert String to Uppercase when on, Lowercase when off<BR>
+
+<INPUT TYPE="checkbox" onClick="(this.checked) ? cmdTest() : ' ' ">
+Test for the Presence of the symbol "@"<P>
+
+<INPUT TYPE="button" VALUE=" See the first two characters of the string " 
+onClick="showFirst2()"><P>
+
+<INPUT TYPE="button" VALUE=" Get string length "
+onClick=' var strLength=document.forms[0].textBox.value.length
+alert("That string is " + strLength + " characters long. ") '>
+
+</FORM>
+
+</BODY>
+</HTML>

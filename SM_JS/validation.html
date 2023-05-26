@@ -1,0 +1,30 @@
+<html>
+<head>
+<script language="JavaScript">
+function checkvalue()
+{
+	if(document.f1.t1.value!="" && document.f1.p1.value!="")
+	{
+		alert("True")
+		return true
+	}
+	else
+	{
+		alert("False")
+		return false
+	}
+}
+</script>
+</head>
+<body bgcolor="yellow">
+<form name=f1 action="b.html">
+<table border=1 align=center>
+<tr><td>Name</td><td><input type=text name=t1></td></tr>
+<tr><td>Password</td><td><input type=password name=p1></td></tr> 
+</table>
+<br>
+<br>
+<center><input type=submit name=s1 value=submit onClick="return checkvalue()"></center>
+</form>
+</body>
+</html>

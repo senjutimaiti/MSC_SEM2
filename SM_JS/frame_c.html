@@ -1,0 +1,16 @@
+<html>
+<head>
+<script language="javascript">
+col=new Array("blue","red","pink","aqua","yellow","green","black")
+function colorchange()
+{
+i=Math.random()
+i=Math.round(i*6)
+document.bgColor=col[i]
+setTimeout("colorchange()",1000)
+}
+</script>
+</head>
+<body onLoad="colorchange()">
+</body>
+</html>

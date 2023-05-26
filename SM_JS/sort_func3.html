@@ -1,0 +1,31 @@
+<html>
+<body>
+
+<p>Click the button to sort the array.</p>
+
+<button onClick="myFunction()">Sorting</button>
+
+<button onClick="myFunction2()">Reverse</button>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+var arr = ["don","saurav","sachin","rahul","arun"];
+document.getElementById("demo").innerHTML = arr;
+
+function myFunction() {
+  arr.sort();
+  document.getElementById("demo").innerHTML = arr;
+}
+
+function myFunction2() {
+  arr.sort();
+  arr.reverse();
+  document.getElementById("demo2").innerHTML = arr;
+}
+
+</script>
+
+</body>
+</html>

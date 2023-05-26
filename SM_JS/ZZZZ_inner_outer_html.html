@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <style type="text/css">
+            .square_box {
+               padding: 20px;
+               background-color: lightgreen;
+               display: inline-block;
+            }
+        </style>
+        <script type="text/javascript">
+            document.getElementById("a_square_box").innerHTML = "A Plus";
+            document.getElementById("b_square_box").outerHTML = "B Plus";
+        </script>
+    </head>
+    <body>
+         <div id="a_square_box" class="square_box">A</div>
+         <div id="b_square_box" class="square_box">B</div>
+    </body>
+</html>

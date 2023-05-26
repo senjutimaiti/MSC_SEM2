@@ -1,0 +1,18 @@
+<html>
+<head>
+<script language="javascript">
+col=new Array("blue","red","pink","white","aqua","yellow","green","black")
+function colorchange()
+{
+	i=Math.random()
+	i=Math.round(i*7)
+	document.bgColor=col[i]
+}
+</script>
+</head>
+<body bgcolor="pink" >
+<form name="f">
+<input type="button"value="bg color change"onClick="colorchange()">
+</form>
+</body>
+</html>

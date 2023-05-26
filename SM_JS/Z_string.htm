@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>Certified Internet Webmaster JavaScript Professional
+</TITLE>
+
+<SCRIPT>
+<!--
+
+function drawWindow()
+{
+	var content = ""
+	content += " Welcome to my links ! ".big().fontcolor("blue") + "<P>\n"
+	content += " Visit my "
+	content += " favourite ".italics()
+	content += " places here .<P>\n"
+	content += "<UL><LI>"
+	content += " Gamelan ".link("http://www.gamelan.com")
+	content += "\n<LI>"
+	content += " NASA ".link("http://www.nasa.gov")
+	content += "\n<LI>"
+	content += " Paris ".link("http://www.musee-orsay.fr")
+	content += "\n<UL>"
+
+	linkWindow = open ("","Links","width=300,height=200,scrollbars=1,resizable=1,history=1,toolbar=1")
+
+	with (linkWindow.document)
+	{
+		open()
+		write(content)
+		close()
+	}
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<FORM>
+<INPUT TYPE="button" VALUE=" Create a Window with Links Here " 
+onClick="drawWindow()">
+</FORM>
+
+</BODY>
+</HTML>

@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>Certified Internet Webmaster JavaScript Professional
+</TITLE>
+
+<SCRIPT>
+<!--
+
+function changeStatus()
+{
+	var newText
+	newText = " Welcome, "
+	newText += prompt(" What is your favourite food ? ", "")
+	newText += " Lover ! "
+	status = newText
+}
+
+function customStatus()
+{
+	status = prompt(" Enter new text for the status bar : ", "")
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<H1>Status Bar Example</H1>
+<HR>
+
+Wave over <A HREF="newwin.htm"
+	onMouseOver=" status=' Hey, watch where you wave that thing ! ' ">
+	this link</A> and watch the status bar.
+<P>
+Click the button and watch the status bar.
+<P>
+
+<FORM>
+<INPUT TYPE="button" VALUE="Change the Status Bar" onClick="changeStatus()">
+<INPUT TYPE="button" VALUE="Customize the Status Bar" onClick="customStatus()">
+</FORM>
+
+</BODY>
+</HTML>

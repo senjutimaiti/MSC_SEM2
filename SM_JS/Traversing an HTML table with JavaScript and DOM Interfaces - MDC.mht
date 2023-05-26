@@ -1,0 +1,5146 @@
+From: <Saved by Microsoft Internet Explorer 5>
+Subject: Traversing an HTML table with JavaScript and DOM Interfaces - MDC
+Date: Thu, 11 Oct 2007 00:43:38 +0530
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01C80B9F.C320A020"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML lang=3Den dir=3Dltr xml:lang=3D"en"=20
+xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD><TITLE>Traversing an HTML =
+table with JavaScript and DOM Interfaces - MDC</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dutf-8">
+<META http-equiv=3DContent-Language content=3Den>
+<META content=3D"Traversing an HTML table with JavaScript and DOM =
+Interfaces"=20
+name=3Dkeywords><LINK title=3D"RDF Metadata"=20
+href=3D"/en/docs/index.php?title=3DSpecial:Rdf&amp;target=3DTraversing_an=
+_HTML_table_with_JavaScript_and_DOM_Interfaces"=20
+type=3Dapplication/rdf+xml rel=3Dmeta><LINK href=3D"/favicon.ico"=20
+rel=3D"shortcut icon"><LINK title=3D"MDC (English)"=20
+href=3D"/en/docs/opensearch_desc.php" =
+type=3Dapplication/opensearchdescription+xml=20
+rel=3Dsearch><LINK href=3D"/en/docs/MDC:Copyrights" =
+rel=3Dcopyright><LINK=20
+title=3D"MDC Webwatch" =
+href=3D"http://developer.mozilla.org/webwatch/?feed=3Drss"=20
+type=3Dapplication/rss+xml rel=3Dalternate><LINK title=3D"MDC DevNews"=20
+href=3D"http://developer.mozilla.org/devnews/?feed=3Drss" =
+type=3Dapplication/rss+xml=20
+rel=3Dalternate><LINK title=3D"Recent Changes (en)"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DSpecial:Re=
+centchanges&amp;feed=3Drss"=20
+type=3Dapplication/rss+xml rel=3Dalternate><LINK title=3D"New Pages =
+(en)"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DSpecial:Ne=
+wpages&amp;feed=3Drss"=20
+type=3Dapplication/rss+xml rel=3Dalternate><LINK media=3Dall=20
+href=3D"http://developer.mozilla.org/css/base.css" type=3Dtext/css=20
+rel=3Dstylesheet><LINK media=3Dall =
+href=3D"http://developer.mozilla.org/css/wiki.css"=20
+type=3Dtext/css rel=3Dstylesheet><LINK media=3Dprint=20
+href=3D"http://developer.mozilla.org/css/wikiprint.css" type=3Dtext/css=20
+rel=3Dstylesheet><!--[if gte IE 6]>
+<STYLE type=3Dtext/css>@import url( /en/docs/skins/devmo/IE60Fixes.css =
+);
+</STYLE>
+<![endif]--><!--[if IE]>
+<SCRIPT =
+src=3D"http://developer.mozilla.org/en/docs/skins/common/IEFixes.js"=20
+type=3Dtext/javascript></SCRIPT>
+
+<META http-equiv=3Dimagetoolbar content=3Dno><!{endif]-->
+<SCRIPT type=3Dtext/javascript>/*<![CDATA[*/=0A=
+var skin =3D "devmo";=0A=
+var stylepath =3D "/en/docs/skins";=0A=
+var wgArticlePath =3D "/en/docs/$1";=0A=
+var wgScriptPath =3D "/en/docs";=0A=
+var wgServer =3D "http://developer.mozilla.org";=0A=
+var wgCanonicalNamespace =3D "";=0A=
+var wgCanonicalSpecialPageName =3D false;=0A=
+var wgNamespaceNumber =3D 0;=0A=
+var wgPageName =3D =
+"Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces";=0A=
+var wgTitle =3D "Traversing an HTML table with JavaScript and DOM =
+Interfaces";=0A=
+var wgArticleId =3D "2312";=0A=
+var wgIsArticle =3D true;=0A=
+var wgUserName =3D null;=0A=
+var wgUserLanguage =3D "en";=0A=
+var wgContentLanguage =3D "en";=0A=
+var wgBreakFrames =3D false;=0A=
+var wgCurRevisionId =3D "55841";=0A=
+/*]]>*/</SCRIPT>
+
+<SCRIPT=20
+src=3D"http://developer.mozilla.org/en/docs/index.php?title=3D-&amp;actio=
+n=3Draw&amp;gen=3Djs"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT =
+src=3D"http://developer.mozilla.org/en/docs/skins/common/wikibits.js"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT =
+src=3D"http://developer.mozilla.org/en/docs/skins/devmo/devmo.js"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT =
+src=3D"http://developer.mozilla.org/en/docs/skins/devmo/prototype.js"=20
+type=3Dtext/javascript></SCRIPT>
+
+<SCRIPT =
+src=3D"http://developer.mozilla.org/en/docs/skins/devmo/scriptaculous.js"=
+=20
+type=3Dtext/javascript></SCRIPT>
+
+<STYLE type=3Dtext/css>@import url( =
+/en/docs/index.php?title=3DMediaWiki:Common.css&usemsgcache=3Dyes&action=3D=
+raw&ctype=3Dtext/css&smaxage=3D18000 );
+@import url( =
+/en/docs/index.php?title=3DMediaWiki:Devmo.css&usemsgcache=3Dyes&action=3D=
+raw&ctype=3Dtext/css&smaxage=3D18000 );
+@import url( =
+/en/docs/index.php?title=3D-&action=3Draw&gen=3Dcss&maxage=3D18000 );
+</STYLE>
+
+<META content=3D"MSHTML 6.00.2900.2180" name=3DGENERATOR></HEAD>
+<BODY class=3Dns-0 id=3Ddeveloper-mozilla-org>
+<DIV id=3Dcontainer>
+<P class=3DskipLink><A accessKey=3D2=20
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#content">Skip=20
+to main content</A></P>
+<DIV id=3Dmozilla-org><A href=3D"http://www.mozilla.org/">Visit=20
+Mozilla.org</A></DIV>
+<DIV id=3Dheader>
+<H1><A title=3D"Return to home page" accessKey=3D1=20
+href=3D"http://developer.mozilla.org/">Mozilla Developer =
+Network</A></H1><!-- search box -->
+<FORM id=3Dsearchform name=3Dsearchform =
+action=3D/en/docs/Special:Nutch><INPUT=20
+type=3Dhidden value=3Den name=3Dlanguage> <INPUT type=3Dhidden value=3D0 =
+name=3Dstart>=20
+<INPUT type=3Dhidden value=3D10 name=3DhitsPerPage> <INPUT =
+id=3DsearchInput accessKey=3Ds=20
+name=3Dquery> <INPUT class=3DsearchButton type=3Dsubmit value=3DSearch =
+name=3Dfulltext>=20
+</FORM><!-- end searchbox --></DIV>
+<DIV id=3Dnavigation>
+<DIV id=3Dbar>
+<DIV>
+<UL id=3Dpersonal>
+  <LI id=3Dpt-login><A=20
+  =
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DSpecial:Us=
+erlogin&amp;returnto=3DTraversing_an_HTML_table_with_JavaScript_and_DOM_I=
+nterfaces">Create=20
+  an account or log in</A> </LI></UL>
+<UL id=3Dcontenttypes>
+  <LI class=3Dselected><A=20
+  =
+href=3D"http://developer.mozilla.org/en/docs/Main_Page">Documentation</A>=
+ </LI>
+  <LI><A href=3D"http://developer.mozilla.org/devnews/">DevNews</A> =
+</LI>
+  <LI><A href=3D"http://developer.mozilla.org/webwatch/">Webwatch</A>=20
+</LI></UL></DIV></DIV></DIV>
+<DIV id=3Dpage>
+<DIV id=3Dsidebar>
+<DIV class=3Dsidebarslidecontrol id=3Dsidebarslideup=20
+onclick=3D"new Effect.SlideUp('sidebarslidebox'); sidebarUp();">Hide =
+Sidebar=20
+</DIV>
+<DIV class=3Dsidebarslidecontrol id=3Dsidebarslidedown style=3D"DISPLAY: =
+none"=20
+onclick=3D"new Effect.SlideDown('sidebarslidebox'); sidebarDown();">Show =
+Sidebar=20
+</DIV>
+<DIV id=3Dsidebarslidebox>
+<DIV>
+<DIV id=3Drelated>
+<DIV>
+<H3>Related</H3>
+<P class=3Dcatlinks><A title=3DSpecial:Categories=20
+href=3D"http://developer.mozilla.org/en/docs/Special:Categories">Category=
+</A>:=20
+<SPAN dir=3Dltr><A title=3DCategory:DOM=20
+href=3D"http://developer.mozilla.org/en/docs/Category:DOM">DOM</A></SPAN>=
+</P></DIV></DIV><!-- WIKI NAVIGATION -->
+<SCRIPT type=3Dtext/javascript> if (window.isMSIE55) fixalpha(); =
+</SCRIPT>
+
+<DIV class=3Dpagetools>
+<DIV>
+<H3>Navigation</H3>
+<UL>
+  <LI id=3Dn-mainpage><A=20
+  href=3D"http://developer.mozilla.org/en/docs/Main_Page">Main Page</A>=20
+  <LI id=3Dn-portal><A=20
+  =
+href=3D"http://developer.mozilla.org/en/docs/MDC:Community_Portal">Commun=
+ity=20
+  portal</A>=20
+  <LI id=3Dn-currentevents><A=20
+  href=3D"http://developer.mozilla.org/en/docs/Current_events">Current =
+events</A>=20
+  <LI id=3Dn-recentchanges><A=20
+  =
+href=3D"http://developer.mozilla.org/en/docs/Special:Recentchanges">Recen=
+t=20
+  changes</A>=20
+  <LI id=3Dn-randompage><A=20
+  href=3D"http://developer.mozilla.org/en/docs/Special:Random">Random =
+page</A>=20
+  <LI id=3Dn-help><A=20
+  href=3D"http://developer.mozilla.org/en/docs/Help:Contents">Help</A>=20
+  <LI id=3Dn-sitesupport><A=20
+  =
+href=3D"http://developer.mozilla.org/en/docs/MDC:Site_support">Donations<=
+/A>=20
+  </LI></UL></DIV></DIV><!-- VIEWS -->
+<DIV class=3Dpagetools>
+<DIV>
+<H3>Views</H3>
+<UL>
+  <LI class=3Dselected id=3Dca-nstab-main><A=20
+  =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces">Article</A>
+  <LI id=3Dca-talk><A=20
+  =
+href=3D"http://developer.mozilla.org/en/docs/Talk:Traversing_an_HTML_tabl=
+e_with_JavaScript_and_DOM_Interfaces">Discussion</A>
+  <LI id=3Dca-edit><A=20
+  =
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit">Edit=
+</A>
+  <LI id=3Dca-history><A=20
+  =
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dhistory">H=
+istory</A>=20
+  </LI></UL></DIV></DIV><!-- TOOLBOX -->
+<DIV class=3Dpagetools>
+<DIV>
+<H3>Toolbox</H3>
+<UL>
+  <LI id=3Dt-whatlinkshere><A=20
+  =
+href=3D"http://developer.mozilla.org/en/docs/Special:Whatlinkshere/Traver=
+sing_an_HTML_table_with_JavaScript_and_DOM_Interfaces">What=20
+  links here</A>=20
+  <LI id=3Dt-recentchangeslinked><A=20
+  =
+href=3D"http://developer.mozilla.org/en/docs/Special:Recentchangeslinked/=
+Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces">Related=20
+  changes</A>=20
+  <LI id=3Dt-upload><A=20
+  href=3D"http://developer.mozilla.org/en/docs/Special:Upload">Upload =
+file</A>=20
+  <LI id=3Dt-specialpages><A=20
+  =
+href=3D"http://developer.mozilla.org/en/docs/Special:Specialpages">Specia=
+l=20
+  pages</A>=20
+  <LI id=3Dt-print><A=20
+  =
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;printable=3Dyes">Pr=
+intable=20
+  version</A> </LI></UL></DIV></DIV><!-- LANGUAGE LINKS -->
+<DIV class=3Dpagetools>
+<DIV>
+<H3>In other languages</H3>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://developer.mozilla.org/fr/docs/Explorer_un_tableau_HTML_ave=
+c_des_interfaces_DOM_et_JavaScript">Fran=C3=A7ais</A>=20
+
+  <LI><A=20
+  =
+href=3D"http://developer.mozilla.org/ja/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces">=E6=97=A5=E6=9C=AC=E8=AA=9E</A>=20
+
+  <LI><A=20
+  =
+href=3D"http://developer.mozilla.org/cn/docs/=C3=A4=C2=BD=C2=BF=C3=A7=C2=94=
+=C2=A8Javascript=C3=A5=C2=92=C2=8CDOM_Interfaces=C3=A6=C2=9D=C2=A5=C3=A5=C2=
+=A4=C2=84=C3=A7=C2=90=C2=86HTML">=E4=B8=AD=E6=96=87(=E7=AE=80=E4=BD=93)</=
+A>=20
+  </LI></UL></DIV></DIV></DIV></DIV></DIV><!-- END SIDEBAR -->
+<DIV id=3Dcontent>
+<DIV class=3Darticle><A id=3DcontentTop name=3Dtop></A>
+<H1 class=3DfirstHeading>Traversing an HTML table with JavaScript and =
+DOM=20
+Interfaces</H1>
+<H3 id=3DsiteSub>From MDC</H3>
+<DIV id=3DcontentSub></DIV>
+<TABLE class=3Dtoc id=3Dtoc summary=3DContents>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV id=3Dtoctitle>
+      <H2>Contents</H2></DIV>
+      <UL>
+        <LI class=3Dtoclevel-1><A=20
+        =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#Introduction"><SPAN=20
+        class=3Dtocnumber>1</SPAN> <SPAN =
+class=3Dtoctext>Introduction</SPAN></A>=20
+        <LI class=3Dtoclevel-1><A=20
+        =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#Overview_of_Sample1.html"><SPAN=20
+        class=3Dtocnumber>2</SPAN> <SPAN class=3Dtoctext>Overview of=20
+        Sample1.html</SPAN></A>=20
+        <LI class=3Dtoclevel-1><A=20
+        =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#Fundamental_DOM_Methods_-_Sample2.html"><=
+SPAN=20
+        class=3Dtocnumber>3</SPAN> <SPAN class=3Dtoctext>Fundamental DOM =
+Methods -=20
+        Sample2.html</SPAN></A>=20
+        <UL>
+          <LI class=3Dtoclevel-2><A=20
+          =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#Creating_TextNodes_with_document.createTe=
+xtNode.28.22...22.29"><SPAN=20
+          class=3Dtocnumber>3.1</SPAN> <SPAN class=3Dtoctext>Creating =
+TextNodes with=20
+          document.createTextNode("..")</SPAN></A>=20
+          <LI class=3Dtoclevel-2><A=20
+          =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#Inserting_Elements_with_appendChild.28...=
+29"><SPAN=20
+          class=3Dtocnumber>3.2</SPAN> <SPAN class=3Dtoctext>Inserting =
+Elements with=20
+          appendChild(..)</SPAN></A>=20
+          <LI class=3Dtoclevel-2><A=20
+          =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#Creating_New_Elements_with_the_document_o=
+bject_and_the_createElement.28...29_method"><SPAN=20
+          class=3Dtocnumber>3.3</SPAN> <SPAN class=3Dtoctext>Creating =
+New Elements=20
+          with the document object and the createElement(..) =
+method</SPAN></A>=20
+          <LI class=3Dtoclevel-2><A=20
+          =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#Removing_nodes_with_the_removeChild.28...=
+29_method"><SPAN=20
+          class=3Dtocnumber>3.4</SPAN> <SPAN class=3Dtoctext>Removing =
+nodes with the=20
+          removeChild(..) method</SPAN></A> </LI></UL>
+        <LI class=3Dtoclevel-1><A=20
+        =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#Creating_a_table_dynamically_.28back_to_S=
+ample1.html.29"><SPAN=20
+        class=3Dtocnumber>4</SPAN> <SPAN class=3Dtoctext>Creating a =
+table=20
+        dynamically (back to Sample1.html)</SPAN></A>=20
+        <UL>
+          <LI class=3Dtoclevel-2><A=20
+          =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#Reviewing_the_HTML_Table_structure"><SPAN=
+=20
+          class=3Dtocnumber>4.1</SPAN> <SPAN class=3Dtoctext>Reviewing =
+the HTML=20
+          Table structure</SPAN></A>=20
+          <LI class=3Dtoclevel-2><A=20
+          =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#Creating_element_nodes_and_inserting_them=
+_into_the_document_tree"><SPAN=20
+          class=3Dtocnumber>4.2</SPAN> <SPAN class=3Dtoctext>Creating =
+element nodes=20
+          and inserting them into the document tree</SPAN></A> =
+</LI></UL>
+        <LI class=3Dtoclevel-1><A=20
+        =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#Manipulating_the_table_with_DOM_and_CSS">=
+<SPAN=20
+        class=3Dtocnumber>5</SPAN> <SPAN class=3Dtoctext>Manipulating =
+the table with=20
+        DOM and CSS</SPAN></A>=20
+        <UL>
+          <LI class=3Dtoclevel-2><A=20
+          =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#Getting_a_text_node_from_the_table"><SPAN=
+=20
+          class=3Dtocnumber>5.1</SPAN> <SPAN class=3Dtoctext>Getting a =
+text node=20
+          from the table</SPAN></A>=20
+          <LI class=3Dtoclevel-2><A=20
+          =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#Getting_an_attribute_value"><SPAN=20
+          class=3Dtocnumber>5.2</SPAN> <SPAN class=3Dtoctext>Getting an =
+attribute=20
+          value</SPAN></A>=20
+          <LI class=3Dtoclevel-2><A=20
+          =
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces#Hiding_a_column_by_changing_style_propert=
+ies"><SPAN=20
+          class=3Dtocnumber>5.3</SPAN> <SPAN class=3Dtoctext>Hiding a =
+column by=20
+          changing style properties</SPAN></A>=20
+</LI></UL></LI></UL></TD></TR></TBODY></TABLE>
+<SCRIPT type=3Dtext/javascript> if (window.showTocToggle) { var =
+tocShowText =3D "show"; var tocHideText =3D "hide"; showTocToggle(); } =
+</SCRIPT>
+<A name=3DIntroduction></A>
+<H2><SPAN class=3Deditsection>[<A title=3D"Edit section: Introduction"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit&amp;s=
+ection=3D1">edit</A>]</SPAN>=20
+<SPAN class=3Dmw-headline>Introduction </SPAN></H2>
+<P>This article is an overview of some powerful, fundamental DOM level =
+1.0=20
+methods and how to use them from JavaScript. You will learn how to =
+create,=20
+access and control, and remove HTML elements dynamically. The DOM =
+methods=20
+presented here are not specific to HTML; they also apply to XML. The=20
+demonstrations provided here will work fine in any browser with full =
+support for=20
+DOM level 1, such as the Mozilla browser or others based on it like the=20
+next-generation Navigator browser from Netscape. The code samples in =
+this=20
+document also work on IE5. </P>
+<DIV class=3Dnote>The DOM methods presented here are part of the =
+Document Object=20
+Model (Core) level 1 specification. DOM level 1 includes both methods =
+for=20
+generic document access and manipulation (DOM 1 Core) as well as methods =
+
+specific to HTML documents (DOM 1 HTML).</DIV><A=20
+name=3DOverview_of_Sample1.html></A>
+<H2><SPAN class=3Deditsection>[<A title=3D"Edit section: Overview of =
+Sample1.html"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit&amp;s=
+ection=3D2">edit</A>]</SPAN>=20
+<SPAN class=3Dmw-headline>Overview of Sample1.html </SPAN></H2>
+<P>This article is an introduction to the DOM through sample code. To =
+get=20
+started, try out the following HTML sample. It uses DOM level 1 methods =
+from=20
+JavaScript to create an HTML table dynamically. It creates a small table =
+with=20
+four cells and text content inside each cell. The text content of the =
+cell is:=20
+"cell is row y column x" showing the row and column numbers for that =
+cell in the=20
+table. </P><PRE>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Sample code - Traversing an HTML Table with JavaScript and =
+DOM Interfaces&lt;/title&gt;
+&lt;script&gt;
+    function start() {
+        // get the reference for the body
+        var body =3D document.getElementsByTagName("body")[0];
+
+        // creates a &lt;table&gt; element and a &lt;tbody&gt; element
+        var tbl     =3D document.createElement("table");
+        var tblBody =3D document.createElement("tbody");
+
+        // creating all cells
+        for (var j =3D 0; j &lt; 2; j++) {
+            // creates a table row
+            var row =3D document.createElement("tr");
+
+            for (var i =3D 0; i &lt; 2; i++) {
+                // Create a &lt;td&gt; element and a text node, make the =
+text
+                // node the contents of the &lt;td&gt;, and put the =
+&lt;td&gt; at
+                // the end of the table row
+                var cell =3D document.createElement("td");
+                var cellText =3D document.createTextNode("cell is row =
+"+j+", column "+i);
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+            }
+
+            // add the row to the end of the table body
+            tblBody.appendChild(row);
+        }
+
+        // put the &lt;tbody&gt; in the &lt;table&gt;
+        tbl.appendChild(tblBody);
+        // appends &lt;table&gt; into &lt;body&gt;
+        body.appendChild(tbl);
+        // sets the border attribute of tbl to 2;
+        tbl.setAttribute("border", "2");
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=3D"start()"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</PRE>
+<P>Note the order in which we created the elements and the text node: =
+</P>
+<OL>
+  <LI>First we created the &lt;table&gt; element.=20
+  <LI>Next, we created the &lt;tbody&gt; element, which is a child of =
+the=20
+  &lt;table&gt; element.=20
+  <LI>Next, we used a loop to create the &lt;tr&gt; elements, which are =
+children=20
+  of the &lt;tbody&gt; element.=20
+  <LI>For each &lt;tr&gt; element, we used a loop to create the =
+&lt;td&gt;=20
+  elements, which are children of &lt;tr&gt; elements.=20
+  <LI>For each &lt;td&gt; element, we then created the text node with =
+the table=20
+  cell's text. </LI></OL>
+<P>Once we have created the &lt;table&gt;, &lt;tbody&gt;, &lt;tr&gt;, =
+and=20
+&lt;td&gt; elements and then the text node, we then append each object =
+to its=20
+parent in the opposite order: </P>
+<OL>
+  <LI>First, we attach each text node to its parent &lt;td&gt; element =
+using <PRE>cell.appendChild(cellText);</PRE>
+  <LI>Next, we attach each &lt;td&gt; element to its parent &lt;tr&gt; =
+element=20
+  using <PRE>row.appendChild(cell);</PRE>
+  <LI>Next, we attach each &lt;tr&gt; element to the parent =
+&lt;tbody&gt;=20
+  element using <PRE>tblBody.appendChild(row);</PRE>
+  <LI>Next, we attach the &lt;tbody&gt; element to its parent =
+&lt;table&gt;=20
+  element using <PRE>tbl.appendChild(tblBody);</PRE>
+  <LI>Next, we attach the &lt;table&gt; element to its parent =
+&lt;body&gt;=20
+  element using <PRE>body.appendChild(tbl);</PRE></LI></OL>
+<P>Remember this technique. You will use it frequently in programming =
+for the=20
+W3C DOM. First, you create elements from the top down; then you attach =
+the=20
+children to the parents from the bottom up. </P>
+<P>Here's the HTML markup generated by the JavaScript code: </P><PRE>...
+&lt;table border=3D"2"&gt;
+&lt;tr&gt;&lt;td&gt;cell is row 0 column 0&lt;/td&gt;&lt;td&gt;cell is =
+row 0 column 1&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;cell is row 1 column 0&lt;/td&gt;&lt;td&gt;cell is =
+row 1 column 1&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+...
+</PRE>
+<P>Here's the DOM object tree generated by the code for the TABLE =
+element and=20
+its child elements: </P>
+<P><A class=3Dimage title=3DImage:sample1-tabledom.jpg=20
+href=3D"http://developer.mozilla.org/en/docs/Image:sample1-tabledom.jpg">=
+<IMG=20
+height=3D197 alt=3DImage:sample1-tabledom.jpg=20
+src=3D"http://developer.mozilla.org/wiki-images/en/f/f9/sample1-tabledom.=
+jpg"=20
+width=3D318 longDesc=3D/en/docs/Image:sample1-tabledom.jpg></A> </P>
+<P>You can build this table and its internal child elements by using =
+just a few=20
+DOM methods. Remember to keep in mind the tree model for the structures =
+you are=20
+planning to create; this will make it easier to write the necessary =
+code. In the=20
+&lt;table&gt; tree of Figure 1 the element &lt;table&gt; has one child, =
+the=20
+element &lt;tbody&gt;. &lt;tbody&gt; has two children. Each =
+&lt;tbody&gt;'s=20
+child (&lt;tr&gt;) has one child (&lt;td&gt;). Finally, each &lt;td&gt; =
+has one=20
+child, a text node. </P><A =
+name=3DFundamental_DOM_Methods_-_Sample2.html></A>
+<H2><SPAN class=3Deditsection>[<A=20
+title=3D"Edit section: Fundamental DOM Methods - Sample2.html"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit&amp;s=
+ection=3D3">edit</A>]</SPAN>=20
+<SPAN class=3Dmw-headline>Fundamental DOM Methods - Sample2.html =
+</SPAN></H2>
+<P><CODE>getElementsByTagName</CODE> is a method of both the Document =
+interface=20
+and the Element interface, so both the root document object as well as =
+all=20
+Element objects have the <CODE>getElementsByTagName</CODE> method. To =
+get a list=20
+of children of some element, selecting them by tag names, you can use=20
+<CODE><VAR>element</VAR>.getElementsByTagName(<VAR>tagname</VAR>)</CODE>.=
+ </P>
+<P><CODE>getElementsByTagName</CODE> returns a list of child elements =
+that have=20
+the specified tagname. From that list of child elements, you can reach =
+an=20
+individual element by calling the <CODE>item</CODE> method, passing an =
+index for=20
+the item number you want returned. The first child element of the list =
+is=20
+element number zero. It's easy and very simple but needs attention when =
+you are=20
+working with large structures. In the next topic we continue working =
+with the=20
+Table sample. The following sample is a simpler one, intended to show =
+some basic=20
+methods: </P><PRE>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Sample code - Traversing an HTML Table with JavaScript and =
+DOM
+Interfaces&lt;/title&gt;
+&lt;script&gt;
+    function start() {
+        // get a list of all the body elements (there will only be one),
+        // and then select the zeroth (or first) such element
+        myBody =3D document.getElementsByTagName("body")[0];
+
+        // now, get all the p elements that are children of the body
+        myBodyElements =3D myBody.getElementsByTagName("p");
+
+        // get the second item of the list of p elements
+        myP =3D myBodyElements[1];
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=3D"start()"&gt;
+&lt;p&gt;hi&lt;/p&gt;
+&lt;p&gt;hello&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</PRE>
+<P>In this example, we set the <CODE>myP</CODE> variable to the DOM =
+object for=20
+the second <CODE>p</CODE> element inside the body: </P>
+<OL>
+  <LI>First, we get a list of all the body elements via <PRE>myBody =3D =
+document.getElementsByTagName("body")[0]</PRE>Since there is=20
+  only one body element in any valid HTML document, this list will have =
+only one=20
+  item, which we retrieve by selecting the first element in that list =
+using=20
+  <CODE>[0]</CODE>.=20
+  <LI>Next, we get all the p elements that are children of the body via =
+<PRE>myBodyElements =3D myBody.getElementsByTagName("p");</PRE>
+  <LI>Finally, we get the second item from the list of p elements via =
+<PRE>myP =3D myBodyElements[1];</PRE></LI></OL>
+<P><A class=3Dimage title=3DImage:sample2a2.jpg=20
+href=3D"http://developer.mozilla.org/en/docs/Image:sample2a2.jpg"><IMG =
+height=3D228=20
+alt=3DImage:sample2a2.jpg=20
+src=3D"http://developer.mozilla.org/wiki-images/en/d/d8/sample2a2.jpg" =
+width=3D235=20
+longDesc=3D/en/docs/Image:sample2a2.jpg></A> </P>
+<P>Once you have gotten the DOM object for an HTML element, you can set =
+its=20
+properties. For example, if you want to set the style background color =
+property,=20
+you just add: </P><PRE>myP.style.background =3D "rgb(255,0,0)";
+// setting inline STYLE attribute
+</PRE><A =
+name=3DCreating_TextNodes_with_document.createTextNode.28.22...22.29></A>=
+
+<H3><SPAN class=3Deditsection>[<A=20
+title=3D'Edit section: Creating TextNodes with =
+document.createTextNode("..")'=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit&amp;s=
+ection=3D4">edit</A>]</SPAN>=20
+<SPAN class=3Dmw-headline>Creating TextNodes with=20
+<CODE>document.createTextNode("..")</CODE> </SPAN></H3>
+<P>Use the document object to invoke the createTextNode method and =
+create your=20
+text node. You just need to pass the text content. The return value is =
+an object=20
+that represents the text node. </P><PRE>myTextNode =3D =
+document.createTextNode("world");
+</PRE>
+<P>This means that you have created a node of the type TEXT_NODE (a =
+piece of=20
+text) whose text data is "world", and myTextNode is your reference to =
+this node=20
+object. To insert this text into your HTML page, you need to make this =
+text node=20
+a child of some other node element. </P><A=20
+name=3DInserting_Elements_with_appendChild.28...29></A>
+<H3><SPAN class=3Deditsection>[<A=20
+title=3D"Edit section: Inserting Elements with appendChild(..)"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit&amp;s=
+ection=3D5">edit</A>]</SPAN>=20
+<SPAN class=3Dmw-headline>Inserting Elements with appendChild(..) =
+</SPAN></H3>
+<P>So, by calling myP.appendChild([node_element]), you are making the =
+element a=20
+new child of the second &lt;p&gt; element. =
+</P><PRE>myP.appendChild(myTextNode);
+</PRE>
+<P>After testing this sample, note that the words hello and world are =
+together:=20
+helloworld. So visually, when you see the HTML page it seems like the =
+two text=20
+nodes hello and world are a single node, but remember that in the =
+document=20
+model, there are two nodes. The second node is a new node of type =
+TEXT_NODE, and=20
+it is the second child of the second &lt;p&gt; tag. The following figure =
+shows=20
+the recently created Text Node object inside the document tree. </P>
+<P><A class=3Dimage title=3DImage:sample2b2.jpg=20
+href=3D"http://developer.mozilla.org/en/docs/Image:sample2b2.jpg"><IMG =
+height=3D280=20
+alt=3DImage:sample2b2.jpg=20
+src=3D"http://developer.mozilla.org/wiki-images/en/0/0c/sample2b2.jpg" =
+width=3D236=20
+longDesc=3D/en/docs/Image:sample2b2.jpg></A> </P>
+<DIV class=3Dnote>createTextNode and appendChild is a simple way to =
+include white=20
+space between the words hello and world. Another important note is that =
+the=20
+appendChild method will append the child after the last child, just like =
+the=20
+word world has been added after the word hello. So if you want to append =
+a Text=20
+Node between hello and world you will need to use insertBefore instead =
+of=20
+appendChild.</DIV><A=20
+name=3DCreating_New_Elements_with_the_document_object_and_the_createEleme=
+nt.28...29_method></A>
+<H3><SPAN class=3Deditsection>[<A=20
+title=3D"Edit section: Creating New Elements with the document object =
+and the createElement(..) method"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit&amp;s=
+ection=3D6">edit</A>]</SPAN>=20
+<SPAN class=3Dmw-headline>Creating New Elements with the document object =
+and the=20
+<CODE>createElement(..)</CODE> method </SPAN></H3>
+<P>You can create new HTML elements or any other element you want with=20
+createElement. For example, if you want to create a new &lt;p&gt; =
+element as a=20
+child of the &lt;body&gt; element, you can use the myBody in the =
+previous=20
+example and append a new element node. To create a node simply call=20
+<CODE>document.createElement("tagname")</CODE>. For example: =
+</P><PRE>myNewPTAGnode =3D document.createElement("p");
+myBody.appendChild(myNewPTAGnode);
+</PRE>
+<P><A class=3Dimage title=3DImage:sample2c.jpg=20
+href=3D"http://developer.mozilla.org/en/docs/Image:sample2c.jpg"><IMG =
+height=3D280=20
+alt=3DImage:sample2c.jpg=20
+src=3D"http://developer.mozilla.org/wiki-images/en/4/49/sample2c.jpg" =
+width=3D236=20
+longDesc=3D/en/docs/Image:sample2c.jpg></A> </P><A=20
+name=3DRemoving_nodes_with_the_removeChild.28...29_method></A>
+<H3><SPAN class=3Deditsection>[<A=20
+title=3D"Edit section: Removing nodes with the removeChild(..) method"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit&amp;s=
+ection=3D7">edit</A>]</SPAN>=20
+<SPAN class=3Dmw-headline>Removing nodes with the =
+<CODE>removeChild(..)</CODE>=20
+method </SPAN></H3>
+<P>Each node can be removed. The following line removes the text node =
+which=20
+contains the word world of the myP (second &lt;p&gt; element). =
+</P><PRE>myP.removeChild(myTextNode);
+</PRE>
+<P>Finally you can add myTextNode (which contains the word world) into =
+the=20
+recently created &lt;p&gt; element: =
+</P><PRE>myNewPTAGnode.appendChild(myTextNode);
+</PRE>
+<P>The final state for the modified object tree looks like this: </P>
+<P><A class=3Dimage title=3DImage:sample2d.jpg=20
+href=3D"http://developer.mozilla.org/en/docs/Image:sample2d.jpg"><IMG =
+height=3D280=20
+alt=3DImage:sample2d.jpg=20
+src=3D"http://developer.mozilla.org/wiki-images/en/1/10/sample2d.jpg" =
+width=3D236=20
+longDesc=3D/en/docs/Image:sample2d.jpg></A> </P><A=20
+name=3DCreating_a_table_dynamically_.28back_to_Sample1.html.29></A>
+<H2><SPAN class=3Deditsection>[<A=20
+title=3D"Edit section: Creating a table dynamically (back to =
+Sample1.html)"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit&amp;s=
+ection=3D8">edit</A>]</SPAN>=20
+<SPAN class=3Dmw-headline>Creating a table dynamically (back to =
+Sample1.html)=20
+</SPAN></H2>
+<P>For the rest of this article we will continue working with =
+sample1.html. The=20
+following figure shows the table object tree structure for the table =
+created in=20
+the sample. </P><A name=3DReviewing_the_HTML_Table_structure></A>
+<H3><SPAN class=3Deditsection>[<A=20
+title=3D"Edit section: Reviewing the HTML Table structure"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit&amp;s=
+ection=3D9">edit</A>]</SPAN>=20
+<SPAN class=3Dmw-headline>Reviewing the HTML Table structure =
+</SPAN></H3>
+<P><A class=3Dimage title=3DImage:sample1-tabledom.jpg=20
+href=3D"http://developer.mozilla.org/en/docs/Image:sample1-tabledom.jpg">=
+<IMG=20
+height=3D197 alt=3DImage:sample1-tabledom.jpg=20
+src=3D"http://developer.mozilla.org/wiki-images/en/f/f9/sample1-tabledom.=
+jpg"=20
+width=3D318 longDesc=3D/en/docs/Image:sample1-tabledom.jpg></A> </P><A=20
+name=3DCreating_element_nodes_and_inserting_them_into_the_document_tree><=
+/A>
+<H3><SPAN class=3Deditsection>[<A=20
+title=3D"Edit section: Creating element nodes and inserting them into =
+the document tree"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit&amp;s=
+ection=3D10">edit</A>]</SPAN>=20
+<SPAN class=3Dmw-headline>Creating element nodes and inserting them into =
+the=20
+document tree </SPAN></H3>
+<P>The basic steps to create the table in sample1.html are: </P>
+<UL>
+  <LI>Get the body object (first item of the document object).=20
+  <LI>Create all the elements.=20
+  <LI>Finally, append each child according to the table structure (as in =
+the=20
+  above figure). The following source code is a commented version for =
+the=20
+  sample1.html. </LI></UL>
+<DIV class=3Dnote>At the end of the start function there is a new line =
+of code.=20
+The table's border property was set using another DOM method,=20
+<CODE>setAttribute</CODE>. setAttribute has two arguments: the attribute =
+name=20
+and the attribute value. You can set any attribute of any element using =
+the=20
+setAttribute method.</DIV><PRE>&lt;head&gt;
+&lt;title&gt;Sample code - Traversing an HTML Table with JavaScript and =
+DOM Interfaces&lt;/title&gt;
+&lt;script&gt;
+    function start() {
+        // get the reference for the body
+        var mybody =3D document.getElementsByTagName("body")[0];
+
+        // creates &lt;table&gt; and &lt;tbody&gt; elements
+        mytable     =3D document.createElement("table");
+        mytablebody =3D document.createElement("tbody");
+
+        // creating all cells
+        for(var j =3D 0; j &lt; 2; j++) {
+            // creates a &lt;tr&gt; element
+            mycurrent_row =3D document.createElement("tr");
+
+            for(var i =3D 0; i &lt; 2; i++) {
+                // creates a &lt;td&gt; element
+                mycurrent_cell =3D document.createElement("td");
+                // creates a Text Node
+                currenttext =3D document.createTextNode("cell is row " + =
+j + ", column " + i);
+                // appends the Text Node we created into the cell =
+&lt;td&gt;
+                mycurrent_cell.appendChild(currenttext);
+                // appends the cell &lt;td&gt; into the row &lt;tr&gt;
+                mycurrent_row.appendChild(mycurrent_cell);
+            }
+            // appends the row &lt;tr&gt; into &lt;tbody&gt;
+            mytablebody.appendChild(mycurrent_row);
+        }
+
+        // appends &lt;tbody&gt; into &lt;table&gt;
+        mytable.appendChild(mytablebody);
+        // appends &lt;table&gt; into &lt;body&gt;
+        mybody.appendChild(mytable);
+        // sets the border attribute of mytable to 2;
+        mytable.setAttribute("border","2");
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=3D"start()"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</PRE><A name=3DManipulating_the_table_with_DOM_and_CSS></A>
+<H2><SPAN class=3Deditsection>[<A=20
+title=3D"Edit section: Manipulating the table with DOM and CSS"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit&amp;s=
+ection=3D11">edit</A>]</SPAN>=20
+<SPAN class=3Dmw-headline>Manipulating the table with DOM and CSS =
+</SPAN></H2><A=20
+name=3DGetting_a_text_node_from_the_table></A>
+<H3><SPAN class=3Deditsection>[<A=20
+title=3D"Edit section: Getting a text node from the table"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit&amp;s=
+ection=3D12">edit</A>]</SPAN>=20
+<SPAN class=3Dmw-headline>Getting a text node from the table =
+</SPAN></H3>
+<P>This example introduces two new DOM attributes. First it uses the=20
+<CODE>childNodes</CODE> attribute to get the list of child nodes of =
+mycel. The=20
+<CODE>childNodes</CODE> list includes all child nodes, regardless of =
+what their=20
+name or type is. Like getElementsByTagName, it returns a list of nodes. =
+The=20
+difference is that getElementsByTagName only returns elements of the =
+specified=20
+tag name. Once you have the returned list, use <CODE>[x]</CODE> method =
+to=20
+retrieve the desired child item. This example stores in myceltext the =
+text node=20
+of the second cell in the second row of the table. Then, to display the =
+results=20
+in this example, it creates a new text node whose content is the data of =
+
+myceltext and appends it as a child of the &lt;body&gt; element. </P>
+<DIV class=3Dnote>If your object is a text node, you can use the data =
+attribute=20
+and retrieve the text content of the node.</DIV><PRE>mybody      =3D =
+document.getElementsByTagName("body")[0];
+mytable     =3D mybody.getElementsByTagName("table")[0];
+mytablebody =3D mytable.getElementsByTagName("tbody")[0];
+myrow       =3D mytablebody.getElementsByTagName("tr")[1];
+mycel       =3D myrow.getElementsByTagName("td")[1];
+
+// first item element of the childNodes list of mycel
+myceltext=3Dmycel.childNodes[0];
+
+// content of currenttext is the data content of myceltext
+currenttext=3Ddocument.createTextNode(myceltext.data);
+mybody.appendChild(currenttext);
+</PRE><A name=3DGetting_an_attribute_value></A>
+<H3><SPAN class=3Deditsection>[<A title=3D"Edit section: Getting an =
+attribute value"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit&amp;s=
+ection=3D13">edit</A>]</SPAN>=20
+<SPAN class=3Dmw-headline>Getting an attribute value </SPAN></H3>
+<P>At the end of sample1 there is a call to setAttribute on the mytable =
+object.=20
+This call was used to set the border property of the table. To retrieve =
+the=20
+value of the attribute, use the getAttribute method: =
+</P><PRE>mytable.getAttribute("border");
+</PRE><A name=3DHiding_a_column_by_changing_style_properties></A>
+<H3><SPAN class=3Deditsection>[<A=20
+title=3D"Edit section: Hiding a column by changing style properties"=20
+href=3D"http://developer.mozilla.org/en/docs/index.php?title=3DTraversing=
+_an_HTML_table_with_JavaScript_and_DOM_Interfaces&amp;action=3Dedit&amp;s=
+ection=3D14">edit</A>]</SPAN>=20
+<SPAN class=3Dmw-headline>Hiding a column by changing style properties=20
+</SPAN></H3>
+<P>Once you have the object in your JavaScript variable, you can set =
+style=20
+properties directly. The following code is a modified version of =
+sample1.html in=20
+which each cell of the second column is hidden and each cell of the =
+first column=20
+is changed to have a red background. Note that the style property was =
+set=20
+directly. </P><PRE>&lt;html&gt;
+&lt;body onload=3D"start()"&gt;
+&lt;/body&gt;
+&lt;script&gt;
+    function start() {
+       var mybody =3Ddocument.getElementsByTagName("body")[0];
+       mytable     =3D document.createElement("table");
+       mytablebody =3D document.createElement("tbody");
+
+       for(var j =3D 0; j &lt; 2; j++) {
+           mycurrent_row=3Ddocument.createElement("tr");
+           for(var i =3D 0; i &lt; 2; i++) {
+               mycurrent_cell =3D document.createElement("td");
+               currenttext =3D document.createTextNode("cell is:" + i + =
+j);
+               mycurrent_cell.appendChild(currenttext);
+               mycurrent_row.appendChild(mycurrent_cell);
+               // set the cell background color
+               // if the column is 0. If the column is 1 hide the cel
+               if (i =3D=3D 0) {
+                   mycurrent_cell.style.background =3D "rgb(255,0,0)";
+               } else {
+                   mycurrent_cell.style.display =3D "none";
+               }
+           }
+           mytablebody.appendChild(mycurrent_row);
+       }
+       mytable.appendChild(mytablebody);
+       mybody.appendChild(mytable);
+    }
+&lt;/script&gt;
+&lt;/html&gt;
+</PRE><!-- Saved in parser cache with key =
+wiki_mdc-mediawiki:pcache:idhash:2312-0!1!0!!en!2 and timestamp =
+20071009222246 -->
+<DIV class=3Dprintfooter>Retrieved from "<A=20
+href=3D"http://developer.mozilla.org/en/docs/Traversing_an_HTML_table_wit=
+h_JavaScript_and_DOM_Interfaces">http://developer.mozilla.org/en/docs/Tra=
+versing_an_HTML_table_with_JavaScript_and_DOM_Interfaces</A>"</DIV>
+<DIV id=3Dcatlinks>
+<P class=3Dcatlinks><A title=3DSpecial:Categories=20
+href=3D"http://developer.mozilla.org/en/docs/Special:Categories">Category=
+</A>:=20
+<SPAN dir=3Dltr><A title=3DCategory:DOM=20
+href=3D"http://developer.mozilla.org/en/docs/Category:DOM">DOM</A></SPAN>=
+</P></DIV></DIV></DIV><!-- end id content -->
+<DIV id=3Dfooter>
+<UL>
+  <LI id=3Df-lastmod>This page was last modified 16:22, 24 August 2007.=20
+  <LI id=3Df-viewcount>This page has been accessed 380,558 times. =
+</LI></UL>
+<UL>
+  <LI id=3Df-copyright>Content is available under <A =
+title=3DMDC:Copyrights=20
+  href=3D"http://developer.mozilla.org/en/docs/MDC:Copyrights">these =
+licenses</A>.=20
+
+  <LI id=3Df-about><A title=3DMDC:About=20
+  href=3D"http://developer.mozilla.org/en/docs/MDC:About">About MDC</A>=20
+</LI></UL></DIV></DIV><!-- end id page --></DIV><!-- end id container =
+--><!-- Served by mrapp53 in 0.120 secs. --></BODY></HTML>
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://developer.mozilla.org/wiki-images/en/f/f9/sample1-tabledom.jpg
+
+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
+TFkyZMi/NXXMRtB2qvYfav/Z
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://developer.mozilla.org/wiki-images/en/d/d8/sample2a2.jpg
+
+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
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://developer.mozilla.org/wiki-images/en/0/0c/sample2b2.jpg
+
+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
+9edcbU8MArf5g4//2Q==
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://developer.mozilla.org/wiki-images/en/4/49/sample2c.jpg
+
+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
+YBW/5g4//9k=
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://developer.mozilla.org/wiki-images/en/1/10/sample2d.jpg
+
+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
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://developer.mozilla.org/css/base.css
+
+BODY {
+	FONT-SIZE: 0.9em; BACKGROUND: url(images/body_back.gif) #fff repeat-x; =
+MARGIN: 0px 30px 2em; COLOR: #333; LINE-HEIGHT: 140%
+}
+BODY {
+	FONT-FAMILY: verdana, sans-serif; voice-family: inherit
+}
+TD {
+	FONT-FAMILY: verdana, sans-serif; voice-family: inherit
+}
+TH {
+	FONT-FAMILY: verdana, sans-serif; voice-family: inherit
+}
+H3 {
+	FONT-FAMILY: verdana, sans-serif; voice-family: inherit
+}
+INPUT {
+	FONT-FAMILY: verdana, sans-serif; voice-family: inherit
+}
+#container {
+	MARGIN: 0px auto; WIDTH: 100%
+}
+#page {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; =
+PADDING-TOP: 2.15em
+}
+#content {
+	BACKGROUND: url(images/page-background.gif) repeat-x left top; MARGIN: =
+0px 230px 0px 0px
+}
+A:link {
+	COLOR: #0033aa
+}
+A:visited {
+	COLOR: #66a
+}
+A:hover {
+	COLOR: #333
+}
+A:active {
+	COLOR: #000
+}
+#mozilla-org {
+	POSITION: relative; HEIGHT: 25px
+}
+#mozilla-org A {
+	DISPLAY: block; RIGHT: 0px; BACKGROUND: url(images/mozilla-org.gif) =
+no-repeat; WIDTH: 110px; TEXT-INDENT: -5000em; POSITION: absolute; TOP: =
+0px; HEIGHT: 25px; TEXT-DECORATION: none
+}
+#header {
+	CLEAR: both; MARGIN: 10px 0px 0px; POSITION: relative; HEIGHT: 38px
+}
+#header H1 {
+	LEFT: 0px; MARGIN: 0px; POSITION: absolute; TOP: 0px
+}
+#header H1 A {
+	DISPLAY: block; FONT-SIZE: 1px; BACKGROUND: url(images/title.gif) =
+no-repeat; WIDTH: 481px; TEXT-INDENT: -7000em; HEIGHT: 38px; =
+TEXT-DECORATION: none
+}
+#header H1 A:hover {
+	DISPLAY: block; FONT-SIZE: 1px; BACKGROUND: url(images/title.gif) =
+no-repeat; WIDTH: 481px; TEXT-INDENT: -7000em; HEIGHT: 38px; =
+TEXT-DECORATION: none
+}
+#header FORM {
+	FONT-SIZE: 85%; RIGHT: 0px; FONT-FAMILY: tahoma, arial, sans-serif; =
+POSITION: absolute; TOP: 8px
+}
+#header FORM LABEL {
+	FONT-WEIGHT: bold
+}
+#header FORM .searchButton {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; FONT-SIZE: 100%; PADDING-BOTTOM: =
+1px; PADDING-TOP: 1px; FONT-FAMILY: tahoma, arial, sans-serif
+}
+#submit {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; FONT-SIZE: 100%; PADDING-BOTTOM: =
+1px; PADDING-TOP: 1px; FONT-FAMILY: tahoma, arial, sans-serif
+}
+#header FORM #searchInput {
+	BORDER-RIGHT: #9097a2 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: =
+#9097a2 1px solid; PADDING-LEFT: 2px; FONT-WEIGHT: normal; FONT-SIZE: =
+100%; PADDING-BOTTOM: 2px; BORDER-LEFT: #9097a2 1px solid; WIDTH: 90px; =
+PADDING-TOP: 2px; BORDER-BOTTOM: #9097a2 1px solid; FONT-FAMILY: tahoma, =
+arial, sans-serif
+}
+#s {
+	BORDER-RIGHT: #9097a2 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: =
+#9097a2 1px solid; PADDING-LEFT: 2px; FONT-WEIGHT: normal; FONT-SIZE: =
+100%; PADDING-BOTTOM: 2px; BORDER-LEFT: #9097a2 1px solid; WIDTH: 90px; =
+PADDING-TOP: 2px; BORDER-BOTTOM: #9097a2 1px solid; FONT-FAMILY: tahoma, =
+arial, sans-serif
+}
+#footer {
+	CLEAR: both; FONT-SIZE: 0.8em; BACKGROUND: =
+url(images/page-background.gif) repeat-x left top; MARGIN: 10px 230px =
+0px auto; WIDTH: auto; TEXT-ALIGN: center
+}
+#footer UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+#footer LI {
+	PADDING-RIGHT: 5px; DISPLAY: inline; PADDING-LEFT: 5px; =
+LIST-STYLE-TYPE: none
+}
+#footer #stickers {
+	PADDING-TOP: 20px
+}
+#footer #stickers DIV {
+	DISPLAY: inline
+}
+#footer #stickers IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-BOTTOM-STYLE: none
+}
+#navigation {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px; HEIGHT: 2.7em
+}
+#navigation DIV#bar {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: =
+url(images/navigation-top-right.gif) #1e4176 no-repeat right top; =
+PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; WHITE-SPACE: nowrap; =
+HEIGHT: 2.7em
+}
+#navigation DIV#bar DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: =
+url(images/navigation-top-left.gif) no-repeat left top; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px; POSITION: relative; HEIGHT: 2.7em
+}
+#navigation #contenttypes {
+	PADDING-RIGHT: 0.7em; PADDING-LEFT: 0.7em; BACKGROUND: =
+url(images/navigation-bottom-left.gif) no-repeat left bottom; LEFT: 0px; =
+PADDING-BOTTOM: 0px; MARGIN: 0px; BOTTOM: 0px; PADDING-TOP: 0px; =
+LIST-STYLE-TYPE: none; POSITION: absolute
+}
+#navigation #contenttypes LI {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: right top; PADDING-LEFT: 0px; =
+FLOAT: left; BACKGROUND-IMAGE: url(images/tab-right.gif); =
+PADDING-BOTTOM: 0px; MARGIN: 0px 2px 0px 0px; PADDING-TOP: 0px; =
+BACKGROUND-REPEAT: no-repeat; HEIGHT: 1.7em
+}
+#navigation #contenttypes LI.selected {
+	BACKGROUND-IMAGE: url(images/tab-right-selected.gif)
+}
+#navigation #contenttypes LI A {
+	PADDING-RIGHT: 6px; BACKGROUND-POSITION: left top; DISPLAY: block; =
+PADDING-LEFT: 6px; FONT-WEIGHT: bold; FONT-SIZE: 85%; FLOAT: left; =
+BACKGROUND-IMAGE: url(images/tab-left.gif); PADDING-BOTTOM: 0px; WIDTH: =
+1%; COLOR: #fff; LINE-HEIGHT: 2em; PADDING-TOP: 0px; BACKGROUND-REPEAT: =
+no-repeat; FONT-FAMILY: verdana, arial, sans-serif; HEIGHT: 2em; =
+TEXT-DECORATION: none
+}
+#navigation #contenttypes LI.selected A {
+	BACKGROUND-IMAGE: url(images/tab-left-selected.gif); COLOR: #003366
+}
+#navigation #personal {
+	PADDING-RIGHT: 0.4em; PADDING-LEFT: 0px; RIGHT: 0px; BACKGROUND: =
+url(images/navigation-bottom-right.gif) no-repeat right bottom; =
+PADDING-BOTTOM: 0px; MARGIN: 0px; BOTTOM: 0px; PADDING-TOP: 0px; =
+LIST-STYLE-TYPE: none; POSITION: absolute; HEIGHT: 1.8em
+}
+#navigation #personal LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: =
+0px; MARGIN: 0px 4px; LINE-HEIGHT: 2em; PADDING-TOP: 0px
+}
+#navigation #personal A {
+	DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 80%; MARGIN: 0px; WIDTH: =
+1%; COLOR: #fff; FONT-FAMILY: tahoma, arial, sans-serif; =
+TEXT-DECORATION: none
+}
+#navigation #personal A:hover {
+	TEXT-DECORATION: underline
+}
+#sidebar {
+	RIGHT: 30px; BACKGROUND: #fff; WIDTH: 210px; LINE-HEIGHT: 120%; =
+POSITION: absolute; TOP: 143px
+}
+#sidebar H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 0.9em; MARGIN: 1em 0px 0.3em
+}
+#sidebar H3:unknown {
+	MARGIN: 0px 0px 0.3em
+}
+#sidebar UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+#sidebar P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.85em; =
+PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 2em; PADDING-TOP: 0px
+}
+#sidebar LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.85em; =
+PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 2em; PADDING-TOP: 0px
+}
+#sidebar LI A:hover {
+	TEXT-DECORATION: underline
+}
+#sidebar P {
+	MARGIN-BOTTOM: 6px
+}
+#sidebar P:unknown {
+	MARGIN-BOTTOM: 0px
+}
+DIV#related {
+	BACKGROUND: url(images/box-yellow-bottom.gif) #eff8ce no-repeat left =
+bottom; MARGIN: 0px 0px 16px
+}
+DIV#related DIV {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; BACKGROUND: =
+url(images/box-yellow-top.gif) no-repeat left top; PADDING-BOTTOM: 8px; =
+PADDING-TOP: 8px
+}
+DIV#related H3 {
+	COLOR: #036
+}
+DIV#related LI {
+	LIST-STYLE-IMAGE: url(images/box-yellow-arrow.gif); COLOR: #999
+}
+DIV#related A {
+	COLOR: #03a; TEXT-DECORATION: none
+}
+DIV.pagetools {
+	BACKGROUND: url(images/box-gray-bottom.gif) #e6e6e6 no-repeat left =
+bottom; MARGIN: 0px 0px 16px
+}
+DIV.pagetools DIV {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; BACKGROUND: =
+url(images/box-gray-top.gif) no-repeat left top; PADDING-BOTTOM: 8px; =
+PADDING-TOP: 8px
+}
+DIV.pagetools H3 {
+	COLOR: #666
+}
+DIV.pagetools A {
+	COLOR: #666; TEXT-DECORATION: none
+}
+DIV.pagetools .new A {
+	COLOR: #ba0000
+}
+#breadcrumbs {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; =
+FONT-SIZE: 0.85em; PADDING-BOTTOM: 0px; MARGIN: 11px 0px 0px; WIDTH: =
+100%; PADDING-TOP: 0px
+}
+#breadcrumbs UL {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#breadcrumbs LI {
+	PADDING-RIGHT: 0px; MARGIN-TOP: 0px; PADDING-LEFT: 0px; FLOAT: left; =
+PADDING-BOTTOM: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+#breadcrumbs A {
+	PADDING-RIGHT: 6px; BACKGROUND-POSITION: left center; PADDING-LEFT: =
+12px; BACKGROUND-IMAGE: url(images/breadcrumbs.gif); PADDING-BOTTOM: =
+0px; COLOR: #888; PADDING-TOP: 0px; BACKGROUND-REPEAT: no-repeat; =
+TEXT-DECORATION: none
+}
+#breadcrumbs SPAN {
+	PADDING-RIGHT: 6px; BACKGROUND-POSITION: left center; PADDING-LEFT: =
+12px; BACKGROUND-IMAGE: url(images/breadcrumbs.gif); PADDING-BOTTOM: =
+0px; COLOR: #888; PADDING-TOP: 0px; BACKGROUND-REPEAT: no-repeat; =
+TEXT-DECORATION: none
+}
+#breadcrumbs:unknown A {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 0px; BACKGROUND-IMAGE: none; =
+PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#breadcrumbs A:hover {
+	TEXT-DECORATION: underline
+}
+#breadcrumbs LI SPAN {
+	COLOR: #3f5d89
+}
+.skipLink {
+	LEFT: -1200px; WIDTH: 990px; POSITION: absolute
+}
+.hide {
+	DISPLAY: none
+}
+#printheader {
+	DISPLAY: none
+}
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://developer.mozilla.org/css/wiki.css
+
+.selected {
+	FONT-WEIGHT: bold
+}
+.new {
+=09
+}
+#sidebarslidebox {
+	WIDTH: 210px; POSITION: absolute
+}
+.sidebarslidecontrol {
+	FONT-SIZE: 0.8em; WIDTH: 202px; CURSOR: pointer; COLOR: #bbb; =
+TEXT-ALIGN: right
+}
+#sidebar {
+	TOP: 8.63em
+}
+.article {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.95em; BACKGROUND: =
+url(images/page-background.gif) repeat-x left top; PADDING-BOTTOM: 2em; =
+MARGIN: 0px; PADDING-TOP: 2em
+}
+.article P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+10px 0px; PADDING-TOP: 0px
+}
+.article DIV.editsection {
+	MARGIN: 20px 0px 0px
+}
+.article H1 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-WEIGHT: normal; =
+PADDING-BOTTOM: 3px; MARGIN: 30px 0px 10px; COLOR: #036; PADDING-TOP: =
+3px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+H2 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-WEIGHT: normal; =
+PADDING-BOTTOM: 3px; MARGIN: 30px 0px 10px; COLOR: #036; PADDING-TOP: =
+3px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+H3 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-WEIGHT: normal; =
+PADDING-BOTTOM: 3px; MARGIN: 30px 0px 10px; COLOR: #036; PADDING-TOP: =
+3px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+H4 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-WEIGHT: normal; =
+PADDING-BOTTOM: 3px; MARGIN: 30px 0px 10px; COLOR: #036; PADDING-TOP: =
+3px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+H5 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-WEIGHT: normal; =
+PADDING-BOTTOM: 3px; MARGIN: 30px 0px 10px; COLOR: #036; PADDING-TOP: =
+3px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+H6 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-WEIGHT: normal; =
+PADDING-BOTTOM: 3px; MARGIN: 30px 0px 10px; COLOR: #036; PADDING-TOP: =
+3px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.article H1 {
+	FONT-SIZE: 1.7em; BORDER-BOTTOM: #ccc 1px solid
+}
+.article H1.firstHeading {
+	MARGIN-TOP: 0px; FONT-SIZE: 1.7em; BORDER-BOTTOM-STYLE: none
+}
+.article H2 {
+	FONT-SIZE: 1.6em; BORDER-BOTTOM: #ccc 1px solid
+}
+.article H3 {
+	FONT-SIZE: 1.5em
+}
+.article H4 {
+	FONT-SIZE: 1.4em
+}
+.article H5 {
+	FONT-SIZE: 1.3em
+}
+.article H6 {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.1em
+}
+.article H1 A {
+	TEXT-DECORATION: none
+}
+.article H2 {
+	FONT-WEIGHT: normal; COLOR: #036; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.article H2 A {
+	TEXT-DECORATION: none
+}
+.article H3 A {
+	TEXT-DECORATION: none
+}
+.article H4 A {
+	TEXT-DECORATION: none
+}
+.article H5 A {
+	TEXT-DECORATION: none
+}
+.article H6 A {
+	TEXT-DECORATION: none
+}
+.article .introduction {
+	BACKGROUND: url(images/box-blue-bottom.gif) #369 no-repeat left bottom; =
+FLOAT: right; MARGIN: 16px 0px 16px 16px; WIDTH: 210px; COLOR: #fff
+}
+.article .introduction H3 {
+	PADDING-RIGHT: 12px; PADDING-LEFT: 12px; FONT-SIZE: 0.8em; BACKGROUND: =
+url(images/box-blue-top.gif) no-repeat left top; PADDING-BOTTOM: 0px; =
+MARGIN: 0px; PADDING-TOP: 8px
+}
+.article .introduction P {
+	PADDING-RIGHT: 12px; PADDING-LEFT: 12px; FONT-SIZE: 0.8em; =
+PADDING-BOTTOM: 8px; MARGIN: 0px; LINE-HEIGHT: 130%; PADDING-TOP: 0px
+}
+.article .selected {
+	FONT-WEIGHT: normal
+}
+.article IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-BOTTOM-STYLE: none
+}
+.article UL LI {
+	LIST-STYLE-TYPE: square
+}
+.article OL LI {
+	LIST-STYLE-TYPE: decimal
+}
+.article DL {
+=09
+}
+.article DL DT {
+	FONT-WEIGHT: bold
+}
+.article DL DD {
+	MARGIN-LEFT: 1em
+}
+#contentSub {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 0.8em; =
+PADDING-BOTTOM: 0px; MARGIN: 10px 10px 10px 25px; COLOR: #999; =
+PADDING-TOP: 0px; FONT-STYLE: italic
+}
+#toc {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: =
+#aaaaaa 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 0.9em; PADDING-BOTTOM: =
+5px; MARGIN: 0px 20px 10px 0px; BORDER-LEFT: #aaaaaa 1px solid; =
+PADDING-TOP: 5px; BORDER-BOTTOM: #aaaaaa 1px solid; BACKGROUND-COLOR: =
+#f9f9f9
+}
+#toc H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 1.4em; =
+PADDING-BOTTOM: 2px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#toc .tocindent {
+	MARGIN-LEFT: 1em
+}
+#toc .tocline {
+	MARGIN-BOTTOM: 0px
+}
+#toc P {
+	MARGIN: 0px
+}
+#toc .toctoggle {
+	FONT-SIZE: 90%
+}
+#toc .editsection {
+	MARGIN-TOP: 0.7em; DISPLAY: none; FONT-SIZE: 94%
+}
+#toc UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+#toc LI {
+	MARGIN-LEFT: 1.2em; LIST-STYLE-TYPE: none
+}
+DIV.floatright {
+	BORDER-TOP-WIDTH: 0px; CLEAR: right; BORDER-LEFT-WIDTH: 0px; FLOAT: =
+right; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0px 0px 0.5em 0.5em; POSITION: =
+relative; BORDER-RIGHT-WIDTH: 0px
+}
+TABLE.floatright {
+	BORDER-TOP-WIDTH: 0px; CLEAR: right; BORDER-LEFT-WIDTH: 0px; FLOAT: =
+right; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0px 0px 0.5em 0.5em; POSITION: =
+relative; BORDER-RIGHT-WIDTH: 0px
+}
+DIV.floatright P {
+	FONT-STYLE: italic
+}
+DIV.floatleft {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; FLOAT: left; =
+BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0px 0.5em 0.5em 0px; POSITION: =
+relative; BORDER-RIGHT-WIDTH: 0px
+}
+TABLE.floatleft {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; FLOAT: left; =
+BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0px 0.5em 0.5em 0px; POSITION: =
+relative; BORDER-RIGHT-WIDTH: 0px
+}
+DIV.floatleft P {
+	FONT-STYLE: italic
+}
+DIV.thumb {
+	BORDER-LEFT-COLOR: white; MARGIN-BOTTOM: 0.5em; BORDER-BOTTOM-COLOR: =
+white; WIDTH: auto; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: white; =
+BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BORDER-RIGHT-COLOR: =
+white; BORDER-BOTTOM-STYLE: solid
+}
+DIV.thumb DIV {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 3px! important; =
+BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 3px! important; FONT-SIZE: =
+94%; PADDING-BOTTOM: 3px! important; OVERFLOW: hidden; BORDER-LEFT: =
+#cccccc 1px solid; PADDING-TOP: 3px! important; BORDER-BOTTOM: #cccccc =
+1px solid; BACKGROUND-COLOR: #f9f9f9; TEXT-ALIGN: center
+}
+DIV.thumb DIV A IMG {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; =
+BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid
+}
+DIV.thumb DIV DIV.thumbcaption {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.1em; =
+BORDER-TOP-STYLE: none; LINE-HEIGHT: 1.4em; PADDING-TOP: 0.3em; =
+BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; TEXT-ALIGN: left; =
+BORDER-BOTTOM-STYLE: none
+}
+DIV.magnify {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: right; =
+BORDER-TOP-STYLE: none! important; BORDER-RIGHT-STYLE: none! important; =
+BORDER-LEFT-STYLE: none! important; BORDER-BOTTOM-STYLE: none! important
+}
+DIV.magnify A {
+	DISPLAY: block; BACKGROUND: none transparent scroll repeat 0% 0%; =
+BORDER-TOP-STYLE: none! important; BORDER-RIGHT-STYLE: none! important; =
+BORDER-LEFT-STYLE: none! important; BORDER-BOTTOM-STYLE: none! important
+}
+DIV.magnify IMG {
+	DISPLAY: block; BACKGROUND: none transparent scroll repeat 0% 0%; =
+BORDER-TOP-STYLE: none! important; BORDER-RIGHT-STYLE: none! important; =
+BORDER-LEFT-STYLE: none! important; BORDER-BOTTOM-STYLE: none! important
+}
+DIV.tright {
+	BORDER-TOP-WIDTH: 0.5em; CLEAR: right; BORDER-LEFT-WIDTH: 1.4em; FLOAT: =
+right; BORDER-BOTTOM-WIDTH: 0.8em; BORDER-RIGHT-WIDTH: 0px
+}
+DIV.tleft {
+	BORDER-TOP-WIDTH: 0.5em; BORDER-LEFT-WIDTH: 0px; FLOAT: left; =
+BORDER-BOTTOM-WIDTH: 0.8em; MARGIN-RIGHT: 0.5em; BORDER-RIGHT-WIDTH: =
+1.4em
+}
+.article .exlink {
+	PADDING-RIGHT: 13px; BACKGROUND: url(images/external.png) no-repeat =
+right center
+}
+UNKNOWN {
+	PADDING-RIGHT: 13px; BACKGROUND: url(images/external.png) no-repeat =
+right center
+}
+UNKNOWN {
+	PADDING-RIGHT: 16px; BACKGROUND: url(images/lock_icon.gif) no-repeat =
+right center
+}
+UNKNOWN {
+	PADDING-RIGHT: 18px; BACKGROUND: url(images/mail_icon.gif) no-repeat =
+right center
+}
+UNKNOWN {
+	PADDING-RIGHT: 18px; BACKGROUND: url(images/news_icon.png) no-repeat =
+right center
+}
+UNKNOWN {
+	PADDING-RIGHT: 18px; BACKGROUND: url(images/file_icon.gif) no-repeat =
+right center
+}
+UNKNOWN {
+	PADDING-RIGHT: 18px; BACKGROUND: url(images/discussionitem_icon.gif) =
+no-repeat right center
+}
+.article .urlexpansion {
+	DISPLAY: none
+}
+.article A.imagelink {
+	PADDING-RIGHT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%
+}
+#editform INPUT {
+	BORDER-RIGHT: #666 1px solid; BORDER-TOP: #666 1px solid; BORDER-LEFT: =
+#666 1px solid; BORDER-BOTTOM: #666 1px solid
+}
+#editform FORM {
+	MARGIN: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#editform TEXTAREA {
+	BORDER-RIGHT: #666 1px solid; BORDER-TOP: #666 1px solid; BACKGROUND: =
+#eee; BORDER-LEFT: #666 1px solid; WIDTH: 100%; BORDER-BOTTOM: #666 1px =
+solid
+}
+#editform .iebugfix {
+	WIDTH: 100%
+}
+#editform #wpSave {
+	BORDER-RIGHT: #666 1px solid; BORDER-TOP: #666 1px solid; BACKGROUND: =
+#ddd; BORDER-LEFT: #666 1px solid; WIDTH: 125px; BORDER-BOTTOM: #666 1px =
+solid
+}
+#editform #wpPreview {
+	BORDER-RIGHT: #666 1px solid; BORDER-TOP: #666 1px solid; BACKGROUND: =
+#ddd; BORDER-LEFT: #666 1px solid; WIDTH: 125px; BORDER-BOTTOM: #666 1px =
+solid
+}
+DIV#catlinks {
+	CLEAR: both; BORDER-RIGHT: #bbb 1px solid; PADDING-RIGHT: 0px; =
+BORDER-TOP: #bbb 1px solid; PADDING-LEFT: 0px; FONT-SIZE: 0.9em; =
+BACKGROUND: #eee; PADDING-BOTTOM: 0px; MARGIN: 40px 0px 0px; =
+BORDER-LEFT: #bbb 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #bbb 1px =
+solid
+}
+DIV#catlinks P {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.catlink-table {
+	WIDTH: 100%
+}
+.catlink-table TD {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; =
+PADDING-TOP: 5px
+}
+.catlink-table TD H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: =
+1em; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: =
+#bbb 1px solid
+}
+.catlink-table UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 5px =
+0px; PADDING-TOP: 0px
+}
+.catlink-table LI {
+	MARGIN: 0px 0px 0px 2em; LINE-HEIGHT: 1.45em
+}
+#n-portal {
+	DISPLAY: none
+}
+#n-currentevents {
+	DISPLAY: none
+}
+#n-randompage {
+	DISPLAY: none
+}
+#n-sitesupport {
+	DISPLAY: none
+}
+#ca-addsection {
+	DISPLAY: none
+}
+#t-print {
+	DISPLAY: none
+}
+.printfooter {
+	DISPLAY: none
+}
+#siteSub {
+	DISPLAY: none
+}
+A.new {
+	COLOR: #ba0000
+}
+.standard-table {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; =
+BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid; =
+BORDER-COLLAPSE: collapse
+}
+.standard-table TD {
+	BORDER-RIGHT: #bbb 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #bbb 1px =
+solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; =
+BORDER-LEFT: #bbb 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #bbb 1px =
+solid; TEXT-ALIGN: left
+}
+.standard-table TD.header {
+	BORDER-RIGHT: #bbb 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #bbb 1px =
+solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; BACKGROUND: #ddd; =
+PADDING-BOTTOM: 0px; BORDER-LEFT: #bbb 1px solid; PADDING-TOP: 0px; =
+BORDER-BOTTOM: #bbb 1px solid; TEXT-ALIGN: left
+}
+.standard-table TH {
+	BORDER-RIGHT: #bbb 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #bbb 1px =
+solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; BACKGROUND: #ddd; =
+PADDING-BOTTOM: 0px; BORDER-LEFT: #bbb 1px solid; PADDING-TOP: 0px; =
+BORDER-BOTTOM: #bbb 1px solid; TEXT-ALIGN: left
+}
+.fullwidth-table {
+	BORDER-RIGHT: #666 1px solid; BORDER-TOP: #666 1px solid; BACKGROUND: =
+#fff; MARGIN-BOTTOM: 10px; BORDER-LEFT: #666 1px solid; WIDTH: 100%; =
+BORDER-BOTTOM: #666 1px solid; BORDER-COLLAPSE: collapse
+}
+.fullwidth-table TD {
+	BORDER-RIGHT: #bbb 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #bbb 1px =
+solid; PADDING-LEFT: 15px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; =
+BORDER-LEFT: #bbb 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #bbb 1px =
+solid; TEXT-ALIGN: left
+}
+.fullwidth-table TD.header {
+	BORDER-RIGHT: #bbb 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #bbb 1px =
+solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 1.05em; =
+BACKGROUND: #ddd; PADDING-BOTTOM: 0px; BORDER-LEFT: #bbb 1px solid; =
+PADDING-TOP: 0px; BORDER-BOTTOM: #bbb 1px solid; TEXT-ALIGN: left
+}
+.fullwidth-table TH {
+	BORDER-RIGHT: #bbb 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #bbb 1px =
+solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 1.05em; =
+BACKGROUND: #ddd; PADDING-BOTTOM: 0px; BORDER-LEFT: #bbb 1px solid; =
+PADDING-TOP: 0px; BORDER-BOTTOM: #bbb 1px solid; TEXT-ALIGN: left
+}
+DIV.breadcrumbs {
+	BORDER-RIGHT: #bbb 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #bbb 1px =
+solid; PADDING-LEFT: 5px; FONT-SIZE: 0.9em; BACKGROUND: #eee; =
+PADDING-BOTTOM: 0px; MARGIN: 10px 0px; BORDER-LEFT: #bbb 1px solid; =
+PADDING-TOP: 0px; BORDER-BOTTOM: #bbb 1px solid
+}
+DIV.breadcrumbs A.breadcrumbs {
+	TEXT-DECORATION: none
+}
+DIV.breadcrumbs SPAN.breadcrumbs {
+	FONT-WEIGHT: bold
+}
+PRE {
+	BORDER-RIGHT: #666 1px dashed; PADDING-RIGHT: 20px; BORDER-TOP: #666 =
+1px dashed; PADDING-LEFT: 20px; FONT-SIZE: 1.1em; BACKGROUND: #eee; =
+PADDING-BOTTOM: 15px; OVERFLOW: auto; BORDER-LEFT: #666 1px dashed; =
+LINE-HEIGHT: 1.1em; PADDING-TOP: 15px; BORDER-BOTTOM: #666 1px dashed
+}
+.prewrong {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.prewrong PRE {
+	BORDER-RIGHT: #644 1px dashed; BORDER-TOP: #644 1px dashed; BACKGROUND: =
+#fdd; BORDER-LEFT: #644 1px dashed; BORDER-BOTTOM: #644 1px dashed
+}
+.wrong {
+	BORDER-RIGHT: #644 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #644 1px =
+solid; PADDING-LEFT: 5px; BACKGROUND: #fdd; PADDING-BOTTOM: 5px; MARGIN: =
+5px 0px; BORDER-LEFT: #644 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: =
+#644 1px solid
+}
+.wrong-inline {
+	BORDER-RIGHT: #644 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #644 1px =
+solid; PADDING-LEFT: 3px; BACKGROUND: #fdd; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #644 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #644 1px =
+solid
+}
+DIV.tip {
+	BORDER-RIGHT: green 2px solid; PADDING-RIGHT: 10px; BORDER-TOP: green =
+2px solid; PADDING-LEFT: 10px; BACKGROUND: #dfd; PADDING-BOTTOM: 0px; =
+MARGIN: 10px 0px; BORDER-LEFT: green 2px solid; PADDING-TOP: 0px; =
+BORDER-BOTTOM: green 2px solid
+}
+DIV.bug {
+	BORDER-RIGHT: red 2px solid; PADDING-RIGHT: 10px; BORDER-TOP: red 2px =
+solid; PADDING-LEFT: 10px; BACKGROUND: #fdd; PADDING-BOTTOM: 0px; =
+MARGIN: 10px 0px; BORDER-LEFT: red 2px solid; PADDING-TOP: 0px; =
+BORDER-BOTTOM: red 2px solid
+}
+DIV.warning {
+	BORDER-RIGHT: red 2px solid; PADDING-RIGHT: 10px; BORDER-TOP: red 2px =
+solid; PADDING-LEFT: 10px; BACKGROUND: #fdd; PADDING-BOTTOM: 0px; =
+MARGIN: 10px 0px; BORDER-LEFT: red 2px solid; PADDING-TOP: 0px; =
+BORDER-BOTTOM: red 2px solid
+}
+DIV.note {
+	BORDER-RIGHT: goldenrod 2px solid; PADDING-RIGHT: 10px; BORDER-TOP: =
+goldenrod 2px solid; PADDING-LEFT: 10px; BACKGROUND: #ffd; =
+PADDING-BOTTOM: 0px; MARGIN: 10px 0px; BORDER-LEFT: goldenrod 2px solid; =
+COLOR: #000; PADDING-TOP: 0px; BORDER-BOTTOM: goldenrod 2px solid
+}
+DIV.note:unknown {
+	content: ""
+}
+.float-left {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FLOAT: left; PADDING-BOTTOM: =
+5px; PADDING-TOP: 5px
+}
+.float-right {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FLOAT: right; PADDING-BOTTOM: =
+5px; PADDING-TOP: 5px
+}
+.figure {
+=09
+}
+.originaldocinfo {
+	BORDER-RIGHT: #cce 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #cce 1px =
+solid; PADDING-LEFT: 10px; FONT-SIZE: 0.8em; BACKGROUND: #ffd; =
+PADDING-BOTTOM: 0px; MARGIN: 15px 0px; BORDER-LEFT: #cce 1px solid; =
+WIDTH: auto; PADDING-TOP: 0px; BORDER-BOTTOM: #cce 1px solid
+}
+.originaldocinfo P {
+	LINE-HEIGHT: 0.8em
+}
+.originaldocinfo H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.3em
+}
+.licenseblock {
+	BORDER-RIGHT: #888 1px dashed; PADDING-RIGHT: 10px; BORDER-TOP: #888 =
+1px dashed; PADDING-LEFT: 10px; FONT-SIZE: 0.8em; BACKGROUND: #ddd; =
+PADDING-BOTTOM: 0px; BORDER-LEFT: #888 1px dashed; PADDING-TOP: 0px; =
+BORDER-BOTTOM: #888 1px dashed
+}
+CODE {
+	FONT-SIZE: 1.2em
+}
+TT {
+	FONT-SIZE: 1.2em
+}
+.wrong-source-code {
+	COLOR: #d00
+}
+.right-source-code {
+	COLOR: #0a0
+}
+.template-toc {
+	BORDER-RIGHT: black 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: black =
+1px solid; PADDING-LEFT: 10px; FONT-SIZE: 0.9em; BACKGROUND: #ddd; =
+PADDING-BOTTOM: 0px; MARGIN: 15px 0px; BORDER-LEFT: black 1px solid; =
+WIDTH: auto; PADDING-TOP: 0px; BORDER-BOTTOM: black 1px solid
+}
+.prevnext {
+	FONT-SIZE: 0.9em; MARGIN: 10px 0px 20px
+}
+DIV.highlight {
+	PADDING-LEFT: 15px; BORDER-LEFT: blue 3px solid
+}
+SPAN.highlightblue {
+	COLOR: blue
+}
+SPAN.highlightred {
+	COLOR: red
+}
+SPAN.highlightgreen {
+	COLOR: green
+}
+.side-note {
+	BORDER-RIGHT: #666 1px solid; PADDING-RIGHT: 20px; BORDER-TOP: #666 1px =
+solid; PADDING-LEFT: 20px; BACKGROUND: #eee; PADDING-BOTTOM: 0px; =
+MARGIN: 10px 0px; BORDER-LEFT: #666 1px solid; WIDTH: auto; PADDING-TOP: =
+0px; BORDER-BOTTOM: #666 1px solid
+}
+.side-note-left {
+	BORDER-RIGHT: #666 1px solid; PADDING-RIGHT: 20px; BORDER-TOP: #666 1px =
+solid; PADDING-LEFT: 20px; BACKGROUND: #eee; FLOAT: left; =
+PADDING-BOTTOM: 0px; MARGIN: 10px 10px 10px 0px; BORDER-LEFT: #666 1px =
+solid; WIDTH: 40%; PADDING-TOP: 0px; BORDER-BOTTOM: #666 1px solid
+}
+.side-note-right {
+	BORDER-RIGHT: #666 1px solid; PADDING-RIGHT: 20px; BORDER-TOP: #666 1px =
+solid; PADDING-LEFT: 20px; BACKGROUND: #eee; FLOAT: right; =
+PADDING-BOTTOM: 0px; MARGIN: 10px 0px 10px 10px; BORDER-LEFT: #666 1px =
+solid; WIDTH: 40%; PADDING-TOP: 0px; BORDER-BOTTOM: #666 1px solid
+}
+.callout-box {
+	BORDER-RIGHT: black 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: black =
+1px solid; PADDING-LEFT: 10px; BACKGROUND: #eee; FLOAT: right; =
+PADDING-BOTTOM: 10px; MARGIN: 0px 0px 15px 15px; BORDER-LEFT: black 1px =
+solid; WIDTH: 200px; PADDING-TOP: 10px; BORDER-BOTTOM: black 1px solid; =
+TEXT-ALIGN: center
+}
+.mainpage H2 {
+	MARGIN-TOP: 0px
+}
+.features-table {
+	MARGIN-BOTTOM: 20px; WIDTH: 100%; BORDER-COLLAPSE: collapse
+}
+.features-table TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; =
+VERTICAL-ALIGN: top; PADDING-TOP: 20px
+}
+.features-table TD IMG {
+	FLOAT: left; MARGIN: -20px 15px 5px 0px
+}
+.features-table TD P {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-SIZE: 0.95em; =
+PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 1.6em; PADDING-TOP: 0px
+}
+.features-table TD H3 {
+	FONT-SIZE: 1.5em; MARGIN: 0px
+}
+.features-table TD H4 {
+	FONT-SIZE: 1.2em; MARGIN: 0px
+}
+.mainpage-table {
+	MARGIN: 0px 0px 10px; WIDTH: 100%; BORDER-COLLAPSE: collapse
+}
+.mainpage-table TD {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; =
+VERTICAL-ALIGN: top; PADDING-TOP: 0px
+}
+.mainpage-table TD UL {
+	PADDING-RIGHT: 25px; PADDING-LEFT: 25px; PADDING-BOTTOM: 0px; MARGIN: =
+0px 0px 10px; PADDING-TOP: 0px
+}
+.mainpage-table TD UL LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.mainpage-table TD H3 {
+	FONT-SIZE: 1.4em; MARGIN: 0px
+}
+.topicpage-table {
+	CLEAR: both; MARGIN: -30px 0px 0px; WIDTH: auto
+}
+.topicpage-table TD {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; =
+VERTICAL-ALIGN: top; WIDTH: 50%; PADDING-TOP: 10px
+}
+.topicpage-table H3 {
+	BORDER-BOTTOM: #bbb 1px solid
+}
+.topicpage-table H3 A {
+	COLOR: #036; TEXT-DECORATION: none
+}
+.topicpage-table H3 A:hover {
+	COLOR: #000; TEXT-DECORATION: underline
+}
+.alllinks {
+	FONT-SIZE: 10px; FLOAT: right
+}
+.date {
+	COLOR: #668; FONT-STYLE: italic
+}
+.disambig {
+	BORDER-TOP: #aaa 1px solid; FONT-SIZE: 0.9em; BORDER-BOTTOM: #aaa 1px =
+solid
+}
+.notice {
+	BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #aaa 1px =
+solid; PADDING-LEFT: 5px; FONT-SIZE: 0.9em; PADDING-BOTTOM: 5px; MARGIN: =
+5px 0px; BORDER-LEFT: #aaa 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: =
+#aaa 1px solid
+}
+SPAN.subpages {
+	DISPLAY: block
+}
+.usermessage {
+	BORDER-RIGHT: #ffa500 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: =
+#ffa500 1px solid; PADDING-LEFT: 1em; FONT-WEIGHT: bold; PADDING-BOTTOM: =
+0.5em; MARGIN: 2em 0em 1em; VERTICAL-ALIGN: middle; BORDER-LEFT: #ffa500 =
+1px solid; COLOR: black; PADDING-TOP: 0.5em; BORDER-BOTTOM: #ffa500 1px =
+solid; BACKGROUND-COLOR: #ffce7b
+}
+.error {
+	FONT-SIZE: larger; COLOR: red
+}
+.hiddenStructure {
+	DISPLAY: none
+}
+IMG.tex {
+	VERTICAL-ALIGN: middle
+}
+SPAN.texhtml {
+	FONT-FAMILY: serif
+}
+.special LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; LINE-HEIGHT: 1.4em; PADDING-TOP: 0px
+}
+.autocomment {
+	COLOR: gray
+}
+#pagehistory SPAN.user {
+	MARGIN-LEFT: 1.4em; MARGIN-RIGHT: 0.4em
+}
+#pagehistory SPAN.minor {
+	FONT-WEIGHT: bold
+}
+#pagehistory LI {
+	BORDER-RIGHT: white 1px solid; BORDER-TOP: white 1px solid; =
+BORDER-LEFT: white 1px solid; BORDER-BOTTOM: white 1px solid
+}
+#pagehistory LI.selected {
+	BORDER-RIGHT: #aaaaaa 1px dashed; BORDER-TOP: #aaaaaa 1px dashed; =
+BORDER-LEFT: #aaaaaa 1px dashed; BORDER-BOTTOM: #aaaaaa 1px dashed; =
+BACKGROUND-COLOR: #f9f9f9
+}
+TABLE.diff {
+	BACKGROUND: white; WIDTH: 100%
+}
+TD.diff-otitle {
+	BACKGROUND: #ffffff
+}
+TD.diff-ntitle {
+	BACKGROUND: #ffffff
+}
+TD.diff-addedline {
+	FONT-SIZE: smaller; BACKGROUND: #ccffcc
+}
+TD.diff-deletedline {
+	FONT-SIZE: smaller; BACKGROUND: #ffffaa
+}
+TD.diff-context {
+	FONT-SIZE: smaller; BACKGROUND: #eeeeee
+}
+SPAN.diffchange {
+	FONT-WEIGHT: bold; COLOR: red
+}
+#preftoc {
+	FLOAT: left; MARGIN: 1em; WIDTH: 13em
+}
+#preftoc LI {
+	BORDER-RIGHT: white 1px solid; BORDER-TOP: white 1px solid; =
+BORDER-LEFT: white 1px solid; BORDER-BOTTOM: white 1px solid
+}
+#preftoc LI.selected {
+	BORDER-RIGHT: #aaaaaa 1px dashed; BORDER-TOP: #aaaaaa 1px dashed; =
+BORDER-LEFT: #aaaaaa 1px dashed; BORDER-BOTTOM: #aaaaaa 1px dashed; =
+BACKGROUND-COLOR: #f9f9f9
+}
+#preftoc A {
+	DISPLAY: block; COLOR: #0014a6
+}
+#preftoc A:active {
+	DISPLAY: block; COLOR: #0014a6
+}
+#prefcontrol {
+	CLEAR: both; MARGIN-TOP: 1em; FLOAT: left
+}
+DIV.prefsectiontip {
+	MARGIN-TOP: 1em; FONT-SIZE: 95%
+}
+FIELDSET.operaprefsection {
+	MARGIN-LEFT: 15em
+}
+.redirectText {
+	FONT-SIZE: 150%; MARGIN: 5px
+}
+.printfooter {
+	DISPLAY: none
+}
+.not_patrolled {
+	BACKGROUND-COLOR: #ffa
+}
+DIV.patrollink {
+	FONT-SIZE: 75%; TEXT-ALIGN: right
+}
+SPAN.newpage {
+	FONT-WEIGHT: bold
+}
+SPAN.minor {
+	FONT-WEIGHT: bold
+}
+SPAN.searchmatch {
+	FONT-WEIGHT: bold
+}
+SPAN.unpatrolled {
+	FONT-WEIGHT: bold; COLOR: red
+}
+SPAN.searchmatch {
+	COLOR: red
+}
+.sharedUploadNotice {
+	FONT-STYLE: italic
+}
+SPAN.updatedmarker {
+	COLOR: black; BACKGROUND-COLOR: #00ff00
+}
+SPAN.newpageletter {
+	FONT-WEIGHT: bold; COLOR: black; BACKGROUND-COLOR: yellow
+}
+SPAN.minoreditletter {
+	COLOR: black; BACKGROUND-COLOR: #c5ffe6
+}
+TABLE.gallery {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: =
+#cccccc 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; MARGIN: 2px; =
+BORDER-LEFT: #cccccc 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc =
+1px solid; BACKGROUND-COLOR: #ffffff
+}
+TABLE.gallery TR {
+	VERTICAL-ALIGN: top
+}
+TABLE.gallery TD {
+	BORDER-RIGHT: white 2px solid; BORDER-TOP: white 2px solid; =
+VERTICAL-ALIGN: top; BORDER-LEFT: white 2px solid; BORDER-BOTTOM: white =
+2px solid; BACKGROUND-COLOR: #f9f9f9
+}
+DIV.gallerybox {
+	MARGIN: 2px; WIDTH: 150px
+}
+DIV.gallerybox DIV.thumb {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; MARGIN: =
+2px; BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid; =
+TEXT-ALIGN: center
+}
+DIV.gallerytext {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-SIZE: 94%; PADDING-BOTTOM: =
+2px; PADDING-TOP: 2px
+}
+DIV.expert {
+	BORDER-RIGHT: #abc 2px solid; PADDING-RIGHT: 20px; BORDER-TOP: #abc 2px =
+solid; PADDING-LEFT: 47px; BACKGROUND: url(images/wizardhat-small.gif) =
+#eff no-repeat left top; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px =
+15px 0px 0px; BORDER-LEFT: #abc 2px solid; WIDTH: 35%; PADDING-TOP: 0px; =
+BORDER-BOTTOM: #abc 2px solid
+}
+TABLE.release {
+	BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: smaller; =
+BORDER-LEFT-COLOR: black; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: =
+black; WIDTH: 100%; BORDER-TOP-COLOR: black; FONT-FAMILY: gill sans mt, =
+gill sans, helvetica, tahoma; BORDER-RIGHT-WIDTH: 1px; =
+BORDER-RIGHT-COLOR: black
+}
+TABLE.release TD {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #ccc 1px =
+solid; PADDING-LEFT: 25px; PADDING-BOTTOM: 15px; BORDER-LEFT: #ccc 1px =
+solid; PADDING-TOP: 0px; BORDER-BOTTOM: #ccc 1px solid
+}
+TR.releaseHeader TD {
+	FONT-SIZE: 125%
+}
+TR.releaseHeader TD.OK {
+	BACKGROUND-COLOR: green
+}
+TR.releaseHeader TD.ERR {
+	BACKGROUND-COLOR: red
+}
+TR.releaseHeader TD.IP {
+	BACKGROUND-COLOR: yellow
+}
+TR.releaseHeader TD.TBD {
+=09
+}
+TR.release TD.OK {
+	BACKGROUND: url(images/ok.png) #cfc no-repeat left top; WIDTH: 22%
+}
+TR.release TD.ERR {
+	BACKGROUND: url(images/err.png) #fcc no-repeat left top; WIDTH: 22%
+}
+TR.release TD.IP {
+	BACKGROUND: url(images/ip.png) #ffc no-repeat left top; WIDTH: 22%
+}
+TR.release TD.TBD {
+	BACKGROUND: url(images/tbd.png) #eee no-repeat left top; WIDTH: 22%
+}
+TR.release TD.stepLabel {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 25px; PADDING-BOTTOM: 15px; WIDTH: =
+12%; PADDING-TOP: 0px; TEXT-ALIGN: right
+}
+.OK {
+	BACKGROUND-COLOR: rgb(153,255,153)
+}
+.irrelevant {
+	COLOR: rgb(153,153,153)
+}
+.maybe {
+	BACKGROUND-COLOR: rgb(255,255,204)
+}
+.editsection {
+	FONT-WEIGHT: normal; FLOAT: right; MARGIN-LEFT: 5px
+}
+H1 .editsection {
+	FONT-SIZE: 50%
+}
+H2 .editsection {
+	FONT-SIZE: 66.7%
+}
+H3 .editsection {
+	FONT-SIZE: 85.5%
+}
+H5 .editsection {
+	FONT-SIZE: 120%
+}
+H6 .editsection {
+	FONT-SIZE: 133%
+}
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://developer.mozilla.org/css/wikiprint.css
+
+BODY {
+	BACKGROUND: #fff
+}
+#sidebar {
+	DISPLAY: none
+}
+#content {
+	BACKGROUND: #fff; MARGIN: 20px
+}
+#mozilla-org {
+	DISPLAY: none
+}
+#header {
+	DISPLAY: none
+}
+#printheader {
+	DISPLAY: block
+}
+#printheader .subtitle {
+	FONT-SIZE: 1.1em; BORDER-BOTTOM: #bbb 1px solid; FONT-STYLE: italic
+}
+#navigation {
+	DISPLAY: none
+}
+#breadcrumbs {
+	DISPLAY: none
+}
+.breadcrumbs {
+	DISPLAY: none
+}
+.article .urlexpansion {
+	DISPLAY: inline
+}
+#footer {
+	DISPLAY: none
+}
+.printfooter {
+	DISPLAY: block; MARGIN: 10px; FONT-STYLE: italic
+}
+.printfooter A {
+	COLOR: #000; TEXT-DECORATION: none
+}
+#siteSub {
+	DISPLAY: block; FONT-SIZE: 1.2em; MARGIN: 10px; COLOR: #666; =
+FONT-STYLE: italic
+}
+#footer #f-about {
+	DISPLAY: none
+}
+#footer #f-disclaimer {
+	DISPLAY: none
+}
+#catlinks {
+	DISPLAY: none
+}
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://developer.mozilla.org/en/docs/skins/devmo/IE60Fixes.css
+
+A.external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(/css/images/external.png) =
+no-repeat right center
+}
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: 7bit
+Content-Location: http://developer.mozilla.org/en/docs/index.php?title=-&action=raw&gen=css&maxage=18000
+
+A.new {
+	COLOR: #cc2200
+}
+#quickbar A.new {
+	COLOR: #cc2200
+}
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://developer.mozilla.org/en/docs/skins/common/IEFixes.js
+
+// IE fixes javascript=0A=
+=0A=
+var isMSIE55 =3D (window.showModalDialog && window.clipboardData && =
+window.createPopup);=0A=
+var doneIETransform;=0A=
+var doneIEAlphaFix;=0A=
+=0A=
+if (document.attachEvent)=0A=
+  document.attachEvent('onreadystatechange', hookit);=0A=
+=0A=
+function hookit() {=0A=
+    if (!doneIETransform && document.getElementById && =
+document.getElementById('bodyContent')) {=0A=
+        doneIETransform =3D true;=0A=
+        relativeforfloats();=0A=
+        fixalpha();=0A=
+    }=0A=
+}=0A=
+=0A=
+// png alpha transparency fixes=0A=
+function fixalpha() {=0A=
+    // bg=0A=
+    if (isMSIE55 && !doneIEAlphaFix)=0A=
+    {=0A=
+        var plogo =3D document.getElementById('p-logo');=0A=
+        if (!plogo) return;=0A=
+=0A=
+        var logoa =3D plogo.getElementsByTagName('a')[0];=0A=
+        if (!logoa) return;=0A=
+=0A=
+        var bg =3D logoa.currentStyle.backgroundImage;=0A=
+        var imageUrl =3D bg.substring(5, bg.length-2);=0A=
+=0A=
+        doneIEAlphaFix =3D true;=0A=
+=0A=
+        if (imageUrl.substr(imageUrl.length-4).toLowerCase() =3D=3D =
+'.png') {=0A=
+            var logospan =3D =
+logoa.appendChild(document.createElement('span'));=0A=
+           =0A=
+            logoa.style.backgroundImage =3D 'none';=0A=
+            logospan.style.filter =3D =
+'progid:DXImageTransform.Microsoft.AlphaImageLoader(src=3D' + imageUrl + =
+')';=0A=
+            logospan.style.height =3D '100%';=0A=
+            logospan.style.position =3D 'absolute';=0A=
+            logospan.style.width =3D logoa.currentStyle.width;=0A=
+            logospan.style.cursor =3D 'hand';=0A=
+            // Center image with hack for IE5.5=0A=
+            if (document.documentElement.dir =3D=3D "rtl") =0A=
+            {=0A=
+              logospan.style.right =3D '50%';=0A=
+              logospan.style.setExpression('marginRight', '"-" + =
+(this.offsetWidth / 2) + "px"');=0A=
+            }=0A=
+            else=0A=
+            {=0A=
+              logospan.style.left =3D '50%';=0A=
+              logospan.style.setExpression('marginLeft', '"-" + =
+(this.offsetWidth / 2) + "px"');=0A=
+            }=0A=
+            logospan.style.top =3D '50%';=0A=
+            logospan.style.setExpression('marginTop', '"-" + =
+(this.offsetHeight / 2) + "px"');=0A=
+ =0A=
+            var linkFix =3D logoa.appendChild(logoa.cloneNode());=0A=
+            linkFix.style.position =3D 'absolute';=0A=
+            linkFix.style.height =3D '100%';=0A=
+            linkFix.style.width =3D '100%';=0A=
+        }=0A=
+    }=0A=
+}=0A=
+=0A=
+// fix ie6 disappering float bug=0A=
+function relativeforfloats() {=0A=
+    var bc =3D document.getElementById('bodyContent');=0A=
+    if (bc) {=0A=
+        var tables =3D bc.getElementsByTagName('table');=0A=
+        var divs =3D bc.getElementsByTagName('div');=0A=
+    }=0A=
+    setrelative(tables);=0A=
+    setrelative(divs);=0A=
+}=0A=
+function setrelative (nodes) {=0A=
+    var i =3D 0;=0A=
+    while (i < nodes.length) {=0A=
+        if(((nodes[i].style.float && nodes[i].style.float !=3D ('none') =
+||=0A=
+        (nodes[i].align && nodes[i].align !=3D ('none'))) &&=0A=
+        (!nodes[i].style.position || nodes[i].style.position !=3D =
+'relative'))) =0A=
+        {=0A=
+            nodes[i].style.position =3D 'relative';=0A=
+        }=0A=
+        i++;=0A=
+    }=0A=
+}=0A=
+=0A=
+=0A=
+// Expand links for printing=0A=
+=0A=
+String.prototype.hasClass =3D function(classWanted)=0A=
+{=0A=
+    var classArr =3D this.split(/\s/);=0A=
+    for (var i=3D0; i<classArr.length; i++)=0A=
+      if (classArr[i].toLowerCase() =3D=3D classWanted.toLowerCase()) =
+return true;=0A=
+    return false;=0A=
+}=0A=
+=0A=
+var expandedURLs;=0A=
+=0A=
+onbeforeprint =3D function() { =0A=
+    expandedURLs =3D [];=0A=
+=0A=
+    var contentEl =3D document.getElementById("content");=0A=
+=0A=
+    if (contentEl)=0A=
+    {=0A=
+      var allLinks =3D contentEl.getElementsByTagName("a");=0A=
+=0A=
+      for (var i=3D0; i < allLinks.length; i++) {=0A=
+          if (allLinks[i].className.hasClass("external") && =
+!allLinks[i].className.hasClass("free")) {=0A=
+              var expandedLink =3D document.createElement("span");=0A=
+              var expandedText =3D document.createTextNode(" (" + =
+allLinks[i].href + ")");=0A=
+              expandedLink.appendChild(expandedText);=0A=
+              allLinks[i].parentNode.insertBefore(expandedLink, =
+allLinks[i].nextSibling);=0A=
+              expandedURLs[i] =3D expandedLink;=0A=
+          }=0A=
+      }=0A=
+   }=0A=
+}=0A=
+=0A=
+onafterprint =3D function()=0A=
+{=0A=
+    for (var i=3D0; i < expandedURLs.length; i++)=0A=
+        if (expandedURLs[i])=0A=
+            expandedURLs[i].removeNode(true);=0A=
+}
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://developer.mozilla.org/en/docs/index.php?title=-&action=raw&gen=js
+
+/* generated javascript */=0A=
+var skin =3D 'devmo';=0A=
+var stylepath =3D '/en/docs/skins';=0A=
+=0A=
+/* MediaWiki:Common.js */=0A=
+/* Any JavaScript here will be loaded for all users on every page load. =
+*/=0A=
+=0A=
+/* MediaWiki:Devmo.js (deprecated; migrate to Common.js!) */=0A=
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://developer.mozilla.org/en/docs/skins/common/wikibits.js
+
+// MediaWiki JavaScript support functions=0A=
+=0A=
+var clientPC =3D navigator.userAgent.toLowerCase(); // Get client info=0A=
+var is_gecko =3D ((clientPC.indexOf('gecko')!=3D-1) && =
+(clientPC.indexOf('spoofer')=3D=3D-1)=0A=
+                && (clientPC.indexOf('khtml') =3D=3D -1) && =
+(clientPC.indexOf('netscape/7.0')=3D=3D-1));=0A=
+var is_safari =3D ((clientPC.indexOf('applewebkit')!=3D-1) && =
+(clientPC.indexOf('spoofer')=3D=3D-1));=0A=
+var is_khtml =3D (navigator.vendor =3D=3D 'KDE' || ( document.childNodes =
+&& !document.all && !navigator.taintEnabled ));=0A=
+// For accesskeys=0A=
+var is_ff2_win =3D (clientPC.indexOf('firefox/2')!=3D-1 || =
+clientPC.indexOf('minefield/3')!=3D-1) && =
+clientPC.indexOf('windows')!=3D-1;=0A=
+var is_ff2_x11 =3D (clientPC.indexOf('firefox/2')!=3D-1 || =
+clientPC.indexOf('minefield/3')!=3D-1) && clientPC.indexOf('x11')!=3D-1;=0A=
+if (clientPC.indexOf('opera') !=3D -1) {=0A=
+	var is_opera =3D true;=0A=
+	var is_opera_preseven =3D (window.opera && !document.childNodes);=0A=
+	var is_opera_seven =3D (window.opera && document.childNodes);=0A=
+}=0A=
+=0A=
+// Global external objects used by this script.=0A=
+/*extern ta, stylepath, skin */=0A=
+=0A=
+// add any onload functions in this hook (please don't hard-code any =
+events in the xhtml source)=0A=
+var doneOnloadHook;=0A=
+=0A=
+if (!window.onloadFuncts) {=0A=
+	var onloadFuncts =3D [];=0A=
+}=0A=
+=0A=
+function addOnloadHook(hookFunct) {=0A=
+	// Allows add-on scripts to add onload functions=0A=
+	onloadFuncts[onloadFuncts.length] =3D hookFunct;=0A=
+}=0A=
+=0A=
+function hookEvent(hookName, hookFunct) {=0A=
+	if (window.addEventListener) {=0A=
+		window.addEventListener(hookName, hookFunct, false);=0A=
+	} else if (window.attachEvent) {=0A=
+		window.attachEvent("on" + hookName, hookFunct);=0A=
+	}=0A=
+}=0A=
+=0A=
+// document.write special stylesheet links=0A=
+if (typeof stylepath !=3D 'undefined' && typeof skin !=3D 'undefined') {=0A=
+	if (is_opera_preseven) {=0A=
+		document.write('<link rel=3D"stylesheet" type=3D"text/css" =
+href=3D"'+stylepath+'/'+skin+'/Opera6Fixes.css">');=0A=
+	} else if (is_opera_seven) {=0A=
+		document.write('<link rel=3D"stylesheet" type=3D"text/css" =
+href=3D"'+stylepath+'/'+skin+'/Opera7Fixes.css">');=0A=
+	} else if (is_khtml) {=0A=
+		document.write('<link rel=3D"stylesheet" type=3D"text/css" =
+href=3D"'+stylepath+'/'+skin+'/KHTMLFixes.css">');=0A=
+	}=0A=
+}=0A=
+=0A=
+if (wgBreakFrames) {=0A=
+	// Un-trap us from framesets=0A=
+	if (window.top !=3D window) {=0A=
+		window.top.location =3D window.location;=0A=
+	}=0A=
+}=0A=
+=0A=
+// for enhanced RecentChanges=0A=
+function toggleVisibility(_levelId, _otherId, _linkId) {=0A=
+	var thisLevel =3D document.getElementById(_levelId);=0A=
+	var otherLevel =3D document.getElementById(_otherId);=0A=
+	var linkLevel =3D document.getElementById(_linkId);=0A=
+	if (thisLevel.style.display =3D=3D 'none') {=0A=
+		thisLevel.style.display =3D 'block';=0A=
+		otherLevel.style.display =3D 'none';=0A=
+		linkLevel.style.display =3D 'inline';=0A=
+	} else {=0A=
+		thisLevel.style.display =3D 'none';=0A=
+		otherLevel.style.display =3D 'inline';=0A=
+		linkLevel.style.display =3D 'none';=0A=
+	}=0A=
+}=0A=
+=0A=
+function historyRadios(parent) {=0A=
+	var inputs =3D parent.getElementsByTagName('input');=0A=
+	var radios =3D [];=0A=
+	for (var i =3D 0; i < inputs.length; i++) {=0A=
+		if (inputs[i].name =3D=3D "diff" || inputs[i].name =3D=3D "oldid") {=0A=
+			radios[radios.length] =3D inputs[i];=0A=
+		}=0A=
+	}=0A=
+	return radios;=0A=
+}=0A=
+=0A=
+// check selection and tweak visibility/class onclick=0A=
+function diffcheck() {=0A=
+	var dli =3D false; // the li where the diff radio is checked=0A=
+	var oli =3D false; // the li where the oldid radio is checked=0A=
+	var hf =3D document.getElementById('pagehistory');=0A=
+	if (!hf) {=0A=
+		return true;=0A=
+	}=0A=
+	var lis =3D hf.getElementsByTagName('li');=0A=
+	for (var i=3D0;i<lis.length;i++) {=0A=
+		var inputs =3D historyRadios(lis[i]);=0A=
+		if (inputs[1] && inputs[0]) {=0A=
+			if (inputs[1].checked || inputs[0].checked) { // this row has a =
+checked radio button=0A=
+				if (inputs[1].checked && inputs[0].checked && inputs[0].value =3D=3D =
+inputs[1].value) {=0A=
+					return false;=0A=
+				}=0A=
+				if (oli) { // it's the second checked radio=0A=
+					if (inputs[1].checked) {=0A=
+						oli.className =3D "selected";=0A=
+						return false;=0A=
+					}=0A=
+				} else if (inputs[0].checked) {=0A=
+					return false;=0A=
+				}=0A=
+				if (inputs[0].checked) {=0A=
+					dli =3D lis[i];=0A=
+				}=0A=
+				if (!oli) {=0A=
+					inputs[0].style.visibility =3D 'hidden';=0A=
+				}=0A=
+				if (dli) {=0A=
+					inputs[1].style.visibility =3D 'hidden';=0A=
+				}=0A=
+				lis[i].className =3D "selected";=0A=
+				oli =3D lis[i];=0A=
+			}  else { // no radio is checked in this row=0A=
+				if (!oli) {=0A=
+					inputs[0].style.visibility =3D 'hidden';=0A=
+				} else {=0A=
+					inputs[0].style.visibility =3D 'visible';=0A=
+				}=0A=
+				if (dli) {=0A=
+					inputs[1].style.visibility =3D 'hidden';=0A=
+				} else {=0A=
+					inputs[1].style.visibility =3D 'visible';=0A=
+				}=0A=
+				lis[i].className =3D "";=0A=
+			}=0A=
+		}=0A=
+	}=0A=
+	return true;=0A=
+}=0A=
+=0A=
+// page history stuff=0A=
+// attach event handlers to the input elements on history page=0A=
+function histrowinit() {=0A=
+	var hf =3D document.getElementById('pagehistory');=0A=
+	if (!hf) {=0A=
+		return;=0A=
+	}=0A=
+	var lis =3D hf.getElementsByTagName('li');=0A=
+	for (var i =3D 0; i < lis.length; i++) {=0A=
+		var inputs =3D historyRadios(lis[i]);=0A=
+		if (inputs[0] && inputs[1]) {=0A=
+			inputs[0].onclick =3D diffcheck;=0A=
+			inputs[1].onclick =3D diffcheck;=0A=
+		}=0A=
+	}=0A=
+	diffcheck();=0A=
+}=0A=
+=0A=
+// generate toc from prefs form, fold sections=0A=
+// XXX: needs testing on IE/Mac and safari=0A=
+// more comments to follow=0A=
+function tabbedprefs() {=0A=
+	var prefform =3D document.getElementById('preferences');=0A=
+	if (!prefform || !document.createElement) {=0A=
+		return;=0A=
+	}=0A=
+	if (prefform.nodeName.toLowerCase() =3D=3D 'a') {=0A=
+		return; // Occasional IE problem=0A=
+	}=0A=
+	prefform.className =3D prefform.className + 'jsprefs';=0A=
+	var sections =3D [];=0A=
+	var children =3D prefform.childNodes;=0A=
+	var seci =3D 0;=0A=
+	for (var i =3D 0; i < children.length; i++) {=0A=
+		if (children[i].nodeName.toLowerCase() =3D=3D 'fieldset') {=0A=
+			children[i].id =3D 'prefsection-' + seci;=0A=
+			children[i].className =3D 'prefsection';=0A=
+			if (is_opera || is_khtml) {=0A=
+				children[i].className =3D 'prefsection operaprefsection';=0A=
+			}=0A=
+			var legends =3D children[i].getElementsByTagName('legend');=0A=
+			sections[seci] =3D {};=0A=
+			legends[0].className =3D 'mainLegend';=0A=
+			if (legends[0] && legends[0].firstChild.nodeValue) {=0A=
+				sections[seci].text =3D legends[0].firstChild.nodeValue;=0A=
+			} else {=0A=
+				sections[seci].text =3D '# ' + seci;=0A=
+			}=0A=
+			sections[seci].secid =3D children[i].id;=0A=
+			seci++;=0A=
+			if (sections.length !=3D 1) {=0A=
+				children[i].style.display =3D 'none';=0A=
+			} else {=0A=
+				var selectedid =3D children[i].id;=0A=
+			}=0A=
+		}=0A=
+	}=0A=
+	var toc =3D document.createElement('ul');=0A=
+	toc.id =3D 'preftoc';=0A=
+	toc.selectedid =3D selectedid;=0A=
+	for (i =3D 0; i < sections.length; i++) {=0A=
+		var li =3D document.createElement('li');=0A=
+		if (i =3D=3D=3D 0) {=0A=
+			li.className =3D 'selected';=0A=
+		}=0A=
+		var a =3D document.createElement('a');=0A=
+		a.href =3D '#' + sections[i].secid;=0A=
+		a.onmousedown =3D a.onclick =3D uncoversection;=0A=
+		a.appendChild(document.createTextNode(sections[i].text));=0A=
+		a.secid =3D sections[i].secid;=0A=
+		li.appendChild(a);=0A=
+		toc.appendChild(li);=0A=
+	}=0A=
+	prefform.parentNode.insertBefore(toc, =
+prefform.parentNode.childNodes[0]);=0A=
+	document.getElementById('prefsubmit').id =3D 'prefcontrol';=0A=
+}=0A=
+=0A=
+function uncoversection() {=0A=
+	var oldsecid =3D this.parentNode.parentNode.selectedid;=0A=
+	var newsec =3D document.getElementById(this.secid);=0A=
+	if (oldsecid !=3D this.secid) {=0A=
+		var ul =3D document.getElementById('preftoc');=0A=
+		document.getElementById(oldsecid).style.display =3D 'none';=0A=
+		newsec.style.display =3D 'block';=0A=
+		ul.selectedid =3D this.secid;=0A=
+		var lis =3D ul.getElementsByTagName('li');=0A=
+		for (var i =3D 0; i< lis.length; i++) {=0A=
+			lis[i].className =3D '';=0A=
+		}=0A=
+		this.parentNode.className =3D 'selected';=0A=
+	}=0A=
+	return false;=0A=
+}=0A=
+=0A=
+// Timezone stuff=0A=
+// tz in format [+-]HHMM=0A=
+function checkTimezone(tz, msg) {=0A=
+	var localclock =3D new Date();=0A=
+	// returns negative offset from GMT in minutes=0A=
+	var tzRaw =3D localclock.getTimezoneOffset();=0A=
+	var tzHour =3D Math.floor( Math.abs(tzRaw) / 60);=0A=
+	var tzMin =3D Math.abs(tzRaw) % 60;=0A=
+	var tzString =3D ((tzRaw >=3D 0) ? "-" : "+") + ((tzHour < 10) ? "0" : =
+"") + tzHour + ((tzMin < 10) ? "0" : "") + tzMin;=0A=
+	if (tz !=3D tzString) {=0A=
+		var junk =3D msg.split('$1');=0A=
+		document.write(junk[0] + "UTC" + tzString + junk[1]);=0A=
+	}=0A=
+}=0A=
+=0A=
+function unhidetzbutton() {=0A=
+	var tzb =3D document.getElementById('guesstimezonebutton');=0A=
+	if (tzb) {=0A=
+		tzb.style.display =3D 'inline';=0A=
+	}=0A=
+}=0A=
+=0A=
+// in [-]HH:MM format...=0A=
+// won't yet work with non-even tzs=0A=
+function fetchTimezone() {=0A=
+	// FIXME: work around Safari bug=0A=
+	var localclock =3D new Date();=0A=
+	// returns negative offset from GMT in minutes=0A=
+	var tzRaw =3D localclock.getTimezoneOffset();=0A=
+	var tzHour =3D Math.floor( Math.abs(tzRaw) / 60);=0A=
+	var tzMin =3D Math.abs(tzRaw) % 60;=0A=
+	var tzString =3D ((tzRaw >=3D 0) ? "-" : "") + ((tzHour < 10) ? "0" : =
+"") + tzHour +=0A=
+		":" + ((tzMin < 10) ? "0" : "") + tzMin;=0A=
+	return tzString;=0A=
+}=0A=
+=0A=
+function guessTimezone(box) {=0A=
+	document.getElementsByName("wpHourDiff")[0].value =3D fetchTimezone();=0A=
+}=0A=
+=0A=
+function showTocToggle() {=0A=
+	if (document.createTextNode) {=0A=
+		// Uses DOM calls to avoid document.write + XHTML issues=0A=
+=0A=
+		var linkHolder =3D document.getElementById('toctitle');=0A=
+		if (!linkHolder) {=0A=
+			return;=0A=
+		}=0A=
+=0A=
+		var outerSpan =3D document.createElement('span');=0A=
+		outerSpan.className =3D 'toctoggle';=0A=
+=0A=
+		var toggleLink =3D document.createElement('a');=0A=
+		toggleLink.id =3D 'togglelink';=0A=
+		toggleLink.className =3D 'internal';=0A=
+		toggleLink.href =3D 'javascript:toggleToc()';=0A=
+		toggleLink.appendChild(document.createTextNode(tocHideText));=0A=
+=0A=
+		outerSpan.appendChild(document.createTextNode('['));=0A=
+		outerSpan.appendChild(toggleLink);=0A=
+		outerSpan.appendChild(document.createTextNode(']'));=0A=
+=0A=
+		linkHolder.appendChild(document.createTextNode(' '));=0A=
+		linkHolder.appendChild(outerSpan);=0A=
+=0A=
+		var cookiePos =3D document.cookie.indexOf("hidetoc=3D");=0A=
+		if (cookiePos > -1 && document.cookie.charAt(cookiePos + 8) =3D=3D 1) {=0A=
+			toggleToc();=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+function changeText(el, newText) {=0A=
+	// Safari work around=0A=
+	if (el.innerText) {=0A=
+		el.innerText =3D newText;=0A=
+	} else if (el.firstChild && el.firstChild.nodeValue) {=0A=
+		el.firstChild.nodeValue =3D newText;=0A=
+	}=0A=
+}=0A=
+=0A=
+function toggleToc() {=0A=
+	var toc =3D =
+document.getElementById('toc').getElementsByTagName('ul')[0];=0A=
+	var toggleLink =3D document.getElementById('togglelink');=0A=
+=0A=
+	if (toc && toggleLink && toc.style.display =3D=3D 'none') {=0A=
+		changeText(toggleLink, tocHideText);=0A=
+		toc.style.display =3D 'block';=0A=
+		document.cookie =3D "hidetoc=3D0";=0A=
+	} else {=0A=
+		changeText(toggleLink, tocShowText);=0A=
+		toc.style.display =3D 'none';=0A=
+		document.cookie =3D "hidetoc=3D1";=0A=
+	}=0A=
+}=0A=
+=0A=
+var mwEditButtons =3D [];=0A=
+var mwCustomEditButtons =3D []; // eg to add in MediaWiki:Common.js=0A=
+=0A=
+// this function generates the actual toolbar buttons with localized text=0A=
+// we use it to avoid creating the toolbar where javascript is not =
+enabled=0A=
+function addButton(imageFile, speedTip, tagOpen, tagClose, sampleText) {=0A=
+	// Don't generate buttons for browsers which don't fully=0A=
+	// support it.=0A=
+	mwEditButtons[mwEditButtons.length] =3D=0A=
+		{"imageFile": imageFile,=0A=
+		 "speedTip": speedTip,=0A=
+		 "tagOpen": tagOpen,=0A=
+		 "tagClose": tagClose,=0A=
+		 "sampleText": sampleText};=0A=
+}=0A=
+=0A=
+// this function generates the actual toolbar buttons with localized text=0A=
+// we use it to avoid creating the toolbar where javascript is not =
+enabled=0A=
+function mwInsertEditButton(parent, item) {=0A=
+	var image =3D document.createElement("img");=0A=
+	image.width =3D 23;=0A=
+	image.height =3D 22;=0A=
+	image.src =3D item.imageFile;=0A=
+	image.border =3D 0;=0A=
+	image.alt =3D item.speedTip;=0A=
+	image.title =3D item.speedTip;=0A=
+	image.style.cursor =3D "pointer";=0A=
+	image.onclick =3D function() {=0A=
+		insertTags(item.tagOpen, item.tagClose, item.sampleText);=0A=
+		return false;=0A=
+	};=0A=
+	=0A=
+	parent.appendChild(image);=0A=
+	return true;=0A=
+}=0A=
+=0A=
+function mwSetupToolbar() {=0A=
+	var toolbar =3D document.getElementById('toolbar');=0A=
+	if (!toolbar) { return false; }=0A=
+=0A=
+	var textbox =3D document.getElementById('wpTextbox1');=0A=
+	if (!textbox) { return false; }=0A=
+	=0A=
+	// Don't generate buttons for browsers which don't fully=0A=
+	// support it.=0A=
+	if (!document.selection && textbox.selectionStart =3D=3D=3D null) {=0A=
+		return false;=0A=
+	}=0A=
+	=0A=
+	for (var i in mwEditButtons) {=0A=
+		mwInsertEditButton(toolbar, mwEditButtons[i]);=0A=
+	}=0A=
+	for (i in mwCustomEditButtons) {=0A=
+		mwInsertEditButton(toolbar, mwCustomEditButtons[i]);=0A=
+	}=0A=
+	return true;=0A=
+}=0A=
+=0A=
+function escapeQuotes(text) {=0A=
+	var re =3D new RegExp("'","g");=0A=
+	text =3D text.replace(re,"\\'");=0A=
+	re =3D new RegExp("\\n","g");=0A=
+	text =3D text.replace(re,"\\n");=0A=
+	return escapeQuotesHTML(text);=0A=
+}=0A=
+=0A=
+function escapeQuotesHTML(text) {=0A=
+	var re =3D new RegExp('&',"g");=0A=
+	text =3D text.replace(re,"&amp;");=0A=
+	re =3D new RegExp('"',"g");=0A=
+	text =3D text.replace(re,"&quot;");=0A=
+	re =3D new RegExp('<',"g");=0A=
+	text =3D text.replace(re,"&lt;");=0A=
+	re =3D new RegExp('>',"g");=0A=
+	text =3D text.replace(re,"&gt;");=0A=
+	return text;=0A=
+}=0A=
+=0A=
+// apply tagOpen/tagClose to selection in textarea,=0A=
+// use sampleText instead of selection if there is none=0A=
+// copied and adapted from phpBB=0A=
+function insertTags(tagOpen, tagClose, sampleText) {=0A=
+	var txtarea;=0A=
+	if (document.editform) {=0A=
+		txtarea =3D document.editform.wpTextbox1;=0A=
+	} else {=0A=
+		// some alternate form? take the first one we can find=0A=
+		var areas =3D document.getElementsByTagName('textarea');=0A=
+		txtarea =3D areas[0];=0A=
+	}=0A=
+=0A=
+	// IE=0A=
+	if (document.selection  && !is_gecko) {=0A=
+		var theSelection =3D document.selection.createRange().text;=0A=
+		if (!theSelection) {=0A=
+			theSelection=3DsampleText;=0A=
+		}=0A=
+		txtarea.focus();=0A=
+		if (theSelection.charAt(theSelection.length - 1) =3D=3D " ") { // =
+exclude ending space char, if any=0A=
+			theSelection =3D theSelection.substring(0, theSelection.length - 1);=0A=
+			document.selection.createRange().text =3D tagOpen + theSelection + =
+tagClose + " ";=0A=
+		} else {=0A=
+			document.selection.createRange().text =3D tagOpen + theSelection + =
+tagClose;=0A=
+		}=0A=
+=0A=
+	// Mozilla=0A=
+	} else if(txtarea.selectionStart || txtarea.selectionStart =3D=3D '0') {=0A=
+		var replaced =3D false;=0A=
+		var startPos =3D txtarea.selectionStart;=0A=
+		var endPos =3D txtarea.selectionEnd;=0A=
+		if (endPos-startPos) {=0A=
+			replaced =3D true;=0A=
+		}=0A=
+		var scrollTop =3D txtarea.scrollTop;=0A=
+		var myText =3D (txtarea.value).substring(startPos, endPos);=0A=
+		if (!myText) {=0A=
+			myText=3DsampleText;=0A=
+		}=0A=
+		var subst;=0A=
+		if (myText.charAt(myText.length - 1) =3D=3D " ") { // exclude ending =
+space char, if any=0A=
+			subst =3D tagOpen + myText.substring(0, (myText.length - 1)) + =
+tagClose + " ";=0A=
+		} else {=0A=
+			subst =3D tagOpen + myText + tagClose;=0A=
+		}=0A=
+		txtarea.value =3D txtarea.value.substring(0, startPos) + subst +=0A=
+			txtarea.value.substring(endPos, txtarea.value.length);=0A=
+		txtarea.focus();=0A=
+		//set new selection=0A=
+		if (replaced) {=0A=
+			var cPos =3D startPos+(tagOpen.length+myText.length+tagClose.length);=0A=
+			txtarea.selectionStart =3D cPos;=0A=
+			txtarea.selectionEnd =3D cPos;=0A=
+		} else {=0A=
+			txtarea.selectionStart =3D startPos+tagOpen.length;=0A=
+			txtarea.selectionEnd =3D startPos+tagOpen.length+myText.length;=0A=
+		}=0A=
+		txtarea.scrollTop =3D scrollTop;=0A=
+=0A=
+	// All other browsers get no toolbar.=0A=
+	// There was previously support for a crippled "help"=0A=
+	// bar, but that caused more problems than it solved.=0A=
+	}=0A=
+	// reposition cursor if possible=0A=
+	if (txtarea.createTextRange) {=0A=
+		txtarea.caretPos =3D document.selection.createRange().duplicate();=0A=
+	}=0A=
+}=0A=
+=0A=
+/**=0A=
+ * Set up accesskeys/tooltips.  If doId is specified, only set up for =
+that id.=0A=
+ *=0A=
+ * @param mixed doId string or null=0A=
+ */=0A=
+function akeytt( doId ) {=0A=
+	if (typeof ta =3D=3D "undefined" || !ta) {=0A=
+		return;=0A=
+	}=0A=
+=0A=
+	var pref;=0A=
+	if (is_opera) {=0A=
+		pref =3D 'shift-esc-';=0A=
+	} else if (is_safari || =
+navigator.userAgent.toLowerCase().indexOf('mac') + 1=0A=
+		|| navigator.userAgent.toLowerCase().indexOf('konqueror') + 1 ) {=0A=
+		pref =3D 'control-';=0A=
+	} else if (is_ff2_win || is_ff2_x11) {=0A=
+		pref =3D 'alt-shift-';=0A=
+	} else {=0A=
+		pref =3D 'alt-';=0A=
+	}=0A=
+=0A=
+	if ( doId ) {=0A=
+		ta =3D [ta[doId]];=0A=
+	}=0A=
+=0A=
+	for (var id in ta) {=0A=
+		var n =3D document.getElementById(id);=0A=
+		if (n) {=0A=
+			var a =3D null;=0A=
+			var ak =3D '';=0A=
+			// Are we putting accesskey in it=0A=
+			if (ta[id][0].length > 0) {=0A=
+				// Is this object a object? If not assume it's the next child.=0A=
+=0A=
+				if (n.nodeName.toLowerCase() =3D=3D "a") {=0A=
+					a =3D n;=0A=
+				} else {=0A=
+					a =3D n.childNodes[0];=0A=
+				}=0A=
+			 	// Don't add an accesskey for the watch tab if the watch=0A=
+			 	// checkbox is also available.=0A=
+				if (a && ((id !=3D 'ca-watch' && id !=3D 'ca-unwatch') ||=0A=
+				=
+!(window.location.search.match(/[\?&](action=3Dedit|action=3Dsubmit)/i)))=
+) {=0A=
+					a.accessKey =3D ta[id][0];=0A=
+					ak =3D ' ['+pref+ta[id][0]+']';=0A=
+				}=0A=
+			} else {=0A=
+				// We don't care what type the object is when assigning tooltip=0A=
+				a =3D n;=0A=
+				ak =3D '';=0A=
+			}=0A=
+=0A=
+			if (a) {=0A=
+				a.title =3D ta[id][1]+ak;=0A=
+			}=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+function setupRightClickEdit() {=0A=
+	if (document.getElementsByTagName) {=0A=
+		var spans =3D document.getElementsByTagName('span');=0A=
+		for (var i =3D 0; i < spans.length; i++) {=0A=
+			var el =3D spans[i];=0A=
+			if(el.className =3D=3D 'editsection') {=0A=
+				addRightClickEditHandler(el);=0A=
+			}=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+function addRightClickEditHandler(el) {=0A=
+	for (var i =3D 0; i < el.childNodes.length; i++) {=0A=
+		var link =3D el.childNodes[i];=0A=
+		if (link.nodeType =3D=3D 1 && link.nodeName.toLowerCase() =3D=3D 'a') {=0A=
+			var editHref =3D link.getAttribute('href');=0A=
+			// find the enclosing (parent) header=0A=
+			var prev =3D el.parentNode;=0A=
+			if (prev && prev.nodeType =3D=3D 1 &&=0A=
+			prev.nodeName.match(/^[Hh][1-6]$/)) {=0A=
+				prev.oncontextmenu =3D function(e) {=0A=
+					if (!e) { e =3D window.event; }=0A=
+					// e is now the event in all browsers=0A=
+					var targ;=0A=
+					if (e.target) { targ =3D e.target; }=0A=
+					else if (e.srcElement) { targ =3D e.srcElement; }=0A=
+					if (targ.nodeType =3D=3D 3) { // defeat Safari bug=0A=
+						targ =3D targ.parentNode;=0A=
+					}=0A=
+					// targ is now the target element=0A=
+=0A=
+					// We don't want to deprive the noble reader of a context menu=0A=
+					// for the section edit link, do we?  (Might want to extend this=0A=
+					// to all <a>'s?)=0A=
+					if (targ.nodeName.toLowerCase() !=3D 'a'=0A=
+					|| targ.parentNode.className !=3D 'editsection') {=0A=
+						document.location =3D editHref;=0A=
+						return false;=0A=
+					}=0A=
+					return true;=0A=
+				};=0A=
+			}=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+function setupCheckboxShiftClick() {=0A=
+	if (document.getElementsByTagName) {=0A=
+		var uls =3D document.getElementsByTagName('ul');=0A=
+		var len =3D uls.length;=0A=
+		for (var i =3D 0; i < len; ++i) {=0A=
+			addCheckboxClickHandlers(uls[i]);=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+function addCheckboxClickHandlers(ul, start, finish) {=0A=
+	if (ul.checkboxHandlersTimer) {=0A=
+		clearInterval(ul.checkboxHandlersTimer);=0A=
+	}=0A=
+	if ( !ul.childNodes ) {=0A=
+		return;=0A=
+	}=0A=
+	var len =3D ul.childNodes.length;=0A=
+	if (len < 2) {=0A=
+		return;=0A=
+	}=0A=
+	start =3D start || 0;=0A=
+	finish =3D finish || start + 250;=0A=
+	if ( finish > len ) { finish =3D len; }=0A=
+	ul.checkboxes =3D ul.checkboxes || [];=0A=
+	ul.lastCheckbox =3D ul.lastCheckbox || null;=0A=
+	for (var i =3D start; i<finish; ++i) {=0A=
+		var child =3D ul.childNodes[i];=0A=
+		if ( child && child.childNodes && child.childNodes[0] ) {=0A=
+			var cb =3D child.childNodes[0];=0A=
+			if ( !cb.nodeName || cb.nodeName.toLowerCase() !=3D 'input' ||=0A=
+			     !cb.type || cb.type.toLowerCase() !=3D 'checkbox' ) {=0A=
+				return;=0A=
+			}=0A=
+			cb.index =3D ul.checkboxes.push(cb) - 1;=0A=
+			cb.container =3D ul;=0A=
+			cb.onmouseup =3D checkboxMouseupHandler;=0A=
+		}=0A=
+	}=0A=
+	if (finish < len) {=0A=
+	  var f=3Dfunction(){ addCheckboxClickHandlers(ul, finish, finish+250); =
+};=0A=
+	  ul.checkboxHandlersTimer=3DsetInterval(f, 200);=0A=
+	}=0A=
+}=0A=
+=0A=
+function checkboxMouseupHandler(e) {=0A=
+	if (typeof e =3D=3D 'undefined') {=0A=
+		e =3D window.event;=0A=
+	}=0A=
+	if ( !e.shiftKey || this.container.lastCheckbox =3D=3D=3D null ) {=0A=
+		this.container.lastCheckbox =3D this.index;=0A=
+		return true;=0A=
+	}=0A=
+	var endState =3D !this.checked;=0A=
+	if ( is_opera ) { // opera has already toggled the checkbox by this =
+point=0A=
+		endState =3D !endState;=0A=
+	}=0A=
+	var start, finish;=0A=
+	if ( this.index < this.container.lastCheckbox ) {=0A=
+		start =3D this.index + 1;=0A=
+		finish =3D this.container.lastCheckbox;=0A=
+	} else {=0A=
+		start =3D this.container.lastCheckbox;=0A=
+		finish =3D this.index - 1;=0A=
+	}=0A=
+	for (var i =3D start; i <=3D finish; ++i ) {=0A=
+		this.container.checkboxes[i].checked =3D endState;=0A=
+	}=0A=
+	this.container.lastCheckbox =3D this.index;=0A=
+	return true;=0A=
+}=0A=
+=0A=
+function toggle_element_activation(ida,idb) {=0A=
+	if (!document.getElementById) {=0A=
+		return;=0A=
+	}=0A=
+	document.getElementById(ida).disabled=3Dtrue;=0A=
+	document.getElementById(idb).disabled=3Dfalse;=0A=
+}=0A=
+=0A=
+function toggle_element_check(ida,idb) {=0A=
+	if (!document.getElementById) {=0A=
+		return;=0A=
+	}=0A=
+	document.getElementById(ida).checked=3Dtrue;=0A=
+	document.getElementById(idb).checked=3Dfalse;=0A=
+}=0A=
+=0A=
+function fillDestFilename(id) {=0A=
+	if (!document.getElementById) {=0A=
+		return;=0A=
+	}=0A=
+	var path =3D document.getElementById(id).value;=0A=
+	// Find trailing part=0A=
+	var slash =3D path.lastIndexOf('/');=0A=
+	var backslash =3D path.lastIndexOf('\\');=0A=
+	var fname;=0A=
+	if (slash =3D=3D -1 && backslash =3D=3D -1) {=0A=
+		fname =3D path;=0A=
+	} else if (slash > backslash) {=0A=
+		fname =3D path.substring(slash+1, 10000);=0A=
+	} else {=0A=
+		fname =3D path.substring(backslash+1, 10000);=0A=
+	}=0A=
+=0A=
+	// Capitalise first letter and replace spaces by underscores=0A=
+	fname =3D =
+fname.charAt(0).toUpperCase().concat(fname.substring(1,10000)).replace(/ =
+/g, '_');=0A=
+=0A=
+	// Output result=0A=
+	var destFile =3D document.getElementById('wpDestFile');=0A=
+	if (destFile) {=0A=
+		destFile.value =3D fname;=0A=
+	}=0A=
+}=0A=
+=0A=
+=0A=
+function considerChangingExpiryFocus() {=0A=
+	if (!document.getElementById) {=0A=
+		return;=0A=
+	}=0A=
+	var drop =3D document.getElementById('wpBlockExpiry');=0A=
+	if (!drop) {=0A=
+		return;=0A=
+	}=0A=
+	var field =3D document.getElementById('wpBlockOther');=0A=
+	if (!field) {=0A=
+		return;=0A=
+	}=0A=
+	var opt =3D drop.value;=0A=
+	if (opt =3D=3D 'other') {=0A=
+		field.style.display =3D '';=0A=
+	} else {=0A=
+		field.style.display =3D 'none';=0A=
+	}=0A=
+}=0A=
+=0A=
+function scrollEditBox() {=0A=
+	var editBoxEl =3D document.getElementById("wpTextbox1");=0A=
+	var scrollTopEl =3D document.getElementById("wpScrolltop");=0A=
+	var editFormEl =3D document.getElementById("editform");=0A=
+=0A=
+	if (editBoxEl && scrollTopEl) {=0A=
+		if (scrollTopEl.value) { editBoxEl.scrollTop =3D scrollTopEl.value; }=0A=
+		editFormEl.onsubmit =3D function() {=0A=
+			document.getElementById("wpScrolltop").value =3D =
+document.getElementById("wpTextbox1").scrollTop;=0A=
+		};=0A=
+	}=0A=
+}=0A=
+=0A=
+hookEvent("load", scrollEditBox);=0A=
+=0A=
+var allmessages_nodelist =3D false;=0A=
+var allmessages_modified =3D false;=0A=
+var allmessages_timeout =3D false;=0A=
+var allmessages_running =3D false;=0A=
+=0A=
+function allmessagesmodified() {=0A=
+	allmessages_modified =3D !allmessages_modified;=0A=
+	allmessagesfilter();=0A=
+}=0A=
+=0A=
+function allmessagesfilter() {=0A=
+	if ( allmessages_timeout )=0A=
+		window.clearTimeout( allmessages_timeout );=0A=
+=0A=
+	if ( !allmessages_running )=0A=
+		allmessages_timeout =3D window.setTimeout( 'allmessagesfilter_do();', =
+500 );=0A=
+}=0A=
+=0A=
+function allmessagesfilter_do() {=0A=
+	if ( !allmessages_nodelist )=0A=
+		return;=0A=
+=0A=
+	var text =3D document.getElementById('allmessagesinput').value;=0A=
+	var nodef =3D allmessages_modified;=0A=
+=0A=
+	allmessages_running =3D true;=0A=
+=0A=
+	for ( var name in allmessages_nodelist ) {=0A=
+		var nodes =3D allmessages_nodelist[name];=0A=
+		var display =3D ( name.indexOf( text ) =3D=3D -1 ? 'none' : '' );=0A=
+=0A=
+		for ( var i =3D 0; i < nodes.length; i++)=0A=
+			nodes[i].style.display =3D=0A=
+				( nodes[i].className =3D=3D "def" && nodef=0A=
+				  ? 'none' : display );=0A=
+	}=0A=
+=0A=
+	if ( text !=3D document.getElementById('allmessagesinput').value ||=0A=
+	     nodef !=3D allmessages_modified )=0A=
+		allmessagesfilter_do();  // repeat=0A=
+=0A=
+	allmessages_running =3D false;=0A=
+}=0A=
+=0A=
+function allmessagesfilter_init() {=0A=
+	if ( allmessages_nodelist )=0A=
+		return;=0A=
+=0A=
+	var nodelist =3D new Array();=0A=
+	var templist =3D new Array();=0A=
+=0A=
+	var table =3D document.getElementById('allmessagestable');=0A=
+	if ( !table ) return;=0A=
+=0A=
+	var rows =3D document.getElementsByTagName('tr');=0A=
+	for ( var i =3D 0; i < rows.length; i++ ) {=0A=
+		var id =3D rows[i].getAttribute('id')=0A=
+		if ( id && id.substring(0,16) !=3D 'sp-allmessages-r' ) continue;=0A=
+		templist[ id ] =3D rows[i];=0A=
+	}=0A=
+=0A=
+	var spans =3D table.getElementsByTagName('span');=0A=
+	for ( var i =3D 0; i < spans.length; i++ ) {=0A=
+		var id =3D spans[i].getAttribute('id')=0A=
+		if ( id && id.substring(0,17) !=3D 'sp-allmessages-i-' ) continue;=0A=
+		if ( !spans[i].firstChild || spans[i].firstChild.nodeType !=3D 3 ) =
+continue;=0A=
+=0A=
+		var nodes =3D new Array();=0A=
+		var row1 =3D templist[ id.replace('i', 'r1') ];=0A=
+		var row2 =3D templist[ id.replace('i', 'r2') ];=0A=
+=0A=
+		if ( row1 ) nodes[nodes.length] =3D row1;=0A=
+		if ( row2 ) nodes[nodes.length] =3D row2;=0A=
+		nodelist[ spans[i].firstChild.nodeValue ] =3D nodes;=0A=
+	}=0A=
+=0A=
+	var k =3D document.getElementById('allmessagesfilter');=0A=
+	if (k) { k.style.display =3D ''; }=0A=
+=0A=
+	allmessages_nodelist =3D nodelist;=0A=
+}=0A=
+=0A=
+hookEvent( "load", allmessagesfilter_init );=0A=
+=0A=
+/*=0A=
+	Written by Jonathan Snook, http://www.snook.ca/jonathan=0A=
+	Add-ons by Robert Nyman, http://www.robertnyman.com=0A=
+	Author says "The credit comment is all it takes, no license. Go crazy =
+with it!:-)"=0A=
+	From =
+http://www.robertnyman.com/2005/11/07/the-ultimate-getelementsbyclassname=
+/=0A=
+*/=0A=
+function getElementsByClassName(oElm, strTagName, oClassNames){=0A=
+	var arrElements =3D (strTagName =3D=3D "*" && oElm.all)? oElm.all : =
+oElm.getElementsByTagName(strTagName);=0A=
+	var arrReturnElements =3D new Array();=0A=
+	var arrRegExpClassNames =3D new Array();=0A=
+	if(typeof oClassNames =3D=3D "object"){=0A=
+		for(var i=3D0; i<oClassNames.length; i++){=0A=
+			arrRegExpClassNames.push(new RegExp("(^|\\s)" + =
+oClassNames[i].replace(/\-/g, "\\-") + "(\\s|$)"));=0A=
+		}=0A=
+	}=0A=
+	else{=0A=
+		arrRegExpClassNames.push(new RegExp("(^|\\s)" + =
+oClassNames.replace(/\-/g, "\\-") + "(\\s|$)"));=0A=
+	}=0A=
+	var oElement;=0A=
+	var bMatchesAll;=0A=
+	for(var j=3D0; j<arrElements.length; j++){=0A=
+		oElement =3D arrElements[j];=0A=
+		bMatchesAll =3D true;=0A=
+		for(var k=3D0; k<arrRegExpClassNames.length; k++){=0A=
+			if(!arrRegExpClassNames[k].test(oElement.className)){=0A=
+				bMatchesAll =3D false;=0A=
+				break;=0A=
+			}=0A=
+		}=0A=
+		if(bMatchesAll){=0A=
+			arrReturnElements.push(oElement);=0A=
+		}=0A=
+	}=0A=
+	return (arrReturnElements)=0A=
+}=0A=
+=0A=
+function sortableTables() {=0A=
+	if (getElementsByClassName(document, "table", "sortable").length !=3D =
+0) {=0A=
+		document.write('<script type=3D"text/javascript" =
+src=3D"'+stylepath+'/common/sorttable.js?1"></script>');=0A=
+	}=0A=
+}=0A=
+=0A=
+function redirectToFragment(fragment) {=0A=
+	var match =3D navigator.userAgent.match(/AppleWebKit\/(\d+)/);=0A=
+	if (match) {=0A=
+		var webKitVersion =3D parseInt(match[1]);=0A=
+		if (webKitVersion < 420) {=0A=
+			// Released Safari w/ WebKit 418.9.1 messes up horribly=0A=
+			// Nightlies of 420+ are ok=0A=
+			return;=0A=
+		}=0A=
+	}=0A=
+	if (is_gecko) {=0A=
+		// Mozilla needs to wait until after load, otherwise the window =
+doesn't scroll=0A=
+		addOnloadHook(function () {=0A=
+			if (window.location.hash =3D=3D "")=0A=
+				window.location.hash =3D fragment;=0A=
+		});=0A=
+	} else {=0A=
+		if (window.location.hash =3D=3D "")=0A=
+			window.location.hash =3D fragment;=0A=
+	}=0A=
+}=0A=
+=0A=
+function runOnloadHook() {=0A=
+	// don't run anything below this for non-dom browsers=0A=
+	if (doneOnloadHook || !(document.getElementById && =
+document.getElementsByTagName)) {=0A=
+		return;=0A=
+	}=0A=
+=0A=
+	histrowinit();=0A=
+	unhidetzbutton();=0A=
+	tabbedprefs();=0A=
+	akeytt( null );=0A=
+	scrollEditBox();=0A=
+	setupCheckboxShiftClick();=0A=
+	sortableTables();=0A=
+=0A=
+	// Run any added-on functions=0A=
+	for (var i =3D 0; i < onloadFuncts.length; i++) {=0A=
+		onloadFuncts[i]();=0A=
+	}=0A=
+=0A=
+	doneOnloadHook =3D true;=0A=
+}=0A=
+=0A=
+//note: all skins should call runOnloadHook() at the end of html output,=0A=
+//      so the below should be redundant. It's there just in case.=0A=
+hookEvent("load", runOnloadHook);=0A=
+=0A=
+hookEvent("load", mwSetupToolbar);=0A=
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://developer.mozilla.org/en/docs/skins/devmo/devmo.js
+
+// The following toggleSidebar function was added by DRichardson (dria)=0A=
+// on Aug 29th, 2005.=0A=
+=0A=
+function showSidebarToggle() {=0A=
+  if (document.createTextNode) {=0A=
+    // Uses DOM calls to avoid document.write + XHTML issues=0A=
+=0A=
+    var linkHolder =3D document.getElementById('sidebarlinkholder');=0A=
+    if (!linkHolder) return;=0A=
+=0A=
+    var outerSpan =3D document.createElement('span');=0A=
+    outerSpan.className =3D 'sidebartoggle';=0A=
+=0A=
+    var sidebartoggleLink =3D document.createElement('a');=0A=
+    sidebartoggleLink.id =3D 'sidebartogglelink';=0A=
+    sidebartoggleLink.className =3D 'internal';=0A=
+    sidebartoggleLink.href =3D 'javascript:toggleSidebar()';=0A=
+    =
+sidebartoggleLink.appendChild(document.createTextNode(sidebarHideText));=0A=
+=0A=
+    outerSpan.appendChild(document.createTextNode('['));=0A=
+    outerSpan.appendChild(sidebartoggleLink);=0A=
+    outerSpan.appendChild(document.createTextNode(']'));=0A=
+=0A=
+    linkHolder.appendChild(document.createTextNode(' '));=0A=
+    linkHolder.appendChild(outerSpan);=0A=
+=0A=
+//    var cookiePos =3D document.cookie.indexOf("hidesidebar=3D");=0A=
+//    if (cookiePos > -1 && document.cookie.charAt(cookiePos + 8) =3D=3D =
+1)=0A=
+     toggleSidebar();=0A=
+  }=0A=
+}=0A=
+=0A=
+function toggleSidebar() {=0A=
+	var sidebar =3D document.getElementById('sidebar');=0A=
+	var content =3D document.getElementById('content');=0A=
+	var sidetoggleLink =3D document.getElementById('sidebartogglelink')=0A=
+=0A=
+	if (sidebar && sidetoggleLink && sidebar.style.display =3D=3D 'none') {=0A=
+		changeText(sidetoggleLink, sidebarHideText);=0A=
+			sidebar.style.display =3D 'block';=0A=
+			content.style.marginRight =3D '230px';=0A=
+		} else {=0A=
+		changeText(sidetoggleLink, sidebarShowText);=0A=
+			sidebar.style.display =3D 'none';=0A=
+			content.style.marginRight =3D '0px;';=0A=
+		}=0A=
+}=0A=
+=0A=
+function sidebarUp() {=0A=
+	var content =3D document.getElementById('content');=0A=
+	var footer =3D document.getElementById('footer');=0A=
+	var sidebarslideup =3D document.getElementById('sidebarslideup');=0A=
+	var sidebarslidedown =3D document.getElementById('sidebarslidedown');=0A=
+	content.style.marginRight =3D '0px';=0A=
+	footer.style.marginRight =3D '0px';=0A=
+	sidebarslideup.style.display =3D 'none';=0A=
+	sidebarslidedown.style.display =3D 'block';=0A=
+	document.cookie =3D 'hidesidebar=3D1';=0A=
+}=0A=
+=0A=
+function sidebarDown() {=0A=
+	var content =3D document.getElementById('content');=0A=
+	var footer =3D document.getElementById('footer');=0A=
+	var sidebarslideup =3D document.getElementById('sidebarslideup');=0A=
+	var sidebarslidedown =3D document.getElementById('sidebarslidedown');=0A=
+	content.style.marginRight =3D '230px';=0A=
+	footer.style.marginRight =3D '230px';=0A=
+	sidebarslideup.style.display =3D 'block';=0A=
+	sidebarslidedown.style.display =3D 'none';=0A=
+	document.cookie =3D 'hidesidebar=3D0';=0A=
+}=0A=
+=0A=
+function sidebarCheck() {=0A=
+	var content =3D document.getElementById('content');=0A=
+	var footer =3D document.getElementById('footer');=0A=
+	var sidebarslideup =3D document.getElementById('sidebarslideup');=0A=
+	var sidebarslidedown =3D document.getElementById('sidebarslidedown');=0A=
+	var sidebarslidebox =3D document.getElementById('sidebarslidebox');=0A=
+	var cookieSidebarPos =3D document.cookie.indexOf("hidesidebar=3D");=0A=
+	if (cookieSidebarPos > -1 && document.cookie.charAt(cookieSidebarPos + =
+12) =3D=3D 1) {=0A=
+		sidebarslidebox.style.display =3D 'none';=0A=
+		content.style.marginRight =3D '0px';=0A=
+		footer.style.marginRight =3D '0px';=0A=
+		sidebarslideup.style.display =3D 'none';=0A=
+		sidebarslidedown.style.display =3D 'block';=0A=
+	}=0A=
+}=0A=
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://developer.mozilla.org/en/docs/skins/devmo/prototype.js
+
+/*  Prototype JavaScript framework, version 1.3.1=0A=
+ *  (c) 2005 Sam Stephenson <sam@conio.net>=0A=
+ *=0A=
+ *  THIS FILE IS AUTOMATICALLY GENERATED. When sending patches, please =
+diff=0A=
+ *  against the source tree, available from the Prototype darcs =
+repository. =0A=
+ *=0A=
+ *  Prototype is freely distributable under the terms of an MIT-style =
+license.=0A=
+ *=0A=
+ *  For details, see the Prototype web site: http://prototype.conio.net/=0A=
+ *=0A=
+/*-----------------------------------------------------------------------=
+---*/=0A=
+=0A=
+var Prototype =3D {=0A=
+  Version: '1.3.1',=0A=
+  emptyFunction: function() {}=0A=
+}=0A=
+=0A=
+var Class =3D {=0A=
+  create: function() {=0A=
+    return function() { =0A=
+      this.initialize.apply(this, arguments);=0A=
+    }=0A=
+  }=0A=
+}=0A=
+=0A=
+var Abstract =3D new Object();=0A=
+=0A=
+Object.extend =3D function(destination, source) {=0A=
+  for (property in source) {=0A=
+    destination[property] =3D source[property];=0A=
+  }=0A=
+  return destination;=0A=
+}=0A=
+=0A=
+Object.prototype.extend =3D function(object) {=0A=
+  return Object.extend.apply(this, [this, object]);=0A=
+}=0A=
+=0A=
+Function.prototype.bind =3D function(object) {=0A=
+  var __method =3D this;=0A=
+  return function() {=0A=
+    __method.apply(object, arguments);=0A=
+  }=0A=
+}=0A=
+=0A=
+Function.prototype.bindAsEventListener =3D function(object) {=0A=
+  var __method =3D this;=0A=
+  return function(event) {=0A=
+    __method.call(object, event || window.event);=0A=
+  }=0A=
+}=0A=
+=0A=
+Number.prototype.toColorPart =3D function() {=0A=
+  var digits =3D this.toString(16);=0A=
+  if (this < 16) return '0' + digits;=0A=
+  return digits;=0A=
+}=0A=
+=0A=
+var Try =3D {=0A=
+  these: function() {=0A=
+    var returnValue;=0A=
+=0A=
+    for (var i =3D 0; i < arguments.length; i++) {=0A=
+      var lambda =3D arguments[i];=0A=
+      try {=0A=
+        returnValue =3D lambda();=0A=
+        break;=0A=
+      } catch (e) {}=0A=
+    }=0A=
+=0A=
+    return returnValue;=0A=
+  }=0A=
+}=0A=
+=0A=
+/*-----------------------------------------------------------------------=
+---*/=0A=
+=0A=
+var PeriodicalExecuter =3D Class.create();=0A=
+PeriodicalExecuter.prototype =3D {=0A=
+  initialize: function(callback, frequency) {=0A=
+    this.callback =3D callback;=0A=
+    this.frequency =3D frequency;=0A=
+    this.currentlyExecuting =3D false;=0A=
+=0A=
+    this.registerCallback();=0A=
+  },=0A=
+=0A=
+  registerCallback: function() {=0A=
+    setInterval(this.onTimerEvent.bind(this), this.frequency * 1000);=0A=
+  },=0A=
+=0A=
+  onTimerEvent: function() {=0A=
+    if (!this.currentlyExecuting) {=0A=
+      try { =0A=
+        this.currentlyExecuting =3D true;=0A=
+        this.callback(); =0A=
+      } finally { =0A=
+        this.currentlyExecuting =3D false;=0A=
+      }=0A=
+    }=0A=
+  }=0A=
+}=0A=
+=0A=
+/*-----------------------------------------------------------------------=
+---*/=0A=
+=0A=
+function $() {=0A=
+  var elements =3D new Array();=0A=
+=0A=
+  for (var i =3D 0; i < arguments.length; i++) {=0A=
+    var element =3D arguments[i];=0A=
+    if (typeof element =3D=3D 'string')=0A=
+      element =3D document.getElementById(element);=0A=
+=0A=
+    if (arguments.length =3D=3D 1) =0A=
+      return element;=0A=
+=0A=
+    elements.push(element);=0A=
+  }=0A=
+=0A=
+  return elements;=0A=
+}=0A=
+=0A=
+if (!Array.prototype.push) {=0A=
+  Array.prototype.push =3D function() {=0A=
+		var startLength =3D this.length;=0A=
+		for (var i =3D 0; i < arguments.length; i++)=0A=
+      this[startLength + i] =3D arguments[i];=0A=
+	  return this.length;=0A=
+  }=0A=
+}=0A=
+=0A=
+if (!Function.prototype.apply) {=0A=
+  // Based on code from http://www.youngpup.net/=0A=
+  Function.prototype.apply =3D function(object, parameters) {=0A=
+    var parameterStrings =3D new Array();=0A=
+    if (!object)     object =3D window;=0A=
+    if (!parameters) parameters =3D new Array();=0A=
+    =0A=
+    for (var i =3D 0; i < parameters.length; i++)=0A=
+      parameterStrings[i] =3D 'parameters[' + i + ']';=0A=
+    =0A=
+    object.__apply__ =3D this;=0A=
+    var result =3D eval('object.__apply__(' + =0A=
+      parameterStrings.join(', ') + ')');=0A=
+    object.__apply__ =3D null;=0A=
+    =0A=
+    return result;=0A=
+  }=0A=
+}=0A=
+=0A=
+String.prototype.extend({=0A=
+  stripTags: function() {=0A=
+    return this.replace(/<\/?[^>]+>/gi, '');=0A=
+  },=0A=
+=0A=
+  escapeHTML: function() {=0A=
+    var div =3D document.createElement('div');=0A=
+    var text =3D document.createTextNode(this);=0A=
+    div.appendChild(text);=0A=
+    return div.innerHTML;=0A=
+  },=0A=
+=0A=
+  unescapeHTML: function() {=0A=
+    var div =3D document.createElement('div');=0A=
+    div.innerHTML =3D this.stripTags();=0A=
+    return div.childNodes[0].nodeValue;=0A=
+  }=0A=
+});=0A=
+=0A=
+var Ajax =3D {=0A=
+  getTransport: function() {=0A=
+    return Try.these(=0A=
+      function() {return new ActiveXObject('Msxml2.XMLHTTP')},=0A=
+      function() {return new ActiveXObject('Microsoft.XMLHTTP')},=0A=
+      function() {return new XMLHttpRequest()}=0A=
+    ) || false;=0A=
+  }=0A=
+}=0A=
+=0A=
+Ajax.Base =3D function() {};=0A=
+Ajax.Base.prototype =3D {=0A=
+  setOptions: function(options) {=0A=
+    this.options =3D {=0A=
+      method:       'post',=0A=
+      asynchronous: true,=0A=
+      parameters:   ''=0A=
+    }.extend(options || {});=0A=
+  },=0A=
+=0A=
+  responseIsSuccess: function() {=0A=
+    return this.transport.status =3D=3D undefined=0A=
+        || this.transport.status =3D=3D 0 =0A=
+        || (this.transport.status >=3D 200 && this.transport.status < =
+300);=0A=
+  },=0A=
+=0A=
+  responseIsFailure: function() {=0A=
+    return !this.responseIsSuccess();=0A=
+  }=0A=
+}=0A=
+=0A=
+Ajax.Request =3D Class.create();=0A=
+Ajax.Request.Events =3D =0A=
+  ['Uninitialized', 'Loading', 'Loaded', 'Interactive', 'Complete'];=0A=
+=0A=
+Ajax.Request.prototype =3D (new Ajax.Base()).extend({=0A=
+  initialize: function(url, options) {=0A=
+    this.transport =3D Ajax.getTransport();=0A=
+    this.setOptions(options);=0A=
+    this.request(url);=0A=
+  },=0A=
+=0A=
+  request: function(url) {=0A=
+    var parameters =3D this.options.parameters || '';=0A=
+    if (parameters.length > 0) parameters +=3D '&_=3D';=0A=
+=0A=
+    try {=0A=
+      if (this.options.method =3D=3D 'get')=0A=
+        url +=3D '?' + parameters;=0A=
+=0A=
+      this.transport.open(this.options.method, url,=0A=
+        this.options.asynchronous);=0A=
+=0A=
+      if (this.options.asynchronous) {=0A=
+        this.transport.onreadystatechange =3D =
+this.onStateChange.bind(this);=0A=
+        setTimeout((function() =
+{this.respondToReadyState(1)}).bind(this), 10);=0A=
+      }=0A=
+=0A=
+      this.setRequestHeaders();=0A=
+=0A=
+      var body =3D this.options.postBody ? this.options.postBody : =
+parameters;=0A=
+      this.transport.send(this.options.method =3D=3D 'post' ? body : =
+null);=0A=
+=0A=
+    } catch (e) {=0A=
+    }=0A=
+  },=0A=
+=0A=
+  setRequestHeaders: function() {=0A=
+    var requestHeaders =3D =0A=
+      ['X-Requested-With', 'XMLHttpRequest',=0A=
+       'X-Prototype-Version', Prototype.Version];=0A=
+=0A=
+    if (this.options.method =3D=3D 'post') {=0A=
+      requestHeaders.push('Content-type', =0A=
+        'application/x-www-form-urlencoded');=0A=
+=0A=
+      /* Force "Connection: close" for Mozilla browsers to work around=0A=
+       * a bug where XMLHttpReqeuest sends an incorrect Content-length=0A=
+       * header. See Mozilla Bugzilla #246651. =0A=
+       */=0A=
+      if (this.transport.overrideMimeType)=0A=
+        requestHeaders.push('Connection', 'close');=0A=
+    }=0A=
+=0A=
+    if (this.options.requestHeaders)=0A=
+      requestHeaders.push.apply(requestHeaders, =
+this.options.requestHeaders);=0A=
+=0A=
+    for (var i =3D 0; i < requestHeaders.length; i +=3D 2)=0A=
+      this.transport.setRequestHeader(requestHeaders[i], =
+requestHeaders[i+1]);=0A=
+  },=0A=
+=0A=
+  onStateChange: function() {=0A=
+    var readyState =3D this.transport.readyState;=0A=
+    if (readyState !=3D 1)=0A=
+      this.respondToReadyState(this.transport.readyState);=0A=
+  },=0A=
+=0A=
+  respondToReadyState: function(readyState) {=0A=
+    var event =3D Ajax.Request.Events[readyState];=0A=
+=0A=
+    if (event =3D=3D 'Complete')=0A=
+      (this.options['on' + this.transport.status]=0A=
+       || this.options['on' + (this.responseIsSuccess() ? 'Success' : =
+'Failure')]=0A=
+       || Prototype.emptyFunction)(this.transport);=0A=
+=0A=
+    (this.options['on' + event] || =
+Prototype.emptyFunction)(this.transport);=0A=
+=0A=
+    /* Avoid memory leak in MSIE: clean up the oncomplete event handler =
+*/=0A=
+    if (event =3D=3D 'Complete')=0A=
+      this.transport.onreadystatechange =3D Prototype.emptyFunction;=0A=
+  }=0A=
+});=0A=
+=0A=
+Ajax.Updater =3D Class.create();=0A=
+Ajax.Updater.ScriptFragment =3D =
+'(?:<script.*?>)((\n|.)*?)(?:<\/script>)';=0A=
+=0A=
+Ajax.Updater.prototype.extend(Ajax.Request.prototype).extend({=0A=
+  initialize: function(container, url, options) {=0A=
+    this.containers =3D {=0A=
+      success: container.success ? $(container.success) : $(container),=0A=
+      failure: container.failure ? $(container.failure) :=0A=
+        (container.success ? null : $(container))=0A=
+    }=0A=
+=0A=
+    this.transport =3D Ajax.getTransport();=0A=
+    this.setOptions(options);=0A=
+=0A=
+    var onComplete =3D this.options.onComplete || =
+Prototype.emptyFunction;=0A=
+    this.options.onComplete =3D (function() {=0A=
+      this.updateContent();=0A=
+      onComplete(this.transport);=0A=
+    }).bind(this);=0A=
+=0A=
+    this.request(url);=0A=
+  },=0A=
+=0A=
+  updateContent: function() {=0A=
+    var receiver =3D this.responseIsSuccess() ?=0A=
+      this.containers.success : this.containers.failure;=0A=
+=0A=
+    var match    =3D new RegExp(Ajax.Updater.ScriptFragment, 'img');=0A=
+    var response =3D this.transport.responseText.replace(match, '');=0A=
+    var scripts  =3D this.transport.responseText.match(match);=0A=
+=0A=
+    if (receiver) {=0A=
+      if (this.options.insertion) {=0A=
+        new this.options.insertion(receiver, response);=0A=
+      } else {=0A=
+        receiver.innerHTML =3D response;=0A=
+      }=0A=
+    }=0A=
+=0A=
+    if (this.responseIsSuccess()) {=0A=
+      if (this.onComplete)=0A=
+        setTimeout((function() {this.onComplete(=0A=
+          this.transport)}).bind(this), 10);=0A=
+    }=0A=
+=0A=
+    if (this.options.evalScripts && scripts) {=0A=
+      match =3D new RegExp(Ajax.Updater.ScriptFragment, 'im');=0A=
+      setTimeout((function() {=0A=
+        for (var i =3D 0; i < scripts.length; i++)=0A=
+          eval(scripts[i].match(match)[1]);=0A=
+      }).bind(this), 10);=0A=
+    }=0A=
+  }=0A=
+});=0A=
+=0A=
+Ajax.PeriodicalUpdater =3D Class.create();=0A=
+Ajax.PeriodicalUpdater.prototype =3D (new Ajax.Base()).extend({=0A=
+  initialize: function(container, url, options) {=0A=
+    this.setOptions(options);=0A=
+    this.onComplete =3D this.options.onComplete;=0A=
+=0A=
+    this.frequency =3D (this.options.frequency || 2);=0A=
+    this.decay =3D 1;=0A=
+=0A=
+    this.updater =3D {};=0A=
+    this.container =3D container;=0A=
+    this.url =3D url;=0A=
+=0A=
+    this.start();=0A=
+  },=0A=
+=0A=
+  start: function() {=0A=
+    this.options.onComplete =3D this.updateComplete.bind(this);=0A=
+    this.onTimerEvent();=0A=
+  },=0A=
+=0A=
+  stop: function() {=0A=
+    this.updater.onComplete =3D undefined;=0A=
+    clearTimeout(this.timer);=0A=
+    (this.onComplete || Ajax.emptyFunction).apply(this, arguments);=0A=
+  },=0A=
+=0A=
+  updateComplete: function(request) {=0A=
+    if (this.options.decay) {=0A=
+      this.decay =3D (request.responseText =3D=3D this.lastText ? =0A=
+        this.decay * this.options.decay : 1);=0A=
+=0A=
+      this.lastText =3D request.responseText;=0A=
+    }=0A=
+    this.timer =3D setTimeout(this.onTimerEvent.bind(this), =0A=
+      this.decay * this.frequency * 1000);=0A=
+  },=0A=
+=0A=
+  onTimerEvent: function() {=0A=
+    this.updater =3D new Ajax.Updater(this.container, this.url, =
+this.options);=0A=
+  }=0A=
+});=0A=
+=0A=
+document.getElementsByClassName =3D function(className) {=0A=
+  var children =3D document.getElementsByTagName('*') || document.all;=0A=
+  var elements =3D new Array();=0A=
+  =0A=
+  for (var i =3D 0; i < children.length; i++) {=0A=
+    var child =3D children[i];=0A=
+    var classNames =3D child.className.split(' ');=0A=
+    for (var j =3D 0; j < classNames.length; j++) {=0A=
+      if (classNames[j] =3D=3D className) {=0A=
+        elements.push(child);=0A=
+        break;=0A=
+      }=0A=
+    }=0A=
+  }=0A=
+  =0A=
+  return elements;=0A=
+}=0A=
+=0A=
+/*-----------------------------------------------------------------------=
+---*/=0A=
+=0A=
+if (!window.Element) {=0A=
+  var Element =3D new Object();=0A=
+}=0A=
+=0A=
+Object.extend(Element, {=0A=
+  toggle: function() {=0A=
+    for (var i =3D 0; i < arguments.length; i++) {=0A=
+      var element =3D $(arguments[i]);=0A=
+      element.style.display =3D =0A=
+        (element.style.display =3D=3D 'none' ? '' : 'none');=0A=
+    }=0A=
+  },=0A=
+=0A=
+  hide: function() {=0A=
+    for (var i =3D 0; i < arguments.length; i++) {=0A=
+      var element =3D $(arguments[i]);=0A=
+      element.style.display =3D 'none';=0A=
+    }=0A=
+  },=0A=
+=0A=
+  show: function() {=0A=
+    for (var i =3D 0; i < arguments.length; i++) {=0A=
+      var element =3D $(arguments[i]);=0A=
+      element.style.display =3D '';=0A=
+    }=0A=
+  },=0A=
+=0A=
+  remove: function(element) {=0A=
+    element =3D $(element);=0A=
+    element.parentNode.removeChild(element);=0A=
+  },=0A=
+   =0A=
+  getHeight: function(element) {=0A=
+    element =3D $(element);=0A=
+    return element.offsetHeight; =0A=
+  },=0A=
+=0A=
+  hasClassName: function(element, className) {=0A=
+    element =3D $(element);=0A=
+    if (!element)=0A=
+      return;=0A=
+    var a =3D element.className.split(' ');=0A=
+    for (var i =3D 0; i < a.length; i++) {=0A=
+      if (a[i] =3D=3D className)=0A=
+        return true;=0A=
+    }=0A=
+    return false;=0A=
+  },=0A=
+=0A=
+  addClassName: function(element, className) {=0A=
+    element =3D $(element);=0A=
+    Element.removeClassName(element, className);=0A=
+    element.className +=3D ' ' + className;=0A=
+  },=0A=
+=0A=
+  removeClassName: function(element, className) {=0A=
+    element =3D $(element);=0A=
+    if (!element)=0A=
+      return;=0A=
+    var newClassName =3D '';=0A=
+    var a =3D element.className.split(' ');=0A=
+    for (var i =3D 0; i < a.length; i++) {=0A=
+      if (a[i] !=3D className) {=0A=
+        if (i > 0)=0A=
+          newClassName +=3D ' ';=0A=
+        newClassName +=3D a[i];=0A=
+      }=0A=
+    }=0A=
+    element.className =3D newClassName;=0A=
+  },=0A=
+  =0A=
+  // removes whitespace-only text node children=0A=
+  cleanWhitespace: function(element) {=0A=
+    var element =3D $(element);=0A=
+    for (var i =3D 0; i < element.childNodes.length; i++) {=0A=
+      var node =3D element.childNodes[i];=0A=
+      if (node.nodeType =3D=3D 3 && !/\S/.test(node.nodeValue)) =0A=
+        Element.remove(node);=0A=
+    }=0A=
+  }=0A=
+});=0A=
+=0A=
+var Toggle =3D new Object();=0A=
+Toggle.display =3D Element.toggle;=0A=
+=0A=
+/*-----------------------------------------------------------------------=
+---*/=0A=
+=0A=
+Abstract.Insertion =3D function(adjacency) {=0A=
+  this.adjacency =3D adjacency;=0A=
+}=0A=
+=0A=
+Abstract.Insertion.prototype =3D {=0A=
+  initialize: function(element, content) {=0A=
+    this.element =3D $(element);=0A=
+    this.content =3D content;=0A=
+    =0A=
+    if (this.adjacency && this.element.insertAdjacentHTML) {=0A=
+      this.element.insertAdjacentHTML(this.adjacency, this.content);=0A=
+    } else {=0A=
+      this.range =3D this.element.ownerDocument.createRange();=0A=
+      if (this.initializeRange) this.initializeRange();=0A=
+      this.fragment =3D =
+this.range.createContextualFragment(this.content);=0A=
+      this.insertContent();=0A=
+    }=0A=
+  }=0A=
+}=0A=
+=0A=
+var Insertion =3D new Object();=0A=
+=0A=
+Insertion.Before =3D Class.create();=0A=
+Insertion.Before.prototype =3D (new =
+Abstract.Insertion('beforeBegin')).extend({=0A=
+  initializeRange: function() {=0A=
+    this.range.setStartBefore(this.element);=0A=
+  },=0A=
+  =0A=
+  insertContent: function() {=0A=
+    this.element.parentNode.insertBefore(this.fragment, this.element);=0A=
+  }=0A=
+});=0A=
+=0A=
+Insertion.Top =3D Class.create();=0A=
+Insertion.Top.prototype =3D (new =
+Abstract.Insertion('afterBegin')).extend({=0A=
+  initializeRange: function() {=0A=
+    this.range.selectNodeContents(this.element);=0A=
+    this.range.collapse(true);=0A=
+  },=0A=
+  =0A=
+  insertContent: function() {  =0A=
+    this.element.insertBefore(this.fragment, this.element.firstChild);=0A=
+  }=0A=
+});=0A=
+=0A=
+Insertion.Bottom =3D Class.create();=0A=
+Insertion.Bottom.prototype =3D (new =
+Abstract.Insertion('beforeEnd')).extend({=0A=
+  initializeRange: function() {=0A=
+    this.range.selectNodeContents(this.element);=0A=
+    this.range.collapse(this.element);=0A=
+  },=0A=
+  =0A=
+  insertContent: function() {=0A=
+    this.element.appendChild(this.fragment);=0A=
+  }=0A=
+});=0A=
+=0A=
+Insertion.After =3D Class.create();=0A=
+Insertion.After.prototype =3D (new =
+Abstract.Insertion('afterEnd')).extend({=0A=
+  initializeRange: function() {=0A=
+    this.range.setStartAfter(this.element);=0A=
+  },=0A=
+  =0A=
+  insertContent: function() {=0A=
+    this.element.parentNode.insertBefore(this.fragment, =0A=
+      this.element.nextSibling);=0A=
+  }=0A=
+});=0A=
+=0A=
+var Field =3D {=0A=
+  clear: function() {=0A=
+    for (var i =3D 0; i < arguments.length; i++)=0A=
+      $(arguments[i]).value =3D '';=0A=
+  },=0A=
+=0A=
+  focus: function(element) {=0A=
+    $(element).focus();=0A=
+  },=0A=
+  =0A=
+  present: function() {=0A=
+    for (var i =3D 0; i < arguments.length; i++)=0A=
+      if ($(arguments[i]).value =3D=3D '') return false;=0A=
+    return true;=0A=
+  },=0A=
+  =0A=
+  select: function(element) {=0A=
+    $(element).select();=0A=
+  },=0A=
+   =0A=
+  activate: function(element) {=0A=
+    $(element).focus();=0A=
+    $(element).select();=0A=
+  }=0A=
+}=0A=
+=0A=
+/*-----------------------------------------------------------------------=
+---*/=0A=
+=0A=
+var Form =3D {=0A=
+  serialize: function(form) {=0A=
+    var elements =3D Form.getElements($(form));=0A=
+    var queryComponents =3D new Array();=0A=
+    =0A=
+    for (var i =3D 0; i < elements.length; i++) {=0A=
+      var queryComponent =3D Form.Element.serialize(elements[i]);=0A=
+      if (queryComponent)=0A=
+        queryComponents.push(queryComponent);=0A=
+    }=0A=
+    =0A=
+    return queryComponents.join('&');=0A=
+  },=0A=
+  =0A=
+  getElements: function(form) {=0A=
+    var form =3D $(form);=0A=
+    var elements =3D new Array();=0A=
+=0A=
+    for (tagName in Form.Element.Serializers) {=0A=
+      var tagElements =3D form.getElementsByTagName(tagName);=0A=
+      for (var j =3D 0; j < tagElements.length; j++)=0A=
+        elements.push(tagElements[j]);=0A=
+    }=0A=
+    return elements;=0A=
+  },=0A=
+  =0A=
+  getInputs: function(form, typeName, name) {=0A=
+    var form =3D $(form);=0A=
+    var inputs =3D form.getElementsByTagName('input');=0A=
+    =0A=
+    if (!typeName && !name)=0A=
+      return inputs;=0A=
+      =0A=
+    var matchingInputs =3D new Array();=0A=
+    for (var i =3D 0; i < inputs.length; i++) {=0A=
+      var input =3D inputs[i];=0A=
+      if ((typeName && input.type !=3D typeName) ||=0A=
+          (name && input.name !=3D name)) =0A=
+        continue;=0A=
+      matchingInputs.push(input);=0A=
+    }=0A=
+=0A=
+    return matchingInputs;=0A=
+  },=0A=
+=0A=
+  disable: function(form) {=0A=
+    var elements =3D Form.getElements(form);=0A=
+    for (var i =3D 0; i < elements.length; i++) {=0A=
+      var element =3D elements[i];=0A=
+      element.blur();=0A=
+      element.disabled =3D 'true';=0A=
+    }=0A=
+  },=0A=
+=0A=
+  enable: function(form) {=0A=
+    var elements =3D Form.getElements(form);=0A=
+    for (var i =3D 0; i < elements.length; i++) {=0A=
+      var element =3D elements[i];=0A=
+      element.disabled =3D '';=0A=
+    }=0A=
+  },=0A=
+=0A=
+  focusFirstElement: function(form) {=0A=
+    var form =3D $(form);=0A=
+    var elements =3D Form.getElements(form);=0A=
+    for (var i =3D 0; i < elements.length; i++) {=0A=
+      var element =3D elements[i];=0A=
+      if (element.type !=3D 'hidden' && !element.disabled) {=0A=
+        Field.activate(element);=0A=
+        break;=0A=
+      }=0A=
+    }=0A=
+  },=0A=
+=0A=
+  reset: function(form) {=0A=
+    $(form).reset();=0A=
+  }=0A=
+}=0A=
+=0A=
+Form.Element =3D {=0A=
+  serialize: function(element) {=0A=
+    var element =3D $(element);=0A=
+    var method =3D element.tagName.toLowerCase();=0A=
+    var parameter =3D Form.Element.Serializers[method](element);=0A=
+    =0A=
+    if (parameter)=0A=
+      return encodeURIComponent(parameter[0]) + '=3D' + =0A=
+        encodeURIComponent(parameter[1]);                   =0A=
+  },=0A=
+  =0A=
+  getValue: function(element) {=0A=
+    var element =3D $(element);=0A=
+    var method =3D element.tagName.toLowerCase();=0A=
+    var parameter =3D Form.Element.Serializers[method](element);=0A=
+    =0A=
+    if (parameter) =0A=
+      return parameter[1];=0A=
+  }=0A=
+}=0A=
+=0A=
+Form.Element.Serializers =3D {=0A=
+  input: function(element) {=0A=
+    switch (element.type.toLowerCase()) {=0A=
+      case 'submit':=0A=
+      case 'hidden':=0A=
+      case 'password':=0A=
+      case 'text':=0A=
+        return Form.Element.Serializers.textarea(element);=0A=
+      case 'checkbox':  =0A=
+      case 'radio':=0A=
+        return Form.Element.Serializers.inputSelector(element);=0A=
+    }=0A=
+    return false;=0A=
+  },=0A=
+=0A=
+  inputSelector: function(element) {=0A=
+    if (element.checked)=0A=
+      return [element.name, element.value];=0A=
+  },=0A=
+=0A=
+  textarea: function(element) {=0A=
+    return [element.name, element.value];=0A=
+  },=0A=
+=0A=
+  select: function(element) {=0A=
+    var value =3D '';=0A=
+    if (element.type =3D=3D 'select-one') {=0A=
+      var index =3D element.selectedIndex;=0A=
+      if (index >=3D 0)=0A=
+        value =3D element.options[index].value || =
+element.options[index].text;=0A=
+    } else {=0A=
+      value =3D new Array();=0A=
+      for (var i =3D 0; i < element.length; i++) {=0A=
+        var opt =3D element.options[i];=0A=
+        if (opt.selected)=0A=
+          value.push(opt.value || opt.text);=0A=
+      }=0A=
+    }=0A=
+    return [element.name, value];=0A=
+  }=0A=
+}=0A=
+=0A=
+/*-----------------------------------------------------------------------=
+---*/=0A=
+=0A=
+var $F =3D Form.Element.getValue;=0A=
+=0A=
+/*-----------------------------------------------------------------------=
+---*/=0A=
+=0A=
+Abstract.TimedObserver =3D function() {}=0A=
+Abstract.TimedObserver.prototype =3D {=0A=
+  initialize: function(element, frequency, callback) {=0A=
+    this.frequency =3D frequency;=0A=
+    this.element   =3D $(element);=0A=
+    this.callback  =3D callback;=0A=
+    =0A=
+    this.lastValue =3D this.getValue();=0A=
+    this.registerCallback();=0A=
+  },=0A=
+  =0A=
+  registerCallback: function() {=0A=
+    setInterval(this.onTimerEvent.bind(this), this.frequency * 1000);=0A=
+  },=0A=
+  =0A=
+  onTimerEvent: function() {=0A=
+    var value =3D this.getValue();=0A=
+    if (this.lastValue !=3D value) {=0A=
+      this.callback(this.element, value);=0A=
+      this.lastValue =3D value;=0A=
+    }=0A=
+  }=0A=
+}=0A=
+=0A=
+Form.Element.Observer =3D Class.create();=0A=
+Form.Element.Observer.prototype =3D (new =
+Abstract.TimedObserver()).extend({=0A=
+  getValue: function() {=0A=
+    return Form.Element.getValue(this.element);=0A=
+  }=0A=
+});=0A=
+=0A=
+Form.Observer =3D Class.create();=0A=
+Form.Observer.prototype =3D (new Abstract.TimedObserver()).extend({=0A=
+  getValue: function() {=0A=
+    return Form.serialize(this.element);=0A=
+  }=0A=
+});=0A=
+=0A=
+/*-----------------------------------------------------------------------=
+---*/=0A=
+=0A=
+Abstract.EventObserver =3D function() {}=0A=
+Abstract.EventObserver.prototype =3D {=0A=
+  initialize: function(element, callback) {=0A=
+    this.element  =3D $(element);=0A=
+    this.callback =3D callback;=0A=
+    =0A=
+    this.lastValue =3D this.getValue();=0A=
+    if (this.element.tagName.toLowerCase() =3D=3D 'form')=0A=
+      this.registerFormCallbacks();=0A=
+    else=0A=
+      this.registerCallback(this.element);=0A=
+  },=0A=
+  =0A=
+  onElementEvent: function() {=0A=
+    var value =3D this.getValue();=0A=
+    if (this.lastValue !=3D value) {=0A=
+      this.callback(this.element, value);=0A=
+      this.lastValue =3D value;=0A=
+    }=0A=
+  },=0A=
+  =0A=
+  registerFormCallbacks: function() {=0A=
+    var elements =3D Form.getElements(this.element);=0A=
+    for (var i =3D 0; i < elements.length; i++)=0A=
+      this.registerCallback(elements[i]);=0A=
+  },=0A=
+  =0A=
+  registerCallback: function(element) {=0A=
+    if (element.type) {=0A=
+      switch (element.type.toLowerCase()) {=0A=
+        case 'checkbox':  =0A=
+        case 'radio':=0A=
+          element.target =3D this;=0A=
+          element.prev_onclick =3D element.onclick || =
+Prototype.emptyFunction;=0A=
+          element.onclick =3D function() {=0A=
+            this.prev_onclick(); =0A=
+            this.target.onElementEvent();=0A=
+          }=0A=
+          break;=0A=
+        case 'password':=0A=
+        case 'text':=0A=
+        case 'textarea':=0A=
+        case 'select-one':=0A=
+        case 'select-multiple':=0A=
+          element.target =3D this;=0A=
+          element.prev_onchange =3D element.onchange || =
+Prototype.emptyFunction;=0A=
+          element.onchange =3D function() {=0A=
+            this.prev_onchange(); =0A=
+            this.target.onElementEvent();=0A=
+          }=0A=
+          break;=0A=
+      }=0A=
+    }    =0A=
+  }=0A=
+}=0A=
+=0A=
+Form.Element.EventObserver =3D Class.create();=0A=
+Form.Element.EventObserver.prototype =3D (new =
+Abstract.EventObserver()).extend({=0A=
+  getValue: function() {=0A=
+    return Form.Element.getValue(this.element);=0A=
+  }=0A=
+});=0A=
+=0A=
+Form.EventObserver =3D Class.create();=0A=
+Form.EventObserver.prototype =3D (new Abstract.EventObserver()).extend({=0A=
+  getValue: function() {=0A=
+    return Form.serialize(this.element);=0A=
+  }=0A=
+});=0A=
+=0A=
+=0A=
+if (!window.Event) {=0A=
+  var Event =3D new Object();=0A=
+}=0A=
+=0A=
+Object.extend(Event, {=0A=
+  KEY_BACKSPACE: 8,=0A=
+  KEY_TAB:       9,=0A=
+  KEY_RETURN:   13,=0A=
+  KEY_ESC:      27,=0A=
+  KEY_LEFT:     37,=0A=
+  KEY_UP:       38,=0A=
+  KEY_RIGHT:    39,=0A=
+  KEY_DOWN:     40,=0A=
+  KEY_DELETE:   46,=0A=
+=0A=
+  element: function(event) {=0A=
+    return event.target || event.srcElement;=0A=
+  },=0A=
+=0A=
+  isLeftClick: function(event) {=0A=
+    return (((event.which) && (event.which =3D=3D 1)) ||=0A=
+            ((event.button) && (event.button =3D=3D 1)));=0A=
+  },=0A=
+=0A=
+  pointerX: function(event) {=0A=
+    return event.pageX || (event.clientX + =0A=
+      (document.documentElement.scrollLeft || document.body.scrollLeft));=0A=
+  },=0A=
+=0A=
+  pointerY: function(event) {=0A=
+    return event.pageY || (event.clientY + =0A=
+      (document.documentElement.scrollTop || document.body.scrollTop));=0A=
+  },=0A=
+=0A=
+  stop: function(event) {=0A=
+    if (event.preventDefault) { =0A=
+      event.preventDefault(); =0A=
+      event.stopPropagation(); =0A=
+    } else {=0A=
+      event.returnValue =3D false;=0A=
+    }=0A=
+  },=0A=
+=0A=
+  // find the first node with the given tagName, starting from the=0A=
+  // node the event was triggered on; traverses the DOM upwards=0A=
+  findElement: function(event, tagName) {=0A=
+    var element =3D Event.element(event);=0A=
+    while (element.parentNode && (!element.tagName ||=0A=
+        (element.tagName.toUpperCase() !=3D tagName.toUpperCase())))=0A=
+      element =3D element.parentNode;=0A=
+    return element;=0A=
+  },=0A=
+=0A=
+  observers: false,=0A=
+  =0A=
+  _observeAndCache: function(element, name, observer, useCapture) {=0A=
+    if (!this.observers) this.observers =3D [];=0A=
+    if (element.addEventListener) {=0A=
+      this.observers.push([element, name, observer, useCapture]);=0A=
+      element.addEventListener(name, observer, useCapture);=0A=
+    } else if (element.attachEvent) {=0A=
+      this.observers.push([element, name, observer, useCapture]);=0A=
+      element.attachEvent('on' + name, observer);=0A=
+    }=0A=
+  },=0A=
+  =0A=
+  unloadCache: function() {=0A=
+    if (!Event.observers) return;=0A=
+    for (var i =3D 0; i < Event.observers.length; i++) {=0A=
+      Event.stopObserving.apply(this, Event.observers[i]);=0A=
+      Event.observers[i][0] =3D null;=0A=
+    }=0A=
+    Event.observers =3D false;=0A=
+  },=0A=
+=0A=
+  observe: function(element, name, observer, useCapture) {=0A=
+    var element =3D $(element);=0A=
+    useCapture =3D useCapture || false;=0A=
+    =0A=
+    if (name =3D=3D 'keypress' &&=0A=
+        ((navigator.appVersion.indexOf('AppleWebKit') > 0) =0A=
+        || element.attachEvent))=0A=
+      name =3D 'keydown';=0A=
+    =0A=
+    this._observeAndCache(element, name, observer, useCapture);=0A=
+  },=0A=
+=0A=
+  stopObserving: function(element, name, observer, useCapture) {=0A=
+    var element =3D $(element);=0A=
+    useCapture =3D useCapture || false;=0A=
+    =0A=
+    if (name =3D=3D 'keypress' &&=0A=
+        ((navigator.appVersion.indexOf('AppleWebKit') > 0) =0A=
+        || element.detachEvent))=0A=
+      name =3D 'keydown';=0A=
+    =0A=
+    if (element.removeEventListener) {=0A=
+      element.removeEventListener(name, observer, useCapture);=0A=
+    } else if (element.detachEvent) {=0A=
+      element.detachEvent('on' + name, observer);=0A=
+    }=0A=
+  }=0A=
+});=0A=
+=0A=
+/* prevent memory leaks in IE */=0A=
+Event.observe(window, 'unload', Event.unloadCache, false);=0A=
+=0A=
+var Position =3D {=0A=
+=0A=
+  // set to true if needed, warning: firefox performance problems=0A=
+  // NOT neeeded for page scrolling, only if draggable contained in=0A=
+  // scrollable elements=0A=
+  includeScrollOffsets: false, =0A=
+=0A=
+  // must be called before calling withinIncludingScrolloffset, every =
+time the=0A=
+  // page is scrolled=0A=
+  prepare: function() {=0A=
+    this.deltaX =3D  window.pageXOffset =0A=
+                || document.documentElement.scrollLeft =0A=
+                || document.body.scrollLeft =0A=
+                || 0;=0A=
+    this.deltaY =3D  window.pageYOffset =0A=
+                || document.documentElement.scrollTop =0A=
+                || document.body.scrollTop =0A=
+                || 0;=0A=
+  },=0A=
+=0A=
+  realOffset: function(element) {=0A=
+    var valueT =3D 0, valueL =3D 0;=0A=
+    do {=0A=
+      valueT +=3D element.scrollTop  || 0;=0A=
+      valueL +=3D element.scrollLeft || 0; =0A=
+      element =3D element.parentNode;=0A=
+    } while (element);=0A=
+    return [valueL, valueT];=0A=
+  },=0A=
+=0A=
+  cumulativeOffset: function(element) {=0A=
+    var valueT =3D 0, valueL =3D 0;=0A=
+    do {=0A=
+      valueT +=3D element.offsetTop  || 0;=0A=
+      valueL +=3D element.offsetLeft || 0;=0A=
+      element =3D element.offsetParent;=0A=
+    } while (element);=0A=
+    return [valueL, valueT];=0A=
+  },=0A=
+=0A=
+  // caches x/y coordinate pair to use with overlap=0A=
+  within: function(element, x, y) {=0A=
+    if (this.includeScrollOffsets)=0A=
+      return this.withinIncludingScrolloffsets(element, x, y);=0A=
+    this.xcomp =3D x;=0A=
+    this.ycomp =3D y;=0A=
+    this.offset =3D this.cumulativeOffset(element);=0A=
+=0A=
+    return (y >=3D this.offset[1] &&=0A=
+            y <  this.offset[1] + element.offsetHeight &&=0A=
+            x >=3D this.offset[0] && =0A=
+            x <  this.offset[0] + element.offsetWidth);=0A=
+  },=0A=
+=0A=
+  withinIncludingScrolloffsets: function(element, x, y) {=0A=
+    var offsetcache =3D this.realOffset(element);=0A=
+=0A=
+    this.xcomp =3D x + offsetcache[0] - this.deltaX;=0A=
+    this.ycomp =3D y + offsetcache[1] - this.deltaY;=0A=
+    this.offset =3D this.cumulativeOffset(element);=0A=
+=0A=
+    return (this.ycomp >=3D this.offset[1] &&=0A=
+            this.ycomp <  this.offset[1] + element.offsetHeight &&=0A=
+            this.xcomp >=3D this.offset[0] && =0A=
+            this.xcomp <  this.offset[0] + element.offsetWidth);=0A=
+  },=0A=
+=0A=
+  // within must be called directly before=0A=
+  overlap: function(mode, element) {  =0A=
+    if (!mode) return 0;  =0A=
+    if (mode =3D=3D 'vertical') =0A=
+      return ((this.offset[1] + element.offsetHeight) - this.ycomp) / =0A=
+        element.offsetHeight;=0A=
+    if (mode =3D=3D 'horizontal')=0A=
+      return ((this.offset[0] + element.offsetWidth) - this.xcomp) / =0A=
+        element.offsetWidth;=0A=
+  },=0A=
+=0A=
+  clone: function(source, target) {=0A=
+    source =3D $(source);=0A=
+    target =3D $(target);=0A=
+    target.style.position =3D 'absolute';=0A=
+    var offsets =3D this.cumulativeOffset(source);=0A=
+    target.style.top    =3D offsets[1] + 'px';=0A=
+    target.style.left   =3D offsets[0] + 'px';=0A=
+    target.style.width  =3D source.offsetWidth + 'px';=0A=
+    target.style.height =3D source.offsetHeight + 'px';=0A=
+  }=0A=
+}=0A=
+
+------=_NextPart_000_0000_01C80B9F.C320A020
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://developer.mozilla.org/en/docs/skins/devmo/scriptaculous.js
+
+Scriptaculous =3D {=0A=
+  Version: '1.5_pre1',=0A=
+  require: function(libraryName) {=0A=
+    // inserting via DOM fails in Safari 2.0, so brute force approach=0A=
+    document.write('<script type=3D"text/javascript" =
+src=3D"'+libraryName+'"></script>');=0A=
+  },=0A=
+  load: function() {=0A=
+    // fixme: check for prototype version number=0A=
+    if(typeof Prototype=3D=3D'undefined') =0A=
+      throw("script.aculo.us requires the Prototype JavaScript framework =
+>=3D 1.4.0");=0A=
+    var scriptTags =3D document.getElementsByTagName("script");=0A=
+    for(var i=3D0;i<scriptTags.length;i++) {=0A=
+      if(scriptTags[i].src && =
+scriptTags[i].src.match(/scriptaculous\.js$/)) {=0A=
+        var path =3D scriptTags[i].src.replace(/scriptaculous\.js$/,'');=0A=
+        this.require(path + 'util.js');=0A=
+        this.require(path + 'effects.js');=0A=
+        this.require(path + 'dragdrop.js');=0A=
+        this.require(path + 'controls.js');=0A=
+      }=0A=
+    }=0A=
+  }=0A=
+}=0A=
+=0A=
+Scriptaculous.load();
+------=_NextPart_000_0000_01C80B9F.C320A020--

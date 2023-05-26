@@ -1,0 +1,36 @@
+<html><head></head>
+ <body><br>
+<marquee behavior="alternate" style="background-color:red;color:white;"><h1>CALCULATOR</h1></marquee>
+<FORM><center>
+<TABLE BORDER="5" bordercolor="red" width="50%" cellpadding="10" cellspacing="10">
+ <tr>
+ <TD>1st Number : <input name="no1" size="5"></td>
+ <TD>2nd Number : <input name="no2" size="5"></td>
+ </tr>
+ <tr><td colspan='2'><h2>+ Result: </h2><input name='add_res' size="8"></td></tr>
+ <tr><td colspan='2'><h2>- Result: </h2><input name='sub_res' size="8"></td></tr>
+ <tr><td colspan='2'><h2>* Result:</h2> <input name='mul_res' size="8"></td></tr>
+ <tr><td colspan='2'><h2>/ Result: </h2><input name='div_res' size="8"></td></tr>
+ <tr><td> <input type="button" onClick="calc(this.form);" value="calculate" </td></tr>
+    <tr><td> <input type="reset"  value="reset" accesskey="r"></td></tr>
+ </table> </center>
+</form></body>
+ </html>
+ 
+<SCRIPT TYPE="text/javascript">
+ <!--
+ function calc(calc)
+ {
+ var fno1=0;
+ var fno2=0;
+ 
+fno1=parseFloat(calc.no1.value);
+ fno2=parseFloat(calc.no2.value);
+ 
+calc.add_res.value=fno1+fno2;
+ calc.sub_res.value=fno1-fno2;
+ calc.mul_res.value=fno1*fno2;
+ calc.div_res.value=fno1/fno2;
+ }
+ //-->
+ </SCRIPT>

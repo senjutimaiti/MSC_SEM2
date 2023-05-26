@@ -1,0 +1,17 @@
+<html>
+<head><title>Color Change</title>
+<script language="JavaScript">
+col=new Array("blue","red","pink","aqua","lightgreen","black")
+function textcolorchange()
+{
+i=Math.random()
+i=Math.round(i*6)
+document.bgColor=col[i]
+document.fgColor=col[i+1]
+setTimeout("textcolorchange()",1000)
+}
+</script>
+</head>
+<body bgcolor=049999 onLoad=textcolorchange()><h1><center> Hello Students.</center></h1>
+</body>
+</html>

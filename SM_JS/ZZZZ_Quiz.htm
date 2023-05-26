@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>Certified Internet Webmaster JavaScript Professional
+</TITLE>
+
+<SCRIPT>
+<!--
+
+var numCorrect = 0
+
+function takeTest()
+{
+	var response = ""
+
+	var q1 = " How much is 2+6 ? "
+	var a1 = 8
+
+	var q2 = " What is this planet's name ? "
+	var a2 = "EARTH"
+
+	var q3 = " What is the meaning of life ? "
+	var a3 = "CHOCOLATE"
+
+	response = prompt(q1, "")
+	if (response) runningTotal((response == a1) ? 5 : 0)
+	alert(numCorrect)
+
+	response = prompt(q2, "")
+	if (response) runningTotal((response.toUpperCase() == "EARTH") ? 5 : 0)
+	alert(numCorrect)
+
+	response = prompt(q3, "")
+	if (response) runningTotal((response.toUpperCase() == "CHOCOLATE") ? 5 : 0)
+	alert("You answered a total of " + numCorrect + " correctly. ")
+	numCorrect = 0
+}
+
+function runningTotal(i)
+{
+	numCorrect += i
+	return numCorrect
+}
+
+// -->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<FORM>
+<INPUT TYPE = Button Value = " Pop Quiz " onClick = "takeTest()">
+</FORM>
+
+</BODY>
+</HTML>

@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE>Clock Exercise
+</TITLE>
+
+<SCRIPT>
+<!--
+function runClock()
+{
+	var timeNow = new Date()
+	var hours = timeNow.getHours()
+	var minutes = timeNow.getMinutes()
+	var seconds = timeNow.getSeconds()
+	if(seconds>=0 && seconds<=9)
+		seconds="0"+seconds
+	var ampm = ""
+	if (hours<12)
+	{
+		ampm = "AM"
+	}
+	else
+	{
+		ampm = "PM"
+		hours = hours - 12
+	}
+	var stringTime = " " + hours + ":" + minutes + ":" + seconds + " " + ampm
+
+	//document.forms[0].clockBox.style.background="black";
+	//document.forms[0].clockBox.style.color="cyan";
+	document.forms[0].clockBox.value = stringTime
+	
+	setTimeout("runClock()", 1000)
+}
+//-->
+</SCRIPT>
+
+</HEAD>
+
+<BODY fgcolor="yellow" bgColor="blue" onLoad="runClock()">
+
+<FORM>
+<TABLE name="t1" WIDTH=100%>
+<TR VALIGN=BOTTOM>
+<TD><H1><font color="yellow">Time Watcher</font></H1></TD>
+<TD ALIGN=RIGHT >
+<INPUT TYPE="text" NAME="clockBox" size=11></font>
+</TD></TR></TABLE>
+<HR>
+</FORM>
+
+</BODY>
+</HTML>

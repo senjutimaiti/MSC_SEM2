@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript">
+function changeSource()
+{
+document.getElementById("frame1").src="frame_c.html";
+document.getElementById("frame2").src="frame_d.html";
+}
+</script>
+</head>
+
+<body>
+<iframe src="frame_a.html" id="frame1"></iframe>
+<iframe src="frame_b.html" id="frame2"></iframe>
+<br /><br />
+<input type="button" onclick="changeSource()" value="Change source of the two iframes">
+
+
+</body>
+</html>
+

@@ -1,0 +1,952 @@
+From: <Saved by Microsoft Internet Explorer 5>
+Subject: What is the Document Object Model?
+Date: Thu, 11 Oct 2007 00:44:00 +0530
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0023_01C80B9F.D095C140"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2180
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0023_01C80B9F.D095C140
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.w3.org/TR/DOM-Level-2-Core/introduction.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!--=0A=
+ Generated: Thu Nov 09 17:42:28 EST 2000 jfouffa.w3.org=0A=
+ --><HTML lang=3Den=20
+xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD><TITLE>What is the Document =
+Object Model?</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1"><LINK=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/spec.css" type=3Dtext/css=20
+rel=3Dstylesheet><LINK =
+href=3D"http://www.w3.org/StyleSheets/TR/W3C-REC.css"=20
+type=3Dtext/css rel=3Dstylesheet><LINK href=3D"core.html" =
+rel=3Dnext><LINK=20
+href=3D"Overview.html#contents" rel=3Dcontents><LINK =
+href=3D"def-index.html"=20
+rel=3Dindex><LINK href=3D"copyright-notice.html" rel=3Dprevious>
+<META content=3D"MSHTML 6.00.2900.2180" name=3DGENERATOR></HEAD>
+<BODY>
+<DIV class=3Dnavbar align=3Dcenter><A accessKey=3Dp=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/copyright-notice.html">prev=
+ious</A>=20
+&nbsp; <A accessKey=3Dn=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/core.html">next</A> &nbsp; =
+<A=20
+accessKey=3Dc=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/Overview.html#contents">con=
+tents</A>=20
+&nbsp; <A accessKey=3Di=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/def-index.html">index</A>=20
+<HR title=3D"Navigation area separator">
+</DIV>
+<DIV class=3Dnoprint style=3D"TEXT-ALIGN: right">
+<P style=3D"FONT-SIZE: small; FONT-FAMILY: monospace">13 November, =
+2000</P></DIV>
+<DIV class=3Ddiv1><A id=3DIntroduction name=3DIntroduction></A>
+<H1 class=3Ddiv1 id=3DIntroduction-h1>What is the Document Object =
+Model?</H1>
+<DL>
+  <DT><I>Editors</I>=20
+  <DD>Philippe Le H=E9garet, W3C=20
+  <DD>Lauren Wood, SoftQuad Software Inc., WG Chair=20
+  <DD>Jonathan Robie, Texcel (for DOM Level 1) </DD></DL>
+<DIV class=3Ddiv2><A id=3DID-E7C3082 name=3DID-E7C3082></A>
+<H2 class=3Ddiv2 id=3DID-E7C3082-h2>Introduction</H2>
+<P>The Document Object Model (DOM) is an application programming =
+interface (<A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-API"><EM>A=
+PI</EM></A>)=20
+for valid <A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-HTML"><EM>=
+HTML</EM></A>=20
+and well-formed <A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-XML"><EM>X=
+ML</EM></A>=20
+documents. It defines the logical structure of documents and the way a =
+document=20
+is accessed and manipulated. In the DOM specification, the term =
+"document" is=20
+used in the broad sense - increasingly, XML is being used as a way of=20
+representing many different kinds of information that may be stored in =
+diverse=20
+systems, and much of this would traditionally be seen as data rather =
+than as=20
+documents. Nevertheless, XML presents this data as documents, and the =
+DOM may be=20
+used to manage this data.</P>
+<P>With the Document Object Model, programmers can build documents, =
+navigate=20
+their structure, and add, modify, or delete elements and content. =
+Anything found=20
+in an HTML or XML document can be accessed, changed, deleted, or added =
+using the=20
+Document Object Model, with a few exceptions - in particular, the DOM <A =
+
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-interface"=
+><EM>interfaces</EM></A>=20
+for the XML internal and external subsets have not yet been =
+specified.</P>
+<P>As a W3C specification, one important objective for the Document =
+Object Model=20
+is to provide a standard programming interface that can be used in a =
+wide=20
+variety of environments and <A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-applicatio=
+n"><EM>applications</EM></A>.=20
+The DOM is designed to be used with any programming language. In order =
+to=20
+provide a precise, language-independent specification of the DOM =
+interfaces, we=20
+have chosen to define the specifications in Object Management Group =
+(OMG) IDL=20
+[<A class=3Dnoxref=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#OMGIDL">OMG=
+IDL</A>],=20
+as defined in the CORBA 2.3.1 specification [<A class=3Dnoxref=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#CORBA">CORB=
+A</A>].=20
+In addition to the OMG IDL specification, we provide <A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-lang-bindi=
+ng"><EM>language=20
+bindings</EM></A> for Java [<A class=3Dnoxref=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#Java">Java<=
+/A>] and=20
+ECMAScript [<A class=3Dnoxref=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#ECMAScript"=
+>ECMAScript</A>]=20
+(an industry-standard scripting language based on JavaScript [<A =
+class=3Dnoxref=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#JavaScript"=
+>JavaScript</A>]=20
+and JScript [<A class=3Dnoxref=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#JScript">JS=
+cript</A>]).</P>
+<P><B>Note:</B> OMG IDL is used only as a language-independent and=20
+implementation-neutral way to specify <A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-interface"=
+><EM>interfaces</EM></A>.=20
+Various other IDLs could have been used ([<A class=3Dnoxref=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#COM">COM</A=
+>], [<A=20
+class=3Dnoxref=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#JavaIDL">Ja=
+vaIDL</A>],=20
+[<A class=3Dnoxref=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#MSIDL">MIDL=
+</A>],=20
+...). In general, IDLs are designed for specific computing environments. =
+The=20
+Document Object Model can be implemented in any computing environment, =
+and does=20
+not require the object binding runtimes generally associated with such=20
+IDLs.</P></DIV><!-- div2 ID-E7C3082 -->
+<DIV class=3Ddiv2><A id=3DID-E7C30821 name=3DID-E7C30821></A>
+<H2 class=3Ddiv2 id=3DID-E7C30821-h2>What the Document Object Model =
+is</H2>
+<P>The DOM is a programming <A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-API"><EM>A=
+PI</EM></A>=20
+for documents. It is based on an object structure that closely resembles =
+the=20
+structure of the documents it <A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-model"><EM=
+>models</EM></A>.=20
+For instance, consider this table, taken from an HTML document:</P>
+<DIV class=3Dcode-block><PRE>      &lt;TABLE&gt;
+      &lt;TBODY&gt;=20
+      &lt;TR&gt;=20
+      &lt;TD&gt;Shady Grove&lt;/TD&gt;
+      &lt;TD&gt;Aeolian&lt;/TD&gt;=20
+      &lt;/TR&gt;=20
+      &lt;TR&gt;
+      &lt;TD&gt;Over the River, Charlie&lt;/TD&gt;       =20
+      &lt;TD&gt;Dorian&lt;/TD&gt;=20
+      &lt;/TR&gt;=20
+      &lt;/TBODY&gt;
+      &lt;/TABLE&gt;
+  =20
+</PRE></DIV>
+<P>A graphical representation of the DOM of the example table =
+is:<BR></P>
+<DIV align=3Dcenter>
+<HR width=3D"90%" SIZE=3D2>
+<IMG alt=3D"graphical representation of the DOM of the example table"=20
+src=3D"http://www.w3.org/TR/DOM-Level-2-Core/images/table.gif">=20
+<HR width=3D"90%" SIZE=3D2>
+<B>graphical representation of the DOM of the example table</B>=20
+<HR width=3D"90%" SIZE=3D2>
+</DIV>
+<P>In the DOM, documents have a logical structure which is very much =
+like a=20
+tree; to be more precise, which is like a "forest" or "grove", which can =
+contain=20
+more than one tree. Each document contains zero or one doctype nodes, =
+one root=20
+element node, and zero or more comments or processing instructions; the =
+root=20
+element serves as the root of the element tree for the document. =
+However, the=20
+DOM does not specify that documents must be <EM>implemented</EM> as a =
+tree or a=20
+grove, nor does it specify how the relationships among objects be =
+implemented.=20
+The DOM is a logical model that may be implemented in any convenient =
+manner. In=20
+this specification, we use the term <EM>structure model</EM> to describe =
+the=20
+tree-like representation of a document. We also use the term "tree" when =
+
+referring to the arrangement of those information items which can be =
+reached by=20
+using "tree-walking" methods; (this does not include attributes). One =
+important=20
+property of DOM structure models is <EM>structural isomorphism</EM>: if =
+any two=20
+Document Object Model implementations are used to create a =
+representation of the=20
+same document, they will create the same structure model, in accordance =
+with the=20
+XML Information Set [<A class=3Dnoxref=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#InfoSet">In=
+foset</A>].</P>
+<P><B>Note:</B> There may be some variations depending on the parser =
+being used=20
+to build the DOM. For instance, the DOM may not contain whitespaces in =
+element=20
+content if the parser discards them.</P>
+<P>The name "Document Object Model" was chosen because it is an "<A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-object-mod=
+el"><EM>object=20
+model</EM></A>" in the traditional object oriented design sense: =
+documents are=20
+modeled using objects, and the model encompasses not only the structure =
+of a=20
+document, but also the behavior of a document and the objects of which =
+it is=20
+composed. In other words, the nodes in the above diagram do not =
+represent a data=20
+structure, they represent objects, which have functions and identity. As =
+an=20
+object model, the DOM identifies:</P>
+<UL>
+  <LI>the interfaces and objects used to represent and manipulate a =
+document=20
+  <LI>the semantics of these interfaces and objects - including both =
+behavior=20
+  and attributes=20
+  <LI>the relationships and collaborations among these interfaces and =
+objects=20
+  </LI></UL>
+<P>The structure of SGML documents has traditionally been represented by =
+an=20
+abstract <A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-datamodel"=
+><EM>data=20
+model</EM></A>, not by an object model. In an abstract <A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-datamodel"=
+><EM>data=20
+model</EM></A>, the model is centered around the data. In object =
+oriented=20
+programming languages, the data itself is encapsulated in objects that =
+hide the=20
+data, protecting it from direct external manipulation. The functions =
+associated=20
+with these objects determine how the objects may be manipulated, and =
+they are=20
+part of the object model.</P></DIV><!-- div2 ID-E7C30821 -->
+<DIV class=3Ddiv2><A id=3DID-E7C30822 name=3DID-E7C30822></A>
+<H2 class=3Ddiv2 id=3DID-E7C30822-h2>What the Document Object Model is =
+not</H2>
+<P>This section is designed to give a more precise understanding of the =
+DOM by=20
+distinguishing it from other systems that may seem to be like it.</P>
+<UL>
+  <LI>The Document Object Model is not a binary specification. DOM =
+programs=20
+  written in the same language binding will be source code compatible =
+across=20
+  platforms, but the DOM does not define any form of binary =
+interoperability.=20
+  <LI>The Document Object Model is not a way of persisting objects to =
+XML or=20
+  HTML. Instead of specifying how objects may be represented in XML, the =
+DOM=20
+  specifies how XML and HTML documents are represented as objects, so =
+that they=20
+  may be used in object oriented programs.=20
+  <LI>The Document Object Model is not a set of data structures; it is =
+an <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-object-mod=
+el"><EM>object=20
+  model</EM></A> that specifies interfaces. Although this document =
+contains=20
+  diagrams showing parent/child relationships, these are logical =
+relationships=20
+  defined by the programming interfaces, not representations of any =
+particular=20
+  internal data structures.=20
+  <LI>The Document Object Model does not define what information in a =
+document=20
+  is relevant or how information in a document is structured. For XML, =
+this is=20
+  specified by the W3C XML Information Set [<A class=3Dnoxref=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#InfoSet">In=
+foset</A>].=20
+  The DOM is simply an <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-API"><EM>A=
+PI</EM></A>=20
+  to this information set.=20
+  <LI>The Document Object Model, despite its name, is not a competitor =
+to the=20
+  Component Object Model (COM). COM, like CORBA, is a language =
+independent way=20
+  to specify interfaces and objects; the DOM is a set of interfaces and =
+objects=20
+  designed for managing HTML and XML documents. The DOM may be =
+implemented using=20
+  language-independent systems like COM or CORBA; it may also be =
+implemented=20
+  using language-specific bindings like the Java or ECMAScript bindings=20
+  specified in this document. </LI></UL></DIV><!-- div2 ID-E7C30822 -->
+<DIV class=3Ddiv2><A id=3DID-E7C30823 name=3DID-E7C30823></A>
+<H2 class=3Ddiv2 id=3DID-E7C30823-h2>Where the Document Object Model =
+came from</H2>
+<P>The DOM originated as a specification to allow JavaScript scripts and =
+Java=20
+programs to be portable among Web browsers. "Dynamic HTML" was the =
+immediate=20
+ancestor of the Document Object Model, and it was originally thought of =
+largely=20
+in terms of browsers. However, when the DOM Working Group was formed at =
+W3C, it=20
+was also joined by vendors in other domains, including HTML or XML =
+editors and=20
+document repositories. Several of these vendors had worked with SGML =
+before XML=20
+was developed; as a result, the DOM has been influenced by SGML Groves =
+and the=20
+HyTime standard. Some of these vendors had also developed their own =
+object=20
+models for documents in order to provide an API for SGML/XML editors or =
+document=20
+repositories, and these object models have also influenced the =
+DOM.</P></DIV><!-- div2 ID-E7C30823 -->
+<DIV class=3Ddiv2><A id=3DID-E7C30824 name=3DID-E7C30824></A>
+<H2 class=3Ddiv2 id=3DID-E7C30824-h2>Entities and the DOM Core</H2>
+<P>In the fundamental DOM interfaces, there are no objects representing=20
+entities. Numeric character references, and references to the =
+pre-defined=20
+entities in HTML and XML, are replaced by the single character that =
+makes up the=20
+entity's replacement. For example, in:</P>
+<DIV class=3Dcode-block><PRE>        &lt;p&gt;This is a dog &amp;amp; a =
+cat&lt;/p&gt;       =20
+    =20
+</PRE></DIV>
+<P>the "&amp;amp;" will be replaced by the character "&amp;", and the =
+text in=20
+the P element will form a single continuous sequence of characters. =
+Since=20
+numeric character references and pre-defined entities are not recognized =
+as such=20
+in CDATA sections, or in the SCRIPT and STYLE elements in HTML, they are =
+not=20
+replaced by the single character they appear to refer to. If the example =
+above=20
+were enclosed in a CDATA section, the "&amp;amp;" would not be replaced =
+by=20
+"&amp;"; neither would the &lt;p&gt; be recognized as a start tag. The=20
+representation of general entities, both internal and external, are =
+defined=20
+within the extended (XML) interfaces of DOM Level 1 [<A class=3Dnoxref=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#DOM-Level-1=
+">DOM=20
+Level 1</A>].</P>
+<P>Note: When a DOM representation of a document is serialized as XML or =
+HTML=20
+text, applications will need to check each character in text data to see =
+if it=20
+needs to be escaped using a numeric or pre-defined entity. Failing to do =
+so=20
+could result in invalid HTML or XML. Also, <A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-implementa=
+tion"><EM>implementations</EM></A>=20
+should be aware of the fact that serialization into a character encoding =
+
+("charset") that does not fully cover ISO 10646 may fail if there are =
+characters=20
+in markup or CDATA sections that are not present in the =
+encoding.</P></DIV><!-- div2 ID-E7C30824 -->
+<DIV class=3Ddiv2><A id=3DID-Conformance name=3DID-Conformance></A>
+<H2 class=3Ddiv2 id=3DID-Conformance-h2>Conformance</H2>
+<P>This section explains the different levels of conformance to DOM =
+Level 2. DOM=20
+Level 2 consists of 14 modules. It is possible to conform to DOM Level =
+2, or to=20
+a DOM Level 2 module.</P>
+<P>An implementation is DOM Level 2 conformant if it supports the Core =
+module=20
+defined in this document (see <A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-BBACDC08">Fund=
+amental=20
+Interfaces</A>). An implementation conforms to a DOM Level 2 module if =
+it=20
+supports all the interfaces for that module and the associated =
+semantics.</P>
+<P>Here is the complete list of DOM Level 2.0 modules and the features =
+used by=20
+them. Feature names are case-insensitive.</P>
+<DL>
+  <DT><B>Core module</B>=20
+  <DD>defines the feature <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-BBACDC08"><EM>=
+"Core"</EM></A>.=20
+
+  <DT><B>XML module</B>=20
+  <DD>defines the feature <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-E067D597"><EM>=
+"XML"</EM></A>.=20
+
+  <DT><B>HTML module</B>=20
+  <DD>defines the feature "HTML". (see [<A class=3Dnoxref=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#DOMHTML-inf=
+">DOM=20
+  Level 2 HTML</A>]).=20
+  <P><B>Note:</B> At time of publication, this DOM Level 2 module is not =
+yet a=20
+  W3C Recommendation.</P>
+  <DT><B>Views module</B>=20
+  <DD>defines the feature <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Views/views.html"><EM>"Views"</E=
+M></A>=20
+  in [<A class=3Dnoxref=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#DOMViews-in=
+f">DOM=20
+  Level 2 Views</A>].=20
+  <DT><B>Style Sheets module</B>=20
+  <DD>defines the feature <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html"><EM>"Sty=
+leSheets"</EM></A>=20
+  in [<A class=3Dnoxref=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#DOMStyleShe=
+ets-inf">DOM=20
+  Level 2 Style Sheets</A>].=20
+  <DT><B>CSS module</B>=20
+  <DD>defines the feature <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Style/css.html"><EM>"CSS"</EM></=
+A> in=20
+  [<A class=3Dnoxref=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#DOMCSS-inf"=
+>DOM=20
+  Level 2 CSS</A>].=20
+  <DT><B>CSS2 module</B>=20
+  <DD>defines the feature <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Style/css.html"><EM>"CSS2"</EM><=
+/A> in=20
+  [<A class=3Dnoxref=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#DOMCSS-inf"=
+>DOM=20
+  Level 2 CSS</A>].=20
+  <DT><B>Events module</B>=20
+  <DD>defines the feature <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Events/events.html"><EM>"Events"=
+</EM></A>=20
+  in [<A class=3Dnoxref=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#DOMEvents-i=
+nf">DOM=20
+  Level 2 Events</A>].=20
+  <DT><B>User interface Events module</B>=20
+  <DD>defines the feature <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Events/events.html"><EM>"UIEvent=
+s"</EM></A>=20
+  in [<A class=3Dnoxref=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#DOMEvents-i=
+nf">DOM=20
+  Level 2 Events</A>].=20
+  <DT><B>Mouse Events module</B>=20
+  <DD>defines the feature <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Events/events.html"><EM>"MouseEv=
+ents"</EM></A>=20
+  in [<A class=3Dnoxref=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#DOMEvents-i=
+nf">DOM=20
+  Level 2 Events</A>].=20
+  <DT><B>Mutation Events module</B>=20
+  <DD>defines the feature <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Events/events.html"><EM>"Mutatio=
+nEvents"</EM></A>=20
+  in [<A class=3Dnoxref=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#DOMEvents-i=
+nf">DOM=20
+  Level 2 Events</A>].=20
+  <DT><B>HTML Events module</B>=20
+  <DD>defines the feature <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Events/events.html"><EM>"HTMLEve=
+nts"</EM></A>=20
+  in [<A class=3Dnoxref=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#DOMEvents-i=
+nf">DOM=20
+  Level 2 Events</A>].=20
+  <DT><B>Range module</B>=20
+  <DD>defines the feature <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html"><EM=
+>"Range"</EM></A>=20
+  in [<A class=3Dnoxref=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#DOMRange-in=
+f">DOM=20
+  Level 2 Range</A>].=20
+  <DT><B>Traversal module</B>=20
+  <DD>defines the feature <A=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">=
+<EM>"Traversal"</EM></A>=20
+  in [<A class=3Dnoxref=20
+  =
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/references.html#DOMTraversa=
+l-inf">DOM=20
+  Level 2 Traversal</A>]. </DD></DL>
+<P>A DOM implementation must not return <CODE>"true"</CODE> to the=20
+<CODE>hasFeature(feature, version)</CODE> <A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-method"><E=
+M>method</EM></A>=20
+of the <A=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-102161490"><CO=
+DE>DOMImplementation</CODE></A>=20
+interface for that feature unless the implementation conforms to that =
+module.=20
+The <CODE>version</CODE> number for all features used in DOM Level 2.0 =
+is=20
+"2.0".</P></DIV><!-- div2 ID-Conformance -->
+<DIV class=3Ddiv2><A id=3DID-E7C30826 name=3DID-E7C30826></A>
+<H2 class=3Ddiv2 id=3DID-E7C30826-h2>DOM Interfaces and DOM =
+Implementations</H2>
+<P>The DOM specifies interfaces which may be used to manage XML or HTML=20
+documents. It is important to realize that these interfaces are an =
+abstraction -=20
+much like "abstract base classes" in C++, they are a means of specifying =
+a way=20
+to access and manipulate an application's internal representation of a =
+document.=20
+Interfaces do not imply a particular concrete implementation. Each DOM=20
+application is free to maintain documents in any convenient =
+representation, as=20
+long as the interfaces shown in this specification are supported. Some =
+DOM=20
+implementations will be existing programs that use the DOM interfaces to =
+access=20
+software written long before the DOM specification existed. Therefore, =
+the DOM=20
+is designed to avoid implementation dependencies; in particular,</P>
+<OL>
+  <LI>Attributes defined in the IDL do not imply concrete objects which =
+must=20
+  have specific data members - in the language bindings, they are =
+translated to=20
+  a pair of get()/set() functions, not to a data member. Read-only =
+attributes=20
+  have only a get() function in the language bindings.=20
+  <LI>DOM applications may provide additional interfaces and objects not =
+found=20
+  in this specification and still be considered DOM conformant.=20
+  <LI>Because we specify interfaces and not the actual objects that are =
+to be=20
+  created, the DOM cannot know what constructors to call for an =
+implementation.=20
+  In general, DOM users call the createX() methods on the Document class =
+to=20
+  create document structures, and DOM implementations create their own =
+internal=20
+  representations of these structures in their implementations of the =
+createX()=20
+  functions. </LI></OL>
+<P>The Level 1 interfaces were extended to provide both Level 1 and =
+Level 2=20
+functionality.</P>
+<P>DOM implementations in languages other than Java or ECMAScript may =
+choose=20
+bindings that are appropriate and natural for their language and run =
+time=20
+environment. For example, some systems may need to create a Document2 =
+class=20
+which inherits from Document and contains the new methods and =
+attributes.</P>
+<P>DOM Level 2 does not specify multithreading mechanisms.</P></DIV><!-- =
+div2 ID-E7C30826 --></DIV><!-- div1 Introduction -->
+<DIV class=3Dnavbar align=3Dcenter>
+<HR title=3D"Navigation area separator">
+<A accessKey=3Dp=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/copyright-notice.html">prev=
+ious</A>=20
+&nbsp; <A accessKey=3Dn=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/core.html">next</A> &nbsp; =
+<A=20
+accessKey=3Dc=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/Overview.html#contents">con=
+tents</A>=20
+&nbsp; <A accessKey=3Di=20
+href=3D"http://www.w3.org/TR/DOM-Level-2-Core/def-index.html">index</A></=
+DIV></BODY></HTML>
+
+------=_NextPart_000_0023_01C80B9F.D095C140
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.w3.org/TR/DOM-Level-2-Core/images/table.gif
+
+R0lGODlhcAHNAPcAAAAAAIAAAACAAICAAAAAgIAAgACAgMDAwMDcwKbK8EAgAGAgAIAgAKAgAMAg
+AOAgAABAACBAAEBAAGBAAIBAAKBAAMBAAOBAAABgACBgAEBgAGBgAIBgAKBgAMBgAOBgAACAACCA
+AECAAGCAAICAAKCAAMCAAOCAAACgACCgAECgAGCgAICgAKCgAMCgAOCgAADAACDAAEDAAGDAAIDA
+AKDAAMDAAODAAADgACDgAEDgAGDgAIDgAKDgAMDgAODgAAAAQCAAQEAAQGAAQIAAQKAAQMAAQOAA
+QAAgQCAgQEAgQGAgQIAgQKAgQMAgQOAgQABAQCBAQEBAQGBAQIBAQKBAQMBAQOBAQABgQCBgQEBg
+QGBgQIBgQKBgQMBgQOBgQACAQCCAQECAQGCAQICAQKCAQMCAQOCAQACgQCCgQECgQGCgQICgQKCg
+QMCgQOCgQADAQCDAQEDAQGDAQIDAQKDAQMDAQODAQADgQCDgQEDgQGDgQIDgQKDgQMDgQODgQAAA
+gCAAgEAAgGAAgIAAgKAAgMAAgOAAgAAggCAggEAggGAggIAggKAggMAggOAggABAgCBAgEBAgGBA
+gIBAgKBAgMBAgOBAgABggCBggEBggGBggIBggKBggMBggOBggACAgCCAgECAgGCAgICAgKCAgMCA
+gOCAgACggCCggECggGCggICggKCggMCggOCggADAgCDAgEDAgGDAgIDAgKDAgMDAgODAgADggCDg
+gEDggGDggIDggKDggMDggODggAAAwCAAwEAAwGAAwIAAwKAAwMAAwOAAwAAgwCAgwEAgwGAgwIAg
+wKAgwMAgwOAgwABAwCBAwEBAwGBAwIBAwKBAwMBAwOBAwABgwCBgwEBgwGBgwIBgwKBgwMBgwOBg
+wACAwCCAwECAwGCAwICAwKCAwMCAwOCAwACgwCCgwECgwGCgwICgwKCgwMCgwOCgwADAwCDAwEDA
+wGDAwIDAwKDAwP/78KCgpICAgP8AAAD/AP//AAAA//8A/wD//////yH5BAAAAAAALAAAAABwAc0A
+AAj+AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFNWBMCypcuX
+MGPKnElTpsqbOHPq3GkSAM+GPn8KHUq06M+gRgsiTcq0qdOnEZc2lQq1qtWrRqkm1Yq1q9evJLkW
+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
+UN1sp8kqJs950rOe9rwnPgMJEhAAOw==
+
+------=_NextPart_000_0023_01C80B9F.D095C140
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.w3.org/TR/DOM-Level-2-Core/spec.css
+
+H4 {
+	FONT-WEIGHT: normal; COLOR: #0050b2; FONT-FAMILY: sans-serif; =
+TEXT-ALIGN: left
+}
+.idl-code {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; =
+BORDER-LEFT: black 1px solid; COLOR: black; BORDER-BOTTOM: black 1px =
+solid; FONT-FAMILY: monospace; WHITE-SPACE: pre; BACKGROUND-COLOR: =
+#dfdfdf
+}
+.java-code {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; =
+BORDER-LEFT: black 1px solid; COLOR: black; BORDER-BOTTOM: black 1px =
+solid; FONT-FAMILY: monospace; WHITE-SPACE: pre; BACKGROUND-COLOR: =
+#dfdfdf
+}
+.code-block {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; =
+BORDER-LEFT: black 1px solid; COLOR: black; BORDER-BOTTOM: black 1px =
+solid; FONT-FAMILY: monospace; WHITE-SPACE: pre; BACKGROUND-COLOR: =
+#dfdfdf
+}
+.ecma-block {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; =
+BORDER-LEFT: black 1px solid; COLOR: black; BORDER-BOTTOM: black 1px =
+solid; BACKGROUND-COLOR: #dfdfdf
+}
+.interface-name {
+	FONT-WEIGHT: bold
+}
+.attribute-name {
+	COLOR: black; BACKGROUND-COLOR: #ffffd2
+}
+.constant-name {
+	COLOR: black; BACKGROUND-COLOR: #ddffd2
+}
+.method-name {
+	COLOR: black; BACKGROUND-COLOR: #d9e6f8
+}
+.parameter-name {
+	COLOR: black; BACKGROUND-COLOR: #fee6f8
+}
+UL.toc {
+	LIST-STYLE-TYPE: none
+}
+OL.toc {
+	LIST-STYLE-TYPE: none
+}
+DIV.toc UL UL {
+	MARGIN-LEFT: 0px
+}
+DIV.toc OL OL {
+	MARGIN-LEFT: 0px
+}
+DIV.toc UL UL UL {
+	MARGIN-LEFT: 1em
+}
+DIV.toc OL OL OL {
+	MARGIN-LEFT: 1em
+}
+DIV.toc UL UL UL UL {
+	MARGIN-LEFT: 0px
+}
+DIV.toc OL OL OL OL {
+	MARGIN-LEFT: 0px
+}
+LI.tocline1 {
+	FONT-WEIGHT: bold
+}
+LI.tocline2 {
+	FONT-WEIGHT: normal
+}
+LI.tocline4 {
+	FONT-STYLE: italic
+}
+CODE {
+	FONT-FAMILY: monospace
+}
+DIV.paramtable {
+	MARGIN-LEFT: 1em
+}
+DIV.returntable {
+	MARGIN-LEFT: 1em
+}
+DIV.exceptiontable {
+	MARGIN-LEFT: 1em
+}
+
+------=_NextPart_000_0023_01C80B9F.D095C140
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.w3.org/StyleSheets/TR/W3C-REC.css
+
+BODY {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 70px; BACKGROUND: white fixed =
+no-repeat left top; PADDING-BOTTOM: 2em; MARGIN: 0px; COLOR: black; =
+PADDING-TOP: 2em; FONT-FAMILY: sans-serif
+}
+:link {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #00c
+}
+:visited {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #609
+}
+A:active {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #c00
+}
+A:link IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-BOTTOM-STYLE: none
+}
+A:visited IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-BOTTOM-STYLE: none
+}
+A IMG {
+	COLOR: white
+}
+
+@media All   =20
+{
+A IMG {
+=09
+}
+    }
+TH {
+	FONT-FAMILY: sans-serif
+}
+TD {
+	FONT-FAMILY: sans-serif
+}
+H1 {
+	TEXT-ALIGN: left
+}
+H2 {
+	TEXT-ALIGN: left
+}
+H3 {
+	TEXT-ALIGN: left
+}
+H4 {
+	TEXT-ALIGN: left
+}
+H5 {
+	TEXT-ALIGN: left
+}
+H6 {
+	TEXT-ALIGN: left
+}
+H1 {
+	BACKGROUND: white; COLOR: #005a9c
+}
+H2 {
+	BACKGROUND: white; COLOR: #005a9c
+}
+H3 {
+	BACKGROUND: white; COLOR: #005a9c
+}
+H1 {
+	FONT: 170% sans-serif
+}
+H2 {
+	FONT: 140% sans-serif
+}
+H3 {
+	FONT: 120% sans-serif
+}
+H4 {
+	FONT: bold 100% sans-serif
+}
+H5 {
+	FONT: italic 100% sans-serif
+}
+H6 {
+	FONT: small-caps 100% sans-serif
+}
+.hide {
+	DISPLAY: none
+}
+DIV.head {
+	MARGIN-BOTTOM: 1em
+}
+DIV.head H1 {
+	CLEAR: both; MARGIN-TOP: 2em
+}
+DIV.head TABLE {
+	MARGIN-TOP: 2em; MARGIN-LEFT: 2em
+}
+P.copyright {
+	FONT-SIZE: small
+}
+P.copyright SMALL {
+	FONT-SIZE: small
+}
+
+@media Screen   =20
+{
+UNKNOWN {
+	BACKGROUND: #ffa
+}
+    }
+PRE {
+	MARGIN-LEFT: 2em
+}
+DT {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+DD {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+DT {
+	FONT-WEIGHT: bold
+}
+PRE {
+	FONT-FAMILY: monospace
+}
+CODE {
+	FONT-FAMILY: monospace
+}
+UL.toc {
+	LIST-STYLE-TYPE: none
+}
+OL.toc {
+	LIST-STYLE-TYPE: none
+}
+
+@media Aural   =20
+{
+H1 {
+	stress: 20; richness: 90
+}
+H2 {
+	stress: 20; richness: 90
+}
+H3 {
+	stress: 20; richness: 90
+}
+.hide {
+	speak: none
+}
+P.copyright {
+	volume: x-soft; speech-rate: x-fast
+}
+DT {
+	pause-before: 20%
+}
+PRE {
+	speak-punctuation: code
+}
+    }
+BODY {
+	BACKGROUND-IMAGE: url(http://www.w3.org/StyleSheets/TR/logo-REC)
+}
+
+------=_NextPart_000_0023_01C80B9F.D095C140--
