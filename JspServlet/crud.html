@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+    <head>
+        <title>CRUD OPERATIONS</title>
+        <link rel="stylesheet" href="crud.css">
+    </head>
+    <body>
+        <h4>SELECT AN OPERATION</h4>
+        <div style="display: block;">
+            <button onclick="return createT()">Create a table</button>
+            <button onclick="return insertR()">Insert a row</button>
+            <button onclick="return updateR()">Update a row</button>
+            <button onclick="return deleteR()">Delete a row</button>
+            <button onclick="return selectR()">Read all rows</button>
+        </div>
+        <form method="post" action="http://localhost:8080/506/crud">
+            <input type="hidden" id="choice" name="choice" value="6">
+            <div id="cT" style="display: none;">
+                <h3>Enter the query for creating a table</h3>
+                <textarea name="query"></textarea>
+            </div>
+            <div id="iR" style="display: none;">
+                <h3>Enter the uid and name to be inserted</h3>
+                Uid: <input type="number" name="iuid"><br>
+                Name: <input type="text" name="iname"><br>
+            </div>
+            <div id="uR" style="display: none;">
+                <h3>Enter the uid of the name to be updated</h3>
+                Uid: <input type="number" name="uuid"><br>
+                New name: <input type="text" name="uname"><br>
+            </div>
+            <div id="dR" style="display: none;">
+                <h3>Enter the uid of the row to be deleted</h3>
+                Uid: <input type="number" name="duid"><br>
+            </div>
+            <div id="sR" style="display: none;">
+            </div>
+            <input id="but" type="hidden"> 
+        </form>
+        <script type="text/javascript">
+
+            const createT = () =>{
+                const disp = document.getElementById("cT");
+                if(disp.style.display == "none"){
+                    document.getElementById("choice").value = "1";
+                    disp.style.display = "block";
+                    document.getElementById("but").type="submit";
+                } else {
+                    disp.style.display = "none";
+                    document.getElementById("but").type="hidden";
+                    document.getElementById("choice").value = "6";
+                }
+                
+            }
+
+            const insertR = () =>{
+                const disp = document.getElementById("iR");
+                if(disp.style.display == "none"){
+                    document.getElementById("choice").value = "2";
+                    disp.style.display = "block";
+                    document.getElementById("but").type="submit";
+                } else {
+                    disp.style.display = "none";
+                    document.getElementById("but").type="hidden";
+                    document.getElementById("choice").value = "6";
+                }
+                
+            }
+
+            const updateR = () =>{
+                const disp = document.getElementById("uR");
+                if(disp.style.display == "none"){
+                    document.getElementById("choice").value = "3";
+                    disp.style.display = "block";
+                    document.getElementById("but").type="submit";
+                } else {
+                    disp.style.display = "none";
+                    document.getElementById("but").type="hidden";
+                    document.getElementById("choice").value = "6";
+                }
+                
+            }
+
+            const deleteR = () =>{
+                const disp = document.getElementById("dR");
+                if(disp.style.display == "none"){
+                    document.getElementById("choice").value = "4";
+                    disp.style.display = "block";
+                    document.getElementById("but").type="submit";
+                } else {
+                    disp.style.display = "none";
+                    document.getElementById("but").type="hidden";
+                    document.getElementById("choice").value = "6";
+                }
+                
+            }
+
+            const selectR = () =>{
+                const disp = document.getElementById("sR");
+                if(disp.style.display == "none"){
+                    document.getElementById("choice").value = "5";
+                    disp.style.display = "block";
+                    document.getElementById("but").type="submit";
+                } else {
+                    disp.style.display = "none";
+                    document.getElementById("but").type="hidden";
+                    document.getElementById("choice").value = "6";
+                }
+                
+            }
+
+        </script>
+    </body>
+</html>

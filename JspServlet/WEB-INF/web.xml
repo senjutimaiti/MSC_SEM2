@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID">
+    <servlet>
+        <servlet-name>crud</servlet-name>
+        <servlet-class>crud</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>crud</servlet-name>
+        <url-pattern>/crud</url-pattern>
+    </servlet-mapping>
+</web-app>
