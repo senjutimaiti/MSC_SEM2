@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bill</title>
+	<style>
+		*{
+			font-size: 20px;
+		}
+		.btn{
+			font-size: 20px;
+			padding: 10px;
+			background-color: rgb(0, 30, 200, 0.7);
+			border: none;
+			border-radius: 10px;
+			color: white;
+		}
+		.btn:hover{
+			transition: 0.3s;
+			background-color: rgb(0, 30, 200, 1.0);
+		}
+		select{
+			width: 50px;
+			height: 30px;
+		}
+	</style>
+	<script type="text/javascript">
+		const res = (res) => {
+			const m1 = parseInt(res.s1.value);
+			const m2 = parseInt(res.s2.value);
+			const m3 = parseInt(res.s3.value);
+			const m4 = parseInt(res.s4.value);
+			const m5 = parseInt(res.s5.value);
+			const m6 = parseInt(res.s6.value);
+			const m7 = parseInt(res.s7.value);
+			const m8 = parseInt(res.s8.value);
+			let sum = m1*50+m2*50+m3*50+m4*80+m5*50+m6*100+m7*100+m8*150;
+			document.write("<center><h1>Bill</h1>");
+			
+			if (sum > 3000){
+				document.write("<h3>Discount : 15% </h3><h3>Total Amount : "+sum+"</h3>");
+				sum -= 0.15*sum;
+				document.write("<h3Amount after discount: "+sum+"</h3>");
+			} else if (sum > 1000){
+				document.write("<h3>Discount : 5% </h3><h3>Total Amount : "+sum+"</h3>");
+				sum -= 0.05*sum;
+				document.write("<h3>Total Amount : "+sum+"</h3>");
+			} else {
+				document.write("<h3Amount after discount: "+sum+"</h3>");
+			}
+		}
+	</script>
+</head>
+<body background="">
+	<center>
+		<form>
+			<h2>Menu</h2>
+			<h4>Select number of plates:</h4>
+			<span>Bhaat Rs.50 </span><select id="s1">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select><br><br>
+			Daal Rs.50 <select id="s2">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select><br><br>
+			Aloo posto Rs.50 <select id="s3">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select><br><br>
+			Shukto Rs.80 <select id="s4">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select><br><br>
+			Fulkofir torkari Rs.50 <select id="s5">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select><br><br>
+			Malai Chingri Rs.100 <select id="s6">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select><br><br>
+			Mangsho kasha Rs.100 <select id="s7">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select><br><br>
+			Biriyani Rs.150 <select id="s8">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select><br><br>
+			<input type="submit" class="btn" onclick="return res(this.form)">
+		</form>
+	</center>
+</body>
+</html>

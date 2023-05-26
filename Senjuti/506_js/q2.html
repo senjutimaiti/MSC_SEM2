@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Report Card</title>
+	<style>
+		*{
+			font-size: 20px;
+		}
+		.btn{
+			font-size: 20px;
+			padding: 10px;
+			background-color: rgb(0, 30, 200, 0.7);
+			border: none;
+			border-radius: 10px;
+			color: white;
+		}
+		.btn:hover{
+			transition: 0.3s;
+			background-color: rgb(0, 30, 200, 1.0);
+		}
+	</style>
+	<script type="text/javascript">
+		const res = (res) => {
+			const m1 = parseInt(res.s1.value);
+			const m2 = parseInt(res.s2.value);
+			const m3 = parseInt(res.s3.value);
+			const m4 = parseInt(res.s4.value);
+			const m5 = parseInt(res.s5.value);
+			const m6 = parseInt(res.s6.value);
+			let sum = m1+m2+m3+m4+m5+m6;
+			let per = sum/6;
+			document.write("<center><h1>Report</h1><h3>Name : "+res.sname.value+"</h3>");
+			document.write("<h3>Roll number : "+res.roll.value+"</h3>")
+			document.write("<h3>Total Marks : "+sum+"</h3><h3>Percentage : "+per+"</h3>");
+			document.write("<h3>Division : "+(per>90 ? "A" : (per>75 ? "B" : (per>65? "C" : (per>45? "D" : "F"))))+"</h3></center>");
+		}
+	</script>
+</head>
+<body>
+	<center>
+		<form>
+			Enter Name <input type="text" id="sname"><br><br>
+			Enter Roll number <input type="text" id="roll"><br><br>
+			English <input id="s1" type="number"><br><br>
+			Physics <input id="s2" type="number"><br><br>
+			Chemistry <input id="s3" type="number"><br><br>
+			Mathematics <input id="s4" type="number"><br><br>
+			Computer Science <input id="s5" type="number"><br><br>
+			Economics <input id="s6" type="number"><br><br>
+			<input type="submit" class="btn" onclick="return res(this.form)">
+		</form>
+	</center>
+</body>
+</html>

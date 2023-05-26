@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clock</title>
+	<script type="text/javascript">
+		const openClock = () =>{
+			const w = screen.width/2 - 80;
+			const h = screen.height/2 -80;
+			const myWin = open("date2.html", "_blank", "width=160, height=160");
+			myWin.moveTo(w,h);
+			window.close();
+		}
+	</script>
+</head>
+<body onload="return openClock()">
+</body>
+</html>

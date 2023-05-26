@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID">
+
+  <servlet>
+    <servlet-name>Date_Servlet</servlet-name>
+    <servlet-class>Date_Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Date_Servlet</servlet-name>
+    <url-pattern>/Date_Servlet</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>

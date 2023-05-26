@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keycode</title>
+	<script type="text/javascript">
+		const textcheck = () =>{
+			if(event.keyCode >=65 && event.keyCode <=90){}
+			else if(event.keyCode >=97 && event.keyCode <=122){}
+			else if(event.keyCode >=47 && event.keyCode <=57){}
+			else if(event.keyCode == 32){}
+			else
+			{
+				alert("The text entered is wrong");
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" onkeypress = "textcheck()">
+	</form>
+</body>
+</html>
